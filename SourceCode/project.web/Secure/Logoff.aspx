@@ -1,0 +1,9 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Logoff.aspx.cs" Inherits="project.web.Secure.Logoff" %>
+
+<%--
+
+   The Logoff page is responsible for signing out a user from the cookie authentication, and
+   then redirecting the user back to the portal home page.  This page is executed when the user
+   clicks the Logoff button at the top of the page.
+
+--%>

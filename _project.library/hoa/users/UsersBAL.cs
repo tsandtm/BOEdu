@@ -1,0 +1,87 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Data;
+using System.Threading.Tasks;
+using nvn.Library.Helpers;
+
+namespace _project.library.hoa
+{
+    public class UsersBAL : IUsersBAL
+    {
+
+        #region Private Methods
+        private int Create(Users item)
+        {
+            int rowsAffected = UsersDAL.Create(item);
+            return rowsAffected > 0 ? item.UserId : 0;
+        }
+        private int Update(Users item)
+        {
+            return UsersDAL.Update(item) ? item.UserId : 0;
+        }
+        #endregion
+
+        #region public Methods
+
+        /// <summary>
+        /// Deletes an instance of Users. Returns true on success.
+        public bool Delete(int userID)
+        {
+            return UsersDAL.Delete(userID);
+        }
+
+        // <summary>
+        /// Saves this instance of Users. Returns a new Guid on success.
+        /// </summary>
+        public int Save(Users item)
+        {
+            if (item.UserId == 0)
+                return Create(item);
+            return Update(item);
+        }
+
+        /// <summary>
+        /// Gets an instance of Users.
+        /// </summary>
+        /// <param name="userGuid"> userGuid </param>
+        public Users GetUsers(int userID)
+        {
+            using (IDataReader reader = UsersDAL.GetOne(userID))
+            {
+                return UsersDTO.PopulateFromReader(reader);
+            }
+        }
+
+        /// <summary>
+        /// Gets an IList with page of instances of Users.
+        /// </summary>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="totalPages">total pages</par
+        public List<Users> GetPage(int pageNumber, int pageSize, out int totalPages)
+        {
+            totalPages = 1;
+            IDataReader reader = UsersDAL.GetPage(pageNumber, pageSize, out totalPages);
+            return UsersDTO.LoadListFromReader(reader);
+        }
+        public int GetCount()
+        {
+            return UsersDAL.GetCount();
+        }
+
+        /// <summary>
+        /// Gets an IList with all instances of Users.
+        /// </summary>
+        public List<Users> GetAll()
+        {
+            IDataReader reader = UsersDAL.GetAll();
+            return UsersDTO.LoadListFromReader(reader);
+        }
+        #endregion       
+
+    }
+}
+
+

@@ -1,0 +1,314 @@
+﻿<%-- 
+Name:  					C# DataLayer Methods for MS SQL using SqlHelper
+Author: 				tsandtm
+Created:				12-12-2013
+Last Modified:			12-12-2013
+Description: 			Generates C# a Static Data Layer class for MS SQL
+
+--%>
+<%@ CodeTemplate Language="C#" TargetLanguage="C#" Src="" Inherits="CodeSmith.BaseTemplates.SqlCodeTemplate" Debug="False" CompilerVersion="v3.5" Description="Template description here." %>
+<%@ Property Name="SourceTable" Type="SchemaExplorer.TableSchema" Category="Context" Description="Table that the object is based on." %>
+
+<%@ Property Name="IViewName" Type="System.String" Default="IView" Category="Name" Description="IViewName" %>
+<%@ Property Name="PresenterName" Type="System.String" Default="Presenter" Category="Name" Description="IPresenterName" %>
+
+<%@ Property Name="Author" Type="System.String" Default="Nguyen Thanh Dai" Category="Style" Description="Author" %>
+<%@ Property Name="NameSpaceProject" Type="System.String" Default="project.library" Category="Style" Description="The Namespace of project" %>
+
+<%@ Property Name="TablePrefix" Type="System.String" Default="ts_" Category="Style" Description="Table Prfix" %>
+<%@ Property Name="RemoveEndingS" Type="System.Boolean" Default="true" Category="Style" Description="If table name ends in s, class name will not if this is set to true." %>
+
+<%@ Property Name="ConnectionToDatabase" Type="System.String" Default="ConnectionToDatabase" Category="Name" Description="ConnectionToDatabase" %>
+
+<%@ Assembly Name="CodeSmith.BaseTemplates" %>
+<%@ Assembly Name="System.Data" %>
+<%@ Assembly Name="SchemaExplorer" %>
+<%@ Import Namespace="SchemaExplorer" %>
+<%@ Import Namespace="System.Data" %>
+<%@ Import Namespace="CodeSmith.BaseTemplates" %>
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Data;
+using System.Configuration;
+using nvn.Library.Patterns.MVP;
+using project.config.library;
+	
+namespace <%= NameSpaceProject %>.Models  
+{
+	public  class <%= GetClassName() %>DAL
+    {
+        /// <summary>
+        /// Inserts a row in the <%= SourceTable.Name %> table. Returns rows affected count.
+        /// </summary>
+        /// <returns>int</returns>
+        public  int Create(<%= GetClassName() %> item)
+        {
+            SqlParameterHelper sph = new SqlParameterHelper(ConnectionStringStatic.GetWriteConnectionString_<%= ConnectionToDatabase %>(), "<%= SourceTable.Name %>_Insert", <%= SourceTable.Columns.Count%>);
+            <% for (int i = 0; i < SourceTable.Columns.Count; i++) { %>
+			sph.DefineSqlParameter("@<%= SourceTable.Columns[i].Name %>", SqlDbType.<%= GetSqlDbType(SourceTable.Columns[i]) %><%= GetSqlParamSize(SourceTable.Columns[i]) %>, ParameterDirection.Input, item.<%= SourceTable.Columns[i].Name %>);
+		    <% } %>	
+          
+            int rowsAffected = sph.ExecuteNonQuery();
+            return rowsAffected;
+        }
+        
+        /// <summary>
+        /// Updates a row in the <%= SourceTable.Name %> table. Returns true if row updated.
+        /// </summary>
+        /// <returns>bool</returns>
+        public bool Update(<%= GetClassName() %> item)
+        {
+            SqlParameterHelper sph = new SqlParameterHelper(ConnectionStringStatic.GetWriteConnectionString_<%= ConnectionToDatabase %>(), "<%= SourceTable.Name %>_Update", <%= SourceTable.PrimaryKey.MemberColumns.Count + SourceTable.NonPrimaryKeyColumns.Count%>);
+            <% for (int i = 0; i < SourceTable.Columns.Count; i++) { %>
+			sph.DefineSqlParameter("@<%= SourceTable.Columns[i].Name %>", SqlDbType.<%= GetSqlDbType(SourceTable.Columns[i]) %><%= GetSqlParamSize(SourceTable.Columns[i]) %>, ParameterDirection.Input, item.<%= SourceTable.Columns[i].Name %>);
+		    <% } %>	
+            int rowsAffected = sph.ExecuteNonQuery();
+            return (rowsAffected > 0);
+        }
+        
+        <%="///" %> <summary>
+		<%="///" %> Deletes a row from the <%= SourceTable.Name %> table. Returns true if row deleted.
+		<%="///" %> </summary>
+		<% for (int i = 0; i < SourceTable.PrimaryKey.MemberColumns.Count; i++) { %>
+		<%="///" %> <param name="<%= GetParamName(SourceTable.PrimaryKey.MemberColumns[i].Name) %>"> <%= GetParamName(SourceTable.PrimaryKey.MemberColumns[i].Name) %> </param>
+				<% } %>
+		/// <returns>bool</returns>
+		public bool Delete(
+			<% for (int i = 0; i < SourceTable.PrimaryKey.MemberColumns.Count; i++) { %>
+			<%= GetCSharpVariableType(SourceTable.PrimaryKey.MemberColumns[i]) %> <%= GetParamName(SourceTable.PrimaryKey.MemberColumns[i].Name) %><% if (i < SourceTable.PrimaryKey.MemberColumns.Count - 1) { %>, <% }else{ %>)<% } %><% } %> 
+		{
+			SqlParameterHelper sph = new SqlParameterHelper(ConnectionStringStatic.GetWriteConnectionString_<%= ConnectionToDatabase %>(), "<%= SourceTable.Name %>_Delete", <%= SourceTable.PrimaryKey.MemberColumns.Count%>);
+		    <% for (int i = 0; i < SourceTable.PrimaryKey.MemberColumns.Count; i++) { %>
+			sph.DefineSqlParameter("@<%= SourceTable.PrimaryKey.MemberColumns[i].Name %>", SqlDbType.<%= GetSqlDbType(SourceTable.PrimaryKey.MemberColumns[i]) %><%= GetSqlParamSize(SourceTable.PrimaryKey.MemberColumns[i]) %>, ParameterDirection.Input, <%= GetParamName(SourceTable.PrimaryKey.MemberColumns[i].Name) %>);
+		    <% } %>	
+			int rowsAffected = sph.ExecuteNonQuery();
+			return (rowsAffected > 0);
+		}
+        
+        <%="///" %> <summary>
+		<%="///" %> Gets an IDataReader with one row from the <%= SourceTable.Name %> table.
+		<%="///" %> </summary>
+		<% for (int i = 0; i < SourceTable.PrimaryKey.MemberColumns.Count; i++) { %>
+		<%="///" %> <param name="<%= GetParamName(SourceTable.PrimaryKey.MemberColumns[i].Name) %>"> <%= GetParamName(SourceTable.PrimaryKey.MemberColumns[i].Name) %> </param>
+				<% } %>
+		public IDataReader GetOne(
+		<% for (int i = 0; i < SourceTable.PrimaryKey.MemberColumns.Count; i++) { %>
+			<%= GetCSharpVariableType(SourceTable.PrimaryKey.MemberColumns[i]) %>  <%= GetParamName(SourceTable.PrimaryKey.MemberColumns[i].Name) %><% if (i < SourceTable.PrimaryKey.MemberColumns.Count - 1) { %>, <% }else{ %>)<% } %><% } %>  
+		{
+			SqlParameterHelper sph = new SqlParameterHelper(ConnectionStringStatic.GetReadConnectionString_<%= ConnectionToDatabase %>(), "<%= SourceTable.Name %>_SelectOne", <%= SourceTable.PrimaryKey.MemberColumns.Count%>);
+            <% for (int i = 0; i < SourceTable.PrimaryKey.MemberColumns.Count; i++) { %>
+            sph.DefineSqlParameter("@<%= SourceTable.PrimaryKey.MemberColumns[i].Name %>", SqlDbType.<%= GetSqlDbType(SourceTable.PrimaryKey.MemberColumns[i]) %><%= GetSqlParamSize(SourceTable.PrimaryKey.MemberColumns[i]) %>, ParameterDirection.Input, <%= GetParamName(SourceTable.PrimaryKey.MemberColumns[i].Name) %>);
+            <% } %>	
+			return sph.ExecuteReader();
+		}
+		
+		/// <summary>
+		/// Gets a count of rows in the <%= SourceTable.Name %> table.
+		/// </summary>
+		public int GetCount()
+		{
+			return Convert.ToInt32(SqlHelper.ExecuteScalar(
+				ConnectionStringStatic.GetReadConnectionString_<%= ConnectionToDatabase %>(),
+				CommandType.StoredProcedure,
+				"<%= SourceTable.Name %>_GetCount",
+				null));
+		}
+        
+        /// <summary>
+		/// Gets an IDataReader with all rows in the <%= SourceTable.Name %> table.
+		/// </summary>
+		public IDataReader GetAll()
+		{
+			return SqlHelper.ExecuteReader(
+				ConnectionStringStatic.GetReadConnectionString_<%= ConnectionToDatabase %>(),
+				CommandType.StoredProcedure,
+				"<%= SourceTable.Name %>_SelectAll",
+				null);
+		}
+		
+		/// <summary>
+		/// Gets a page of data from the <%= SourceTable.Name %> table.
+		/// </summary>
+		/// <param name="pageNumber">The page number.</param>
+		/// <param name="pageSize">Size of the page.</param>
+		/// <param name="totalPages">total pages</param>
+		public IDataReader GetPage(
+			int pageNumber, 
+			int pageSize)
+		{
+			
+			
+			SqlParameterHelper sph = new SqlParameterHelper(ConnectionStringStatic.GetReadConnectionString_<%= ConnectionToDatabase %>(), "<%= SourceTable.Name %>_SelectPage", 2);
+			sph.DefineSqlParameter("@PageNumber", SqlDbType.Int, ParameterDirection.Input, pageNumber);
+			sph.DefineSqlParameter("@PageSize", SqlDbType.Int, ParameterDirection.Input, pageSize);
+			return sph.ExecuteReader();
+		}
+    }
+}
+
+<script runat="template">
+
+
+public string GetClassName()
+{
+	if ((this.RemoveEndingS)
+		&&(SourceTable.Name.EndsWith("s"))
+		)
+	{
+		return RemovePrefix(SourceTable.Name.Substring(0,SourceTable.Name.Length -1));
+	}
+	else
+	{
+		return RemovePrefix(SourceTable.Name);
+	}
+}
+
+public string RemovePrefix(string TableName)
+{
+
+	return TableName.Replace(TablePrefix,"");
+}
+
+public string GetPrivateName(string ColumnName)
+{
+	return ColumnName.Substring(0,1).ToLower() + ColumnName.Substring(1,ColumnName.Length -1);
+}
+
+public string GetParamName(String columnName)
+{
+	if(columnName == "ID")
+		return "id";
+	
+	string firstLetter = columnName.Substring(0,1).ToLower();
+	string Result = firstLetter + columnName.Remove(0,1);
+	
+	return Result;
+}
+
+public string GetDefaultValueString(ColumnSchema column)
+{
+	switch(column.DataType)
+	{	
+		case DbType.Guid: 
+			return " = Guid.Empty";
+		
+		case DbType.Int32 : 
+			return " = -1";
+		
+		case DbType.AnsiString :
+		case DbType.AnsiStringFixedLength :
+		case DbType.String :
+		case DbType.StringFixedLength :
+		
+			return " = string.Empty";
+		
+		default:
+		{
+			return string.Empty;
+		}
+		
+	}
+	
+	
+	
+
+}
+
+
+public string GetReaderConversion(ColumnSchema column)
+{
+	if (column.Name.EndsWith("TypeCode")) return column.Name;
+	
+	switch (column.DataType)
+	{
+		case DbType.AnsiString: return "reader[\"" + column.Name + "\"].ToString();";
+		case DbType.AnsiStringFixedLength: return "reader[\"" + column.Name + "\"].ToString();";
+		case DbType.Binary: return "Byte[]";
+		case DbType.Boolean: return "Convert.ToBoolean(reader[\"" + column.Name + "\"]);";
+		case DbType.Byte: return "Convert.ToByte(reader[\"" + column.Name + "\"]);";
+		case DbType.Currency: return "Convert.ToDecimal(reader[\"" + column.Name + "\"]);";
+		case DbType.Date: return "Convert.ToDateTime(reader[\"" + column.Name + "\"]);";
+		case DbType.DateTime: return "Convert.ToDateTime(reader[\"" + column.Name + "\"]);";
+		case DbType.Decimal: return "Convert.ToDecimal(reader[\"" + column.Name + "\"]);";
+		case DbType.Double: return "Convert.ToDouble(reader[\"" + column.Name + "\"]);";
+		case DbType.Guid: return "new Guid(reader[\"" + column.Name + "\"].ToString());";
+		case DbType.Int16: return "Convert.ToInt16(reader[\"" + column.Name + "\"]);";
+		case DbType.Int32: return "Convert.ToInt32(reader[\"" + column.Name + "\"]);";
+		case DbType.Int64: return "Convert.ToInt64(reader[\"" + column.Name + "\"]);";
+		case DbType.SByte: return "Convert.ToSByte(reader[\"" + column.Name + "\"]);";
+		case DbType.Single: return "Convert.ToSingle(reader[\"" + column.Name + "\"]);";
+		case DbType.String: return "reader[\"" + column.Name + "\"].ToString();";
+		case DbType.StringFixedLength: return "reader[\"" + column.Name + "\"].ToString();";
+		
+		default:
+		{
+			return "__UNKNOWN__" + column.NativeType;
+		}
+	}
+}
+
+public string GetSqlParamSize(ColumnSchema column)
+	{
+		string Result = "";
+		
+		switch(GetSqlDbType(column))
+		{	//TODO more data types
+			case "VarChar" :
+			case "NVarChar" :
+			case "Char" :
+			case "NChar" :
+			
+			Result = ", " + column.Size;
+			
+			return Result;
+			
+			
+		}
+		
+		
+		return Result;
+	
+	}
+
+public string GetVBDataType(ColumnSchema column)
+{
+	if (column.Name.EndsWith("TypeCode")) return column.Name;
+	
+	switch (column.DataType)
+	{
+		case DbType.AnsiString: return "String";
+		case DbType.AnsiStringFixedLength: return "String";
+		case DbType.Binary: return "Byte()";
+		case DbType.Boolean: return "Boolean";
+		case DbType.Byte: return "Byte";
+		case DbType.Currency: return "Decimal";
+		case DbType.Date: return "DateTime";
+		case DbType.DateTime: return "DateTime";
+		case DbType.Decimal: return "Decimal";
+		case DbType.Double: return "Double";
+		case DbType.Guid: return "Guid";
+		case DbType.Int16: return "Short";
+		case DbType.Int32: return "Integer";
+		case DbType.Int64: return "Long";
+		case DbType.Object: return "Object";
+		case DbType.SByte: return "SByte";
+		case DbType.Single: return "Float";
+		case DbType.String: return "String";
+		case DbType.StringFixedLength: return "String";
+		case DbType.Time: return "TimeSpan";
+		case DbType.UInt16: return "UShort";
+		case DbType.UInt32: return "UInt";
+		case DbType.UInt64: return "ULong";
+		case DbType.VarNumeric: return "Decimal";
+		default:
+		{
+			return "__UNKNOWN__" + column.NativeType;
+		}
+	}
+}
+	
+</script>

@@ -1,0 +1,72 @@
+D:\My Private\tsandtm_data\c_mvc\mvc_day2\tool\MVCPaging-master1\MVCPaging-master\MvcPaging\bin\Debug\MvcPaging.XML
+D:\My Private\tsandtm_data\c_mvc\mvc_day2\tool\MVCPaging-master1\MVCPaging-master\MvcPaging\bin\Debug\MvcPaging.dll
+D:\My Private\tsandtm_data\c_mvc\mvc_day2\tool\MVCPaging-master1\MVCPaging-master\MvcPaging\bin\Debug\MvcPaging.pdb
+D:\My Private\tsandtm_data\c_mvc\mvc_day2\tool\MVCPaging-master1\MVCPaging-master\MvcPaging\obj\Debug\MvcPaging.dll
+D:\My Private\tsandtm_data\c_mvc\mvc_day2\tool\MVCPaging-master1\MVCPaging-master\MvcPaging\obj\Debug\MvcPaging.pdb
+D:\My Private\tsandtm_data\c_mvc\mvc_day2\tool\MVCPaging-master1\MVCPaging-master\MvcPaging\obj\Debug\MvcPaging.csprojResolveAssemblyReference.cache
+D:\My Private\tsandtm_data\c_mvc\mvc_day2\nuget\MvcPaging\bin\Debug\MvcPaging.XML
+D:\My Private\tsandtm_data\c_mvc\mvc_day2\nuget\MvcPaging\bin\Debug\MvcPaging.dll
+D:\My Private\tsandtm_data\c_mvc\mvc_day2\nuget\MvcPaging\bin\Debug\MvcPaging.pdb
+D:\My Private\tsandtm_data\c_mvc\mvc_day2\nuget\MvcPaging\obj\Debug\MvcPaging.csprojResolveAssemblyReference.cache
+D:\My Private\tsandtm_data\c_mvc\mvc_day2\nuget\MvcPaging\obj\Debug\MvcPaging.dll
+D:\My Private\tsandtm_data\c_mvc\mvc_day2\nuget\MvcPaging\obj\Debug\MvcPaging.pdb
+D:\ProjectDangLam\team_mvc\mvc_day2\nuget\MvcPaging\bin\Debug\MvcPaging.XML
+D:\ProjectDangLam\team_mvc\mvc_day2\nuget\MvcPaging\bin\Debug\MvcPaging.dll
+D:\ProjectDangLam\team_mvc\mvc_day2\nuget\MvcPaging\bin\Debug\MvcPaging.pdb
+D:\ProjectDangLam\team_mvc\mvc_day2\nuget\MvcPaging\obj\Debug\MvcPaging.dll
+D:\ProjectDangLam\team_mvc\mvc_day2\nuget\MvcPaging\obj\Debug\MvcPaging.pdb
+C:\Users\CTV0010291\Desktop\New folder\nuget\MvcPaging\bin\Debug\MvcPaging.XML
+C:\Users\CTV0010291\Desktop\New folder\nuget\MvcPaging\bin\Debug\MvcPaging.dll
+C:\Users\CTV0010291\Desktop\New folder\nuget\MvcPaging\bin\Debug\MvcPaging.pdb
+C:\Users\CTV0010291\Desktop\New folder\nuget\MvcPaging\obj\Debug\MvcPaging.csprojResolveAssemblyReference.cache
+C:\Users\CTV0010291\Desktop\New folder\nuget\MvcPaging\obj\Debug\MvcPaging.dll
+C:\Users\CTV0010291\Desktop\New folder\nuget\MvcPaging\obj\Debug\MvcPaging.pdb
+F:\svn_hutech\team_mvc\mvc_day2\nuget\MvcPaging\bin\Debug\MvcPaging.XML
+F:\svn_hutech\team_mvc\mvc_day2\nuget\MvcPaging\bin\Debug\MvcPaging.dll
+F:\svn_hutech\team_mvc\mvc_day2\nuget\MvcPaging\bin\Debug\MvcPaging.pdb
+F:\svn_hutech\team_mvc\mvc_day2\nuget\MvcPaging\obj\Debug\MvcPaging.csprojResolveAssemblyReference.cache
+F:\svn_hutech\team_mvc\mvc_day2\nuget\MvcPaging\obj\Debug\MvcPaging.dll
+F:\svn_hutech\team_mvc\mvc_day2\nuget\MvcPaging\obj\Debug\MvcPaging.pdb
+D:\ProjectDangLam\team_mvc\mvc_day2\nuget\MvcPaging\obj\Debug\MvcPaging.csprojResolveAssemblyReference.cache
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\nuget\MvcPaging\bin\Debug\MvcPaging.XML
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\nuget\MvcPaging\bin\Debug\MvcPaging.dll
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\nuget\MvcPaging\bin\Debug\MvcPaging.pdb
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\nuget\MvcPaging\obj\Debug\MvcPaging.dll
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\nuget\MvcPaging\obj\Debug\MvcPaging.pdb
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\nuget\MvcPaging\obj\Debug\MvcPaging.csprojResolveAssemblyReference.cache
+D:\SVN\Project\mvc_hutech_internalsystem\SourceCode\nuget\MvcPaging\obj\Debug\MvcPaging.csprojResolveAssemblyReference.cache
+D:\SVN\Project\mvc_hutech_internalsystem\SourceCode\nuget\MvcPaging\obj\Debug\MvcPaging.dll
+D:\SVN\Project\mvc_hutech_internalsystem\SourceCode\nuget\MvcPaging\obj\Debug\MvcPaging.pdb
+D:\SVN\Project\mvc_hutech_internalsystem\SourceCode\nuget\MvcPaging\bin\Debug\MvcPaging.XML
+D:\SVN\Project\mvc_hutech_internalsystem\SourceCode\nuget\MvcPaging\bin\Debug\MvcPaging.dll
+D:\SVN\Project\mvc_hutech_internalsystem\SourceCode\nuget\MvcPaging\bin\Debug\MvcPaging.pdb
+D:\SVN\Project\mvc_hutech_internalsystem\SourceCode\nuget\MvcPaging\bin\Debug\System.Web.Mvc.dll
+D:\SVN\Project\mvc_hutech_internalsystem\SourceCode\nuget\MvcPaging\bin\Debug\System.Web.Mvc.xml
+E:\HoaDM\Dropbox\demo_Hackacademy\SourceCode\nuget\MvcPaging\bin\Debug\MvcPaging.XML
+E:\HoaDM\Dropbox\demo_Hackacademy\SourceCode\nuget\MvcPaging\bin\Debug\MvcPaging.dll
+E:\HoaDM\Dropbox\demo_Hackacademy\SourceCode\nuget\MvcPaging\bin\Debug\MvcPaging.pdb
+E:\HoaDM\Dropbox\demo_Hackacademy\SourceCode\nuget\MvcPaging\bin\Debug\System.Web.Mvc.dll
+E:\HoaDM\Dropbox\demo_Hackacademy\SourceCode\nuget\MvcPaging\bin\Debug\System.Web.Mvc.xml
+E:\HoaDM\Dropbox\demo_Hackacademy\SourceCode\nuget\MvcPaging\obj\Debug\MvcPaging.csprojResolveAssemblyReference.cache
+E:\HoaDM\Dropbox\demo_Hackacademy\SourceCode\nuget\MvcPaging\obj\Debug\MvcPaging.dll
+E:\HoaDM\Dropbox\demo_Hackacademy\SourceCode\nuget\MvcPaging\obj\Debug\MvcPaging.pdb
+G:\Drive\Dropbox\demo_Hackacademy\SourceCode\nuget\MvcPaging\bin\Debug\MvcPaging.XML
+G:\Drive\Dropbox\demo_Hackacademy\SourceCode\nuget\MvcPaging\bin\Debug\MvcPaging.dll
+G:\Drive\Dropbox\demo_Hackacademy\SourceCode\nuget\MvcPaging\bin\Debug\MvcPaging.pdb
+G:\Drive\Dropbox\demo_Hackacademy\SourceCode\nuget\MvcPaging\bin\Debug\System.Web.Mvc.dll
+G:\Drive\Dropbox\demo_Hackacademy\SourceCode\nuget\MvcPaging\bin\Debug\System.Web.Mvc.xml
+G:\Drive\Dropbox\demo_Hackacademy\SourceCode\nuget\MvcPaging\obj\Debug\MvcPaging.csprojResolveAssemblyReference.cache
+G:\Drive\Dropbox\demo_Hackacademy\SourceCode\nuget\MvcPaging\obj\Debug\MvcPaging.dll
+G:\Drive\Dropbox\demo_Hackacademy\SourceCode\nuget\MvcPaging\obj\Debug\MvcPaging.pdb
+G:\Drive\Dropbox\BOEdu\nuget\MvcPaging\bin\Debug\MvcPaging.XML
+G:\Drive\Dropbox\BOEdu\nuget\MvcPaging\bin\Debug\MvcPaging.dll
+G:\Drive\Dropbox\BOEdu\nuget\MvcPaging\bin\Debug\MvcPaging.pdb
+G:\Drive\Dropbox\BOEdu\nuget\MvcPaging\obj\Debug\MvcPaging.csprojResolveAssemblyReference.cache
+G:\Drive\Dropbox\BOEdu\nuget\MvcPaging\obj\Debug\MvcPaging.dll
+G:\Drive\Dropbox\BOEdu\nuget\MvcPaging\obj\Debug\MvcPaging.pdb
+D:\BOEdu\nuget\MvcPaging\bin\Debug\MvcPaging.XML
+D:\BOEdu\nuget\MvcPaging\bin\Debug\MvcPaging.dll
+D:\BOEdu\nuget\MvcPaging\bin\Debug\MvcPaging.pdb
+D:\BOEdu\nuget\MvcPaging\obj\Debug\MvcPaging.csprojResolveAssemblyReference.cache
+D:\BOEdu\nuget\MvcPaging\obj\Debug\MvcPaging.dll
+D:\BOEdu\nuget\MvcPaging\obj\Debug\MvcPaging.pdb

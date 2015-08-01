@@ -1,0 +1,40 @@
+--level:bac node bao nhiu? 
+--position:thu tu hien thi (max =9999)
+--ListPlacementName: Danh sach ten cac node cha
+--KindCatologyName: Ten cua node cha
+--CatologyName:ten Node con
+--ListStringToSort:Ma hoa nhi phan de sap xep thu tu cac node. (Position max 9999)
+
+select * from cont_Catologies
+
+--lay len danh sach cac danh muc cha sap xep theo thu tu abc
+select * from cont_Catologies where KindCatologyGuid='00000000-0000-0000-0000-000000000000'
+order by CatologyName
+
+--lay len tat ca cac danh muc sap xep theo cap bat ba thu tu abc
+select * from cont_Catologies order by ListStringToSort
+
+--lay len tat cac cac danh muc con cua mot danh muc cha cho truoc
+select * from cont_Catologies 
+where CatologyGuid='E0195052-E962-4161-8C3F-F4E0B4DEB3FC' or ListPlacementGuid like '%E0195052-E962-4161-8C3F-F4E0B4DEB3FC%'
+order by ListStringToSort
+
+--cap nhat thong tin 1 node chu y khi co su thay doi node cha
+
+delete from [cont_Catologies]
+SET IDENTITY_INSERT [dbo].[cont_Catologies] ON
+INSERT [dbo].[cont_Catologies] ([CatologyGuid], [CatologyID], [CatologyName], [Description], [KindCatologyGuid], [KindCatologyName], [ListStringToSort], [ListPlacementGuid], [ListPlacementName], [Levels], [Position], [URLHinhAnh], [IsActive]) VALUES (N'd60ce6f2-cc9c-4e5a-99ac-06825ce16df2', 4, N'4', N'Danh muc 4', N'0c7874c2-5221-4753-a533-ba5069b1d37a', N'root', N'00000100', N'0c7874c2-5221-4753-a533-ba5069b1d37a', NULL, NULL, NULL, NULL, 1)
+INSERT [dbo].[cont_Catologies] ([CatologyGuid], [CatologyID], [CatologyName], [Description], [KindCatologyGuid], [KindCatologyName], [ListStringToSort], [ListPlacementGuid], [ListPlacementName], [Levels], [Position], [URLHinhAnh], [IsActive]) VALUES (N'bc32e5c5-289e-4bc6-84e8-07bfbee7dffd', 80, N'1/1/3/2', N'', N'd8a3d31d-6d76-4282-bede-bacbc252c10b', N'------1/1/3', N'00000001000000010000001100000010', N'0c7874c2-5221-4753-a533-ba5069b1d37a,E0195052-E962-4161-8C3F-F4E0B4DEB3FC;729859B3-2653-4EE0-95BA-77CD6EFC5115;D8A3D31D-6D76-4282-BEDE-BACBC252C10B;', NULL, NULL, NULL, NULL, 1)
+INSERT [dbo].[cont_Catologies] ([CatologyGuid], [CatologyID], [CatologyName], [Description], [KindCatologyGuid], [KindCatologyName], [ListStringToSort], [ListPlacementGuid], [ListPlacementName], [Levels], [Position], [URLHinhAnh], [IsActive]) VALUES (N'990afb8d-4ffb-4a12-9021-22a2c9adb9b3', 73, N'3', N'', N'0c7874c2-5221-4753-a533-ba5069b1d37a', N'root', N'00000011', N'0c7874c2-5221-4753-a533-ba5069b1d37a', NULL, NULL, NULL, NULL, 1)
+INSERT [dbo].[cont_Catologies] ([CatologyGuid], [CatologyID], [CatologyName], [Description], [KindCatologyGuid], [KindCatologyName], [ListStringToSort], [ListPlacementGuid], [ListPlacementName], [Levels], [Position], [URLHinhAnh], [IsActive]) VALUES (N'1b219739-00f0-490b-9730-3be69e00fba7', 70, N'4/2', N'1', N'd60ce6f2-cc9c-4e5a-99ac-06825ce16df2', N'4', N'0000010000000010', N'0c7874c2-5221-4753-a533-ba5069b1d37a;D60CE6F2-CC9C-4E5A-99AC-06825CE16DF2;', NULL, NULL, NULL, NULL, 1)
+INSERT [dbo].[cont_Catologies] ([CatologyGuid], [CatologyID], [CatologyName], [Description], [KindCatologyGuid], [KindCatologyName], [ListStringToSort], [ListPlacementGuid], [ListPlacementName], [Levels], [Position], [URLHinhAnh], [IsActive]) VALUES (N'abd92a04-3d81-48a0-9962-40c912bcc772', 76, N'1/1/1', N'', N'729859b3-2653-4ee0-95ba-77cd6efc5115', N'---1/1', N'000000010000000100000001', N'0c7874c2-5221-4753-a533-ba5069b1d37a;E0195052-E962-4161-8C3F-F4E0B4DEB3FC;729859B3-2653-4EE0-95BA-77CD6EFC5115;', NULL, NULL, NULL, NULL, 1)
+INSERT [dbo].[cont_Catologies] ([CatologyGuid], [CatologyID], [CatologyName], [Description], [KindCatologyGuid], [KindCatologyName], [ListStringToSort], [ListPlacementGuid], [ListPlacementName], [Levels], [Position], [URLHinhAnh], [IsActive]) VALUES (N'6225a253-9dbb-48f2-932e-583a82d9613d', 77, N'1/1/12', N'', N'729859b3-2653-4ee0-95ba-77cd6efc5115', N'---1/1', N'000000010000000100001100', N'0c7874c2-5221-4753-a533-ba5069b1d37a;E0195052-E962-4161-8C3F-F4E0B4DEB3FC;729859B3-2653-4EE0-95BA-77CD6EFC5115;', NULL, NULL, NULL, NULL, 1)
+INSERT [dbo].[cont_Catologies] ([CatologyGuid], [CatologyID], [CatologyName], [Description], [KindCatologyGuid], [KindCatologyName], [ListStringToSort], [ListPlacementGuid], [ListPlacementName], [Levels], [Position], [URLHinhAnh], [IsActive]) VALUES (N'729859b3-2653-4ee0-95ba-77cd6efc5115', 74, N'1/1', N'', N'e0195052-e962-4161-8c3f-f4e0b4deb3fc', N'1', N'0000000100000001', N'0c7874c2-5221-4753-a533-ba5069b1d37a;E0195052-E962-4161-8C3F-F4E0B4DEB3FC;', NULL, NULL, NULL, NULL, 1)
+INSERT [dbo].[cont_Catologies] ([CatologyGuid], [CatologyID], [CatologyName], [Description], [KindCatologyGuid], [KindCatologyName], [ListStringToSort], [ListPlacementGuid], [ListPlacementName], [Levels], [Position], [URLHinhAnh], [IsActive]) VALUES (N'b6907903-1b90-430d-af15-83b25b28943e', 69, N'4/1', N'1', N'd60ce6f2-cc9c-4e5a-99ac-06825ce16df2', N'4', N'0000010000000001', N'0c7874c2-5221-4753-a533-ba5069b1d37a;D60CE6F2-CC9C-4E5A-99AC-06825CE16DF2;', NULL, NULL, NULL, NULL, 1)
+INSERT [dbo].[cont_Catologies] ([CatologyGuid], [CatologyID], [CatologyName], [Description], [KindCatologyGuid], [KindCatologyName], [ListStringToSort], [ListPlacementGuid], [ListPlacementName], [Levels], [Position], [URLHinhAnh], [IsActive]) VALUES (N'93d23675-bc6d-437d-a4a6-83b909126450', 75, N'1/2', N'', N'e0195052-e962-4161-8c3f-f4e0b4deb3fc', N'1', N'0000000100000010', N'0c7874c2-5221-4753-a533-ba5069b1d37a;E0195052-E962-4161-8C3F-F4E0B4DEB3FC;', NULL, NULL, NULL, NULL, 1)
+INSERT [dbo].[cont_Catologies] ([CatologyGuid], [CatologyID], [CatologyName], [Description], [KindCatologyGuid], [KindCatologyName], [ListStringToSort], [ListPlacementGuid], [ListPlacementName], [Levels], [Position], [URLHinhAnh], [IsActive]) VALUES (N'31e6e893-878f-4e49-a343-b78bdf6d90b5', 71, N'4/2/1', N'2', N'1b219739-00f0-490b-9730-3be69e00fba7', N'---4/2', N'000001000000001000000001', N'0c7874c2-5221-4753-a533-ba5069b1d37a;D60CE6F2-CC9C-4E5A-99AC-06825CE16DF2;1B219739-00F0-490B-9730-3BE69E00FBA7;', NULL, NULL, NULL, NULL, 1)
+INSERT [dbo].[cont_Catologies] ([CatologyGuid], [CatologyID], [CatologyName], [Description], [KindCatologyGuid], [KindCatologyName], [ListStringToSort], [ListPlacementGuid], [ListPlacementName], [Levels], [Position], [URLHinhAnh], [IsActive]) VALUES (N'd8a3d31d-6d76-4282-bede-bacbc252c10b', 78, N'1/1/3', N'', N'729859b3-2653-4ee0-95ba-77cd6efc5115', N'---1/1', N'000000010000000100000011', N'0c7874c2-5221-4753-a533-ba5069b1d37a;E0195052-E962-4161-8C3F-F4E0B4DEB3FC;729859B3-2653-4EE0-95BA-77CD6EFC5115;', NULL, NULL, NULL, NULL, 1)
+INSERT [dbo].[cont_Catologies] ([CatologyGuid], [CatologyID], [CatologyName], [Description], [KindCatologyGuid], [KindCatologyName], [ListStringToSort], [ListPlacementGuid], [ListPlacementName], [Levels], [Position], [URLHinhAnh], [IsActive]) VALUES (N'0420c928-1316-42ed-a1f9-d5148f75f09b', 79, N'1/1/3/1', N'', N'd8a3d31d-6d76-4282-bede-bacbc252c10b', N'------1/1/3', N'00000001000000010000001100000001', N'0c7874c2-5221-4753-a533-ba5069b1d37a;E0195052-E962-4161-8C3F-F4E0B4DEB3FC;729859B3-2653-4EE0-95BA-77CD6EFC5115;D8A3D31D-6D76-4282-BEDE-BACBC252C10B;', NULL, NULL, NULL, NULL, 1)
+INSERT [dbo].[cont_Catologies] ([CatologyGuid], [CatologyID], [CatologyName], [Description], [KindCatologyGuid], [KindCatologyName], [ListStringToSort], [ListPlacementGuid], [ListPlacementName], [Levels], [Position], [URLHinhAnh], [IsActive]) VALUES (N'4b06690f-d416-43df-8d42-ebf1f692695f', 81, N'1/1/20', N'', N'729859b3-2653-4ee0-95ba-77cd6efc5115', N'---1/1', N'000000010000000100010100', N'0c7874c2-5221-4753-a533-ba5069b1d37a;E0195052-E962-4161-8C3F-F4E0B4DEB3FC;729859B3-2653-4EE0-95BA-77CD6EFC5115;', NULL, NULL, NULL, NULL, 1)
+INSERT [dbo].[cont_Catologies] ([CatologyGuid], [CatologyID], [CatologyName], [Description], [KindCatologyGuid], [KindCatologyName], [ListStringToSort], [ListPlacementGuid], [ListPlacementName], [Levels], [Position], [URLHinhAnh], [IsActive]) VALUES (N'e0195052-e962-4161-8c3f-f4e0b4deb3fc', 72, N'1', N'1', N'0c7874c2-5221-4753-a533-ba5069b1d37a', N'root', N'00000001', N'0c7874c2-5221-4753-a533-ba5069b1d37a', NULL, NULL, NULL, NULL, 1)
+SET IDENTITY_INSERT [dbo].[cont_Catologies] OFF

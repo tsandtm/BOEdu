@@ -1,0 +1,14 @@
+D:\THANHDAI18HT\SVN\team_mvc\mvc_day2\project.config.library\bin\Release\project.config.library.dll
+D:\THANHDAI18HT\SVN\team_mvc\mvc_day2\project.config.library\bin\Release\project.config.library.pdb
+D:\THANHDAI18HT\SVN\team_mvc\mvc_day2\project.config.library\bin\Release\nvn.Library.dll
+D:\THANHDAI18HT\SVN\team_mvc\mvc_day2\project.config.library\bin\Release\nvn.Library.pdb
+D:\THANHDAI18HT\SVN\team_mvc\mvc_day2\project.config.library\obj\Release\project.config.library.csprojResolveAssemblyReference.cache
+D:\THANHDAI18HT\SVN\team_mvc\mvc_day2\project.config.library\obj\Release\project.config.library.dll
+D:\THANHDAI18HT\SVN\team_mvc\mvc_day2\project.config.library\obj\Release\project.config.library.pdb
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\project.config.library\bin\Release\project.config.library.dll
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\project.config.library\bin\Release\project.config.library.pdb
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\project.config.library\bin\Release\nvn.Library.dll
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\project.config.library\bin\Release\nvn.Library.pdb
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\project.config.library\obj\Release\project.config.library.csprojResolveAssemblyReference.cache
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\project.config.library\obj\Release\project.config.library.dll
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\project.config.library\obj\Release\project.config.library.pdb

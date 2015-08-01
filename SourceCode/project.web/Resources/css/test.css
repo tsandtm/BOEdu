@@ -1,0 +1,70 @@
+﻿
+.detail-rig{line-height: 25px;float: right; position: relative;width: 325px;}
+.detail-left{ float:left; height: 310px; position:relative;margin-top: 15px;}
+.pro-detail-name {D:\My Private\OtherProcejct\site_tuan\project.web\Web.config
+    font-size: 160%;
+    padding: 0px;
+    /*text-transform: capitalize;*/
+    
+}
+.pro-detail-name h1{font-size:20px}
+.pro-detail-eval 
+{
+    
+    border-bottom: 1px dashed #cdcdcd;
+}
+.divEval{display:inline-block; *display:inline; zoom:1; vertical-align:top;float:right;margin-right:3px;}
+ .detail-qlt {
+ 
+}   
+.middle.price-attr{height:105px;}
+.middle-bg{position: static;top:50%;left:0;}
+.middle-inner{position: relative;top: -50%; left:0;}
+.middle-inner p{ clear:left; width:100%;*position:static;top:-50%;display:block;overflow:hidden; left:0;}
+.detail-box-price .middle{ width:325px!important;background:url(../img/detail-discount-v2.png) no-repeat; padding-left:90px; margin:auto;}   
+.middle > div{ clear:left; width:100%;*position:static;display: table-cell;vertical-align: middle;}
+ .middle{height:100%;margin-top:0;position:relative;border-left:0 none;display:table; width:100%;}
+ .detail-discount{width:85px;height:83px;color:#fff; line-height:80px; text-align:center; font-family:robotoBold; font-size:180%; float:left; position:absolute; top:0; left:0;}
+.detail-box-price p{ font-size:100%; line-height:20px; width:100%;}
+.detail-box-price .left{ display:inline-block; *display:inline; zoom:1; width:50%;}
+.detail-box-price del,.detail-box-price i{ display:inline-block; *display:inline; zoom:1; width:46%; text-align:right;}
+.detail-box-price u{ display:inline-block; *display:inline; zoom:1; width:4%; font-size:80%; position:relative; top:-6px;}
+.detail-box-price .detail-line{ border-top:1px solid #999; line-height:0; }
+.detail-box-price .text.large{/* font-size:248%; */font-family:"Roboto",sans-serif; line-height:40px;text-align:left; color:#ff6600;}
+.detail-box-price .text.large span{ width:auto;font-size: 115%; margin-top:-2px; position:relative;font-weight:bold;}
+.detail-box-price .text.large u{ font-size:120%;  top:-16px; line-height:24px;}    
+.detail-btn{padding-top: 20px;}    
+.buttonm{background: none repeat scroll 0 0 #2c984b;
+    color: #fff;
+    font-family: robotoBold;
+    font-size: 22px;
+    padding: 5px 50px 5px;}
+.buttonm:hover{text-decoration:underline !important;color:White !important;}    
+ .detail-images{position:relative; clear:left; float:left;}  
+   .detail-img{ position:relative;width:365px;} 
+  .img-detail{width:365px;height:245px;position: relative;}  
+.product-nav{position:relative;display:block;width:375px;overflow:hidden; clear:left; float:left; margin-top:10px;}
+.product-nav > li{list-style:none; position:relative;float:left;top:0;padding:0;margin-left:-28px;;background: none;width: auto;height: auto;}
+.product-nav > .right{float:right;margin-right:18px;}
+.product-nav > li > a{display:block;text-transform:uppercase;letter-spacing:0.1em;line-height:21px;text-decoration:none;padding:0 0 0 14px; background-image:url(http://statics.kay.com.vn/kay_v2/images/product-nav.gif); background-repeat:no-repeat;}
+.product-nav > li > a:hover{text-decoration:underline;}
+.product-nav > .zoom > a{background-position:0 6px;}
+.product-nav > .zoom.zoomed > a{background-position:0 -24px;}
+.product-nav > .fullscreen > a{background-position:0 -54px;padding:0 0 0 18px;}
+.product-nav > li.shareThis{ float:right;}
+.price-line {
+    border-top: 1px solid #ccc;
+    font-size: 0;
+    height: 0;
+    margin-top: 3px;
+    width: 100%;
+}
+
+
+
+    
+    
+    
+ 
+    
+    

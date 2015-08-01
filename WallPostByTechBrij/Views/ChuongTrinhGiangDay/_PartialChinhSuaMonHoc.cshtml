@@ -1,0 +1,70 @@
+﻿@model chuongtv01082015.library.chuong.MonHoc
+
+<div class="modal-content" id="EditMonHoc">
+    @using (Ajax.BeginForm(
+                            "CreateChuongTrinhGiangDay",
+                            "ChuongTrinhGiangDay",
+                            new AjaxOptions
+                                {
+                                    InsertionMode = InsertionMode.Replace,
+                                    HttpMethod = "POST",
+                                    UpdateTargetId = "CreateMonHoc"
+                                },
+                            new { id = "frmCreateMonHoc" }))
+    {
+
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(model => Model.MonHocGuid)
+        @Html.HiddenFor(model => Model.GiangVienGuid)
+
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <i class="fa fa-laptop modal-icon"></i>
+            <h4 class="modal-title">Môn giảng dạy</h4>
+            <small class="font-bold">cài đặt chương trình giảng dạy cho môn học mà quý thầy cô phụ trách</small>
+        </div>
+        <div class="modal-body">
+            <div id="result"></div>
+
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">
+                        Tên môn
+                    </label>
+                    <div class="col-sm-6">
+                        @Html.EditorFor(model => Model.MonHocName)
+                    </div>
+                    <div class="col-sm-10">@Html.ValidationMessageFor(model => model.MonHocName, "", new { @class = "lbl-valid" })</div>
+                </div>
+            </div>
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">
+                        Môn học ID
+                    </label>
+                    <div class="col-sm-10">
+                        @Html.EditorFor(model => Model.MonHocID)
+                    </div>
+                </div>
+            </div>
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">
+                        Buổi giảng dạy
+                    </label>
+                    <div class="col-sm-10">
+                        @Html.TextBoxFor(model => Model.SoBuoiGiangDay, new { @class = "form-control" })
+                    </div>
+                </div>
+            </div>
+            @*</form>*@
+
+
+        </div>
+        <div class="modal-footer">
+            <button id="buttonSaveLienHe" class="btn btn-primary btn-sm" type="submit"><i class="fa fa-floppy-o"></i> Save</button>
+            hoặc
+            <a>Quay lại</a>
+        </div>
+    }
+</div>

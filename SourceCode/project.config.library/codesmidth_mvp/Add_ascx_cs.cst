@@ -1,0 +1,431 @@
+﻿<%-- 
+Name:  			C# code behind quan ly danh sach (UserControl)
+Author: 		To Van Chuong
+Description: 	code xu ly quan ly danh sach tu table
+Last Modified:	24-02-2014
+
+--%>
+
+<%@ CodeTemplate Language="C#" TargetLanguage="C#" Src="" Inherits="CodeSmith.BaseTemplates.SqlCodeTemplate" Debug="False" Description="code xu ly quan ly danh sach tu table" %>
+
+<%-- Optional Properties --%>
+<%@ Property Name="SourceTable" Type="SchemaExplorer.TableSchema" Category="Context" Description="Table that the object is based on." %>
+<%@ Property Name="Inherits" Type="System.String" Default="project.web.Controls" Category="Context" Description="Duong dan va luu file" %>
+
+<%@ Property Name="Author" Type="System.String" Default="To Van Chuong" Category="Style" Description="Author" %>
+
+<%@ Property Name="NameSpaceProject" Type="System.String" Default="project.library" Category="Style" Description="The Namespace of project" %>
+<%@ Property Name="TablePrefix" Type="System.String" Default="tbl_" Category="Style" Description="Table Prfix" %>
+<%@ Property Name="RemoveEndingS" Type="System.Boolean" Default="true" Category="Style" Description="If table name ends in s, class name will not if this is set to true." %>
+
+<%@ Property Name="GenerateWebControls" Type="System.Boolean" Default="True" Optional="False" Category="Optional" Description="neu set true thi asp.net control se duoc tao." %>
+
+<%@ Assembly Name="CodeSmith.BaseTemplates" %>
+<%@ Assembly Name="System.Data" %>
+<%@ Assembly Name="SchemaExplorer" %>
+<%@ Import Namespace="SchemaExplorer" %>
+<%@ Import Namespace="System.Data" %>
+<%@ Import Namespace="CodeSmith.BaseTemplates" %>
+//Author:					<%= Author %>
+//Created:				    <%= DateTime.Now.Year.ToString() %>-<%= DateTime.Now.Month.ToString() %>-<%= DateTime.Now.Day.ToString() %>
+//Last Modified:			<%= DateTime.Now.Year.ToString() %>-<%= DateTime.Now.Month.ToString() %>-<%= DateTime.Now.Day.ToString() %>
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+using <%= NameSpaceProject %>.Models;
+using <%= NameSpaceProject %>.Views;
+using project.config.library.Utilities;
+using nvn.Library.Patterns;
+using nvn.Library.Utility;
+<% if (SourceTable.PrimaryKey == null) throw new ApplicationException("chua chon bang vao SourceTable."); %>
+<% ColumnSchema primaryKey = SourceTable.PrimaryKey.MemberColumns[0]; %>
+namespace <%= Inherits %>
+{
+    public partial class Add<% =GetClassName() %>Control : System.Web.UI.UserControl, IAdd<% =GetClassName() %>View
+    {
+        #region Su kien dung de goi qua control khac
+        public event EventHandler<TowParameterEventAgrs<string, Guid>> CallHandler;
+        protected void OnCallHandler(string TacVu, Guid ValueGuid)
+        {
+            if (CallHandler != null)
+            {
+                CallHandler(this, new TowParameterEventAgrs<string, Guid>(TacVu, ValueGuid));
+            }
+        }
+        #endregion
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+                OnFristLoadEventHandler();
+        }
+
+        protected override void OnInit(EventArgs e)
+        {
+            base.OnInit(e);
+            this.InitView();
+            ButtonSave.Click += new EventHandler(ButtonSave_Click);
+            ButtonExit.Click += new EventHandler(ButtonExit_Click);
+            ButtonReset.Click += new EventHandler(ButtonReset_Click);
+        }
+
+        #region Load du lieu lan dau tien
+        private void KhoiTaoGiaTriBanDau()
+        {
+        }
+        public void LoadData(string TacVu, object Value)
+        {
+            ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "Show", Popup.OpenPopup("ts-popup"), false);
+            ButtonReset.Visible = false;
+            if (TacVu.Equals(ConstantVariable.TACVU_EDIT))
+            {
+                OnLoadData_Event(ConstantVariable.TACVU_EDIT, new Guid(Value.ToString()));
+                UpdatePanelPopupAdd<% =GetClassName() %>_on.Update();
+                return;
+            }
+
+            if (TacVu.Equals(ConstantVariable.TACVU_ADD))
+            {
+                ButtonReset.Visible = true;
+                OnLoadData_Event(ConstantVariable.TACVU_ADD, Guid.Empty);
+                UpdatePanelPopupAdd<% =GetClassName() %>_on.Update();
+                return;
+            }
+        }
+        #endregion
+
+        #region All event
+        void ButtonExit_Click(object sender, EventArgs e)
+        {
+            ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "Show", Popup.ExitPopup("ts-popup"), false);
+            UpdatePanelPopupAdd<% =GetClassName() %>_on.Update();
+            OnCallHandler(ConstantVariable.TACVU_REFRESH, Guid.Empty);
+        }
+        
+        void ButtonReset_Click(object sender, EventArgs e)
+        {
+            OnLoadData_Event(ConstantVariable.TACVU_ADD, Guid.Empty);
+            UpdatePanelPopupAdd<% =GetClassName() %>_on.Update();
+            return;
+        }
+        
+        void ButtonSave_Click(object sender, EventArgs e)
+        {
+            <% =GetClassName() %> item = new <% =GetClassName() %>();
+
+            //Truyen du lieu vao
+            try
+            {
+                item.<%= SourceTable.PrimaryKey.MemberColumns[0].Name %> = new Guid(Literal<%= SourceTable.PrimaryKey.MemberColumns[0].Name %>.Text);
+            }
+            catch (Exception)
+            {
+                item.<%= SourceTable.PrimaryKey.MemberColumns[0].Name %> = Guid.Empty;
+            }
+
+            <%= Save_GetConversionbByType(SourceTable.Columns[1])%>
+         
+            OnSave_Event(item);
+          
+            UpdatePanelPopupAdd<% =GetClassName() %>_on.Update();
+        }
+        #endregion
+
+        #region Emplement
+        //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>property<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+       public string ErrorMessage
+        {
+            set
+            {
+                if (value != null)
+                    ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "Error", ShowMessage.Error( value), false);
+            }
+        }
+        public string SuccessMessage
+        {
+            set
+            {
+                if (value != null)
+                    ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "Success", ShowMessage.Success(value), false);
+            }
+        }
+
+        public string WaningMessage
+        {
+            set
+            {
+                if (value != null)
+                    ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "Waning", ShowMessage.Waning(value), false);
+            }
+        }
+        public <% =GetClassName() %> item<% =GetClassName() %>
+        {
+            set
+            {
+                Literal<%= SourceTable.PrimaryKey.MemberColumns[0].Name %>.Text = value.<%= SourceTable.PrimaryKey.MemberColumns[0].Name %>.ToString();
+                TextBox<%= SourceTable.Columns[1].Name %>.Text =<%= View_GetConversionbByType(SourceTable.Columns[1]) %>;
+            }
+        }
+        //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Event<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+        public event EventHandler<EventArgs> FristLoadEventHandler;
+        private void OnFristLoadEventHandler()
+        {
+            if (FristLoadEventHandler != null)
+                FristLoadEventHandler(this, new EventArgs());
+        }
+
+        public event EventHandler<TowParameterEventAgrs<string, Guid>> LoadData_Event;
+        private void OnLoadData_Event(string valueString, Guid valueGuid)
+        {
+            if (LoadData_Event != null)
+                LoadData_Event(this, new TowParameterEventAgrs<string, Guid>(valueString, valueGuid));
+        }
+
+        public event EventHandler<OneParameterEventAgrs< <% =GetClassName() %>>> Save_Event;
+        private void OnSave_Event(<% =GetClassName() %> parameterValue)
+        {
+            if (Save_Event != null)
+                Save_Event(this, new OneParameterEventAgrs< <% =GetClassName() %>>(parameterValue));
+        }
+        #endregion
+    }
+}
+              
+<script runat="template">
+
+
+public string GetClassName()
+{
+	
+	if ((this.RemoveEndingS)
+		&&(SourceTable.Name.EndsWith("s"))
+		)
+	{
+		return RemovePrefix(SourceTable.Name.Substring(0,SourceTable.Name.Length -1));
+	}
+	else
+	{
+		return RemovePrefix(SourceTable.Name);
+	}
+}
+
+public string RemovePrefix(string TableName)
+{
+
+	return TableName.Replace(TablePrefix,"");
+}
+
+public string GetPrivateName(string ColumnName)
+{
+	
+
+	return ColumnName.Substring(0,1).ToLower() + ColumnName.Substring(1,ColumnName.Length -1);
+}
+
+public string GetParamName(String columnName)
+{
+	if(columnName == "ID")
+		return "id";
+	
+	string firstLetter = columnName.Substring(0,1).ToLower();
+	string Result = firstLetter + columnName.Remove(0,1);
+	
+	return Result;
+}
+
+public string GetDefaultValueString(ColumnSchema column)
+{
+	switch(column.DataType)
+	{	
+		case DbType.Guid: 
+			return " = Guid.Empty";
+		
+		case DbType.Int32 : 
+			return " = -1";
+		
+		case DbType.AnsiString :
+		case DbType.AnsiStringFixedLength :
+		case DbType.String :
+		case DbType.StringFixedLength :
+		
+			return " = string.Empty";
+		
+		default:
+		{
+			return string.Empty;
+		}
+		
+	}
+	
+	
+	
+
+}
+
+public bool IsComparible(ColumnSchema column)
+{
+	switch(GetSqlDbType(column))
+	{
+		case "Char" :
+		case "NChar" :
+		case "VarChar" :
+		case "NVarChar" :
+		case "Text" :
+		case "NText" :
+		case "Int" :
+		case "DateTime" :
+		return true;
+		
+		break;
+	
+		default:
+			return false;
+		
+	}
+	
+	
+	
+
+}
+/// <summary>
+/// ///////////
+/// </summary>
+/// <param name="column"></param>
+/// <returns></returns>
+public string View_GetConversionbByType(ColumnSchema column)
+{
+	if (column.Name.EndsWith("TypeCode")) return column.Name;
+	
+	switch (column.DataType)
+	{
+		case DbType.AnsiString: return "value."+column.Name+";";
+		case DbType.AnsiStringFixedLength: return "value."+column.Name+";";
+		case DbType.Boolean: return "value."+column.Name+".ToString();";
+		case DbType.Byte: return "value."+column.Name+".ToString();";
+		case DbType.Currency: return "value."+column.Name+".ToString();";
+		case DbType.Date: return "value."+column.Name+".ToString('dd/MM/yyyy');";
+		case DbType.DateTime: return "value."+column.Name+".ToString('dd/MM/yyyy');";
+		case DbType.Decimal: return "value."+column.Name+".ToString();";
+		case DbType.Double: return "value."+column.Name+".ToString();";
+		case DbType.Guid: return "value."+column.Name+".ToString();";
+		case DbType.Int16: return "value."+column.Name+".ToString();";
+		case DbType.Int32: return "value."+column.Name+".ToString();";
+		case DbType.Int64: return "value."+column.Name+".ToString();";
+		case DbType.SByte: return "value."+column.Name+".ToString();";
+		case DbType.Single: return "value."+column.Name+".ToString();";
+		case DbType.String: return "value."+column.Name+";";
+		case DbType.StringFixedLength: return "value."+column.Name+";";
+		
+		default:
+		{
+			return "__UNKNOWN__" + column.NativeType;
+		}
+	}
+}
+
+public string Save_GetConversionbByType(ColumnSchema column)
+{
+	if (column.Name.EndsWith("TypeCode")) return column.Name;
+	
+	switch (column.DataType)
+	{
+		case DbType.Boolean: return "try{item."+column.Name+" =Convert.ToBoolean(TextBox"+column.Name+".Text.Trim());}catch { }";
+		case DbType.Byte: return "try{item."+column.Name+" =Convert.ToByte(TextBox"+column.Name+".Text.Trim());}catch { }";
+		case DbType.Currency: return "value."+column.Name+".ToString();";
+		case DbType.Date: return "try{item."+column.Name+" =Convert.ToDate(TextBox"+column.Name+".Text.Trim());}catch { }";
+		case DbType.DateTime: return "try{item."+column.Name+" =Convert.ToDateTime(TextBox"+column.Name+".Text.Trim());}catch { }";
+		case DbType.Decimal: return "try{item."+column.Name+" =Convert.ToDecimal(TextBox"+column.Name+".Text.Trim());}catch { }";
+		case DbType.Double: return "try{item."+column.Name+" =Convert.ToDouble(TextBox"+column.Name+".Text.Trim());}catch { }";
+		case DbType.Guid: return "try{item."+column.Name+" =new Guid(TextBox"+column.Name+".Text.Trim());}catch { }";
+		case DbType.Int16: return "try{item."+column.Name+" =Convert.Int16(TextBox"+column.Name+".Text.Trim());}catch { }";
+		case DbType.Int32: return "try{item."+column.Name+" =Convert.ToInt32(TextBox"+column.Name+".Text.Trim());}catch { }";
+		case DbType.Int64: return "try{item."+column.Name+" =Convert.ToInt64(TextBox"+column.Name+".Text.Trim());}catch { }";
+        case DbType.SByte: return "value."+column.Name+".ToString();";
+		case DbType.Single: return "try{item."+column.Name+" =Convert.ToSingle(TextBox"+column.Name+".Text.Trim());}catch { }";
+		case DbType.String: return "item."+column.Name+" =TextBox"+column.Name+".Text.Trim();";
+		case DbType.StringFixedLength: return "item."+column.Name+" =TextBox"+column.Name+".Text.Trim();";
+		
+		default:
+		{
+			return "__UNKNOWN__" + column.NativeType;
+		}
+	}
+}
+
+
+public string GetReaderConversion(ColumnSchema column)
+{
+	if (column.Name.EndsWith("TypeCode")) return column.Name;
+	
+	switch (column.DataType)
+	{
+		case DbType.AnsiString: return "reader[\"" + column.Name + "\"].ToString();";
+		case DbType.AnsiStringFixedLength: return "reader[\"" + column.Name + "\"].ToString();";
+		case DbType.Binary: return "Byte[]";
+		case DbType.Boolean: return "Convert.ToBoolean(reader[\"" + column.Name + "\"]);";
+		case DbType.Byte: return "Convert.ToByte(reader[\"" + column.Name + "\"]);";
+		case DbType.Currency: return "Convert.ToDecimal(reader[\"" + column.Name + "\"]);";
+		case DbType.Date: return "Convert.ToDateTime(reader[\"" + column.Name + "\"]);";
+		case DbType.DateTime: return "Convert.ToDateTime(reader[\"" + column.Name + "\"]);";
+		case DbType.Decimal: return "Convert.ToDecimal(reader[\"" + column.Name + "\"]);";
+		case DbType.Double: return "Convert.ToDouble(reader[\"" + column.Name + "\"]);";
+		case DbType.Guid: return "new Guid(reader[\"" + column.Name + "\"].ToString());";
+		case DbType.Int16: return "Convert.ToInt16(reader[\"" + column.Name + "\"]);";
+		case DbType.Int32: return "Convert.ToInt32(reader[\"" + column.Name + "\"]);";
+		case DbType.Int64: return "Convert.ToInt64(reader[\"" + column.Name + "\"]);";
+		case DbType.SByte: return "Convert.ToSByte(reader[\"" + column.Name + "\"]);";
+		case DbType.Single: return "Convert.ToSingle(reader[\"" + column.Name + "\"]);";
+		case DbType.String: return "reader[\"" + column.Name + "\"].ToString();";
+		case DbType.StringFixedLength: return "reader[\"" + column.Name + "\"].ToString();";
+		
+		default:
+		{
+			return "__UNKNOWN__" + column.NativeType;
+		}
+	}
+}
+
+
+
+public string GetVBDataType(ColumnSchema column)
+{
+	if (column.Name.EndsWith("TypeCode")) return column.Name;
+	
+	switch (column.DataType)
+	{
+		case DbType.AnsiString: return "String";
+		case DbType.AnsiStringFixedLength: return "String";
+		case DbType.Binary: return "Byte()";
+		case DbType.Boolean: return "Boolean";
+		case DbType.Byte: return "Byte";
+		case DbType.Currency: return "Decimal";
+		case DbType.Date: return "DateTime";
+		case DbType.DateTime: return "DateTime";
+		case DbType.Decimal: return "Decimal";
+		case DbType.Double: return "Double";
+		case DbType.Guid: return "Guid";
+		case DbType.Int16: return "Short";
+		case DbType.Int32: return "Integer";
+		case DbType.Int64: return "Long";
+		case DbType.Object: return "Object";
+		case DbType.SByte: return "SByte";
+		case DbType.Single: return "Float";
+		case DbType.String: return "String";
+		case DbType.StringFixedLength: return "String";
+		case DbType.Time: return "TimeSpan";
+		case DbType.UInt16: return "UShort";
+		case DbType.UInt32: return "UInt";
+		case DbType.UInt64: return "ULong";
+		case DbType.VarNumeric: return "Decimal";
+		default:
+		{
+			return "__UNKNOWN__" + column.NativeType;
+		}
+	}
+}
+	
+</script>

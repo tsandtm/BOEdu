@@ -1,0 +1,62 @@
+﻿@using project.config.library.Utilities
+
+@model _project.library.Users
+
+<div class="modal-content">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h5 class="modal-title">Chỉnh sửa</h5>
+    </div>
+    @using (Ajax.BeginForm(
+            "Edit",
+            "Users",
+            new AjaxOptions
+        {
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "POST",
+            UpdateTargetId = "result"
+        }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(model => Model.UserId)
+        <div class="modal-body">
+            <div id="result"></div>
+            <div class="wrapper">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        @Html.LabelFor(model => Model.UserName, new { @class = "col-sm-2 control-label" })
+                        <div class="col-sm-4">
+                            @Html.TextBoxFor(model => Model.UserName, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => Model.UserName, "", new { @class = "lbl-valid" })
+
+                        </div>
+                        @Html.LabelFor(model => Model.FullName, new { @class = "col-sm-2 control-label" })
+                        <div class="col-sm-4">
+                            @Html.TextBoxFor(model => Model.FullName, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => Model.FullName, "", new { @class = "lbl-valid" })
+                        </div>
+                    </div>
+                </div>
+                @*row 2*@
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        @Html.LabelFor(model => Model.Password, new { @class = "col-sm-2 control-label" })
+                        <div class="col-sm-4">
+                            @Html.TextBoxFor(model => Model.Password, new { @class = "form-control" })
+                        </div>
+                        @Html.LabelFor(model => Model.Password, new { @class = "col-sm-2 control-label" })
+                        <div class="col-sm-4">
+                            @Html.TextBoxFor(model => Model.Password, new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="submit">Save</button>
+            hoặc
+            <a data-dismiss="modal" data-otf-method="get" data-target="#modalEditUser" data-otf-action="@Url.Action("LoadListUsers", "Users")?page=1" data-otf-target="#ListUsers" onclick="getView(this);">Quay lại</a>
+        </div>
+    }
+</div>
+

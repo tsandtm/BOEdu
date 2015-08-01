@@ -1,0 +1,192 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Massv" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="255" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="hovaten" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="255" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="lop" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="255" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="khoa" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="255" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="STT" type="xs:int" minOccurs="0" />
+                <xs:element name="ErrorContent" type="xs:string" minOccurs="0" />
+                <xs:element name="IsDongLoi" type="xs:boolean" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table>
+    <Massv>0911020296</Massv>
+    <hovaten>Nguyễn Văn B</hovaten>
+    <lop>09cth5</lop>
+    <khoa>Công Nghệ Thông Tin</khoa>
+    <STT>1</STT>
+    <ErrorContent />
+    <IsDongLoi>false</IsDongLoi>
+  </Table>
+  <Table>
+    <Massv>1215061025</Massv>
+    <hovaten>Nguyễn Thành Đại</hovaten>
+    <lop>12hthC5</lop>
+    <khoa>Công Nghệ Thông Tin</khoa>
+    <STT>2</STT>
+    <ErrorContent />
+    <IsDongLoi>false</IsDongLoi>
+  </Table>
+  <Table>
+    <Massv>0911020297</Massv>
+    <hovaten>Nguyễn Văn A</hovaten>
+    <lop>09cth5</lop>
+    <khoa>Công Nghệ Thông Tin</khoa>
+    <STT>3</STT>
+    <ErrorContent />
+    <IsDongLoi>false</IsDongLoi>
+  </Table>
+  <Table>
+    <Massv>0911020298</Massv>
+    <hovaten>Nguyễn Văn B</hovaten>
+    <lop>09cth5</lop>
+    <khoa>Công Nghệ Thông Tin</khoa>
+    <STT>4</STT>
+    <ErrorContent />
+    <IsDongLoi>false</IsDongLoi>
+  </Table>
+  <Table>
+    <Massv>1215061026</Massv>
+    <hovaten>Nguyễn Thành Đại</hovaten>
+    <lop>12hthC6</lop>
+    <khoa>Công Nghệ Thông Tin</khoa>
+    <STT>5</STT>
+    <ErrorContent />
+    <IsDongLoi>false</IsDongLoi>
+  </Table>
+  <Table>
+    <Massv>0911020299</Massv>
+    <hovaten>Nguyễn Văn A</hovaten>
+    <lop>09cth5</lop>
+    <khoa>Công Nghệ Thông Tin</khoa>
+    <STT>6</STT>
+    <ErrorContent />
+    <IsDongLoi>false</IsDongLoi>
+  </Table>
+  <Table>
+    <Massv>0911020300</Massv>
+    <hovaten>Nguyễn Văn B</hovaten>
+    <lop>09cth5</lop>
+    <khoa>Công Nghệ Thông Tin</khoa>
+    <STT>7</STT>
+    <ErrorContent />
+    <IsDongLoi>false</IsDongLoi>
+  </Table>
+  <Table>
+    <Massv>1215061027</Massv>
+    <hovaten>Nguyễn Thành Đại</hovaten>
+    <lop>12hthC7</lop>
+    <khoa>Công Nghệ Thông Tin</khoa>
+    <STT>8</STT>
+    <ErrorContent />
+    <IsDongLoi>false</IsDongLoi>
+  </Table>
+  <Table>
+    <Massv>0911020301</Massv>
+    <hovaten>Nguyễn Văn A</hovaten>
+    <lop>09cth5</lop>
+    <khoa>Công Nghệ Thông Tin</khoa>
+    <STT>9</STT>
+    <ErrorContent />
+    <IsDongLoi>false</IsDongLoi>
+  </Table>
+  <Table>
+    <Massv>0911020302</Massv>
+    <hovaten>Nguyễn Văn B</hovaten>
+    <lop>09cth5</lop>
+    <khoa>Công Nghệ Thông Tin</khoa>
+    <STT>10</STT>
+    <ErrorContent />
+    <IsDongLoi>false</IsDongLoi>
+  </Table>
+  <Table>
+    <Massv>1215061028</Massv>
+    <hovaten>Nguyễn Thành Đại</hovaten>
+    <lop>12hthC8</lop>
+    <khoa>Công Nghệ Thông Tin</khoa>
+    <STT>11</STT>
+    <ErrorContent />
+    <IsDongLoi>false</IsDongLoi>
+  </Table>
+  <Table>
+    <Massv>0911020303</Massv>
+    <hovaten>Nguyễn Văn A</hovaten>
+    <lop>09cth5</lop>
+    <khoa>Công Nghệ Thông Tin</khoa>
+    <STT>12</STT>
+    <ErrorContent />
+    <IsDongLoi>false</IsDongLoi>
+  </Table>
+  <Table>
+    <Massv>0911020304</Massv>
+    <hovaten>Nguyễn Văn B</hovaten>
+    <lop>09cth5</lop>
+    <khoa>Công Nghệ Thông Tin</khoa>
+    <STT>13</STT>
+    <ErrorContent />
+    <IsDongLoi>false</IsDongLoi>
+  </Table>
+  <Table>
+    <Massv>1215061029</Massv>
+    <hovaten>Nguyễn Thành Đại</hovaten>
+    <lop>12hthC9</lop>
+    <khoa>Công Nghệ Thông Tin</khoa>
+    <STT>14</STT>
+    <ErrorContent />
+    <IsDongLoi>false</IsDongLoi>
+  </Table>
+  <Table>
+    <Massv>0911020305</Massv>
+    <hovaten>Nguyễn Văn A</hovaten>
+    <lop>09cth5</lop>
+    <khoa>Công Nghệ Thông Tin</khoa>
+    <STT>15</STT>
+    <ErrorContent />
+    <IsDongLoi>false</IsDongLoi>
+  </Table>
+  <Table>
+    <Massv>0911020306</Massv>
+    <hovaten>Nguyễn Văn B</hovaten>
+    <lop>09cth5</lop>
+    <khoa>Công Nghệ Thông Tin</khoa>
+    <STT>16</STT>
+    <ErrorContent />
+    <IsDongLoi>false</IsDongLoi>
+  </Table>
+</NewDataSet>

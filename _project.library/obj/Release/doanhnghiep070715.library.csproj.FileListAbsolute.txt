@@ -1,0 +1,12 @@
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\doanhnghiep070715.library\bin\Release\doanhnghiep070715.library.dll
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\doanhnghiep070715.library\bin\Release\doanhnghiep070715.library.pdb
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\doanhnghiep070715.library\bin\Release\MvcPaging.dll
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\doanhnghiep070715.library\bin\Release\nvn.Library.dll
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\doanhnghiep070715.library\bin\Release\project.config.library.dll
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\doanhnghiep070715.library\bin\Release\MvcPaging.pdb
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\doanhnghiep070715.library\bin\Release\nvn.Library.pdb
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\doanhnghiep070715.library\bin\Release\project.config.library.pdb
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\doanhnghiep070715.library\obj\Release\doanhnghiep070715.library.csprojResolveAssemblyReference.cache
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\doanhnghiep070715.library\obj\Release\doanhnghiep070715.library.dll
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\doanhnghiep070715.library\obj\Release\doanhnghiep070715.library.pdb
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\doanhnghiep070715.library\bin\Release\EPPlus.dll

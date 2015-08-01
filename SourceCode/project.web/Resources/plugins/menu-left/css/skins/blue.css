@@ -1,0 +1,81 @@
+/*.blue .accordion{ border-top: 1px solid #013d6c; border-right: 1px solid #013d6c; border-left: 1px solid #013d6c;}
+.blue .accordion, .blue .accordion li {margin: 0; padding: 0; border: none;}
+.blue .accordion a {padding: 10px 10px 10px 15px; background: #0D5995; text-decoration:none; display: block; color: #fff; border-bottom: 1px solid #013d6c; border-top: 1px solid #4695d3;}
+.blue .accordion ul a {padding: 10px 10px 10px 25px;}
+.blue .accordion a.dcjq-parent, .blue .accordion a.dcjq-parent:hover {padding: 10px 10px 10px 15px;}
+.blue .accordion a.dcjq-parent.active {background: #0D5995 url(images/checkers.png) repeat 0 0;}
+.blue .accordion a:hover {background: #05477c;}
+.blue .accordion a:active{background: url("images/checkers.png") repeat scroll 0 0 #0d5995;}
+.blue .accordion .active {background: url("images/checkers.png") repeat scroll 0 0 #0d5995;}
+*/
+
+
+.blue .accordion {
+    border-top: 1px solid #19aa8d;
+    border-right: 1px solid #19aa8d;
+    border-left: 1px solid #19aa8d;
+}
+
+    .blue .accordion, .blue .accordion li {
+        margin: 0;
+        padding: 0;
+        border: none;
+        background: #2b2e33;
+    }
+
+        .blue .accordion a {
+            text-decoration: none;
+            display: block;
+        }
+
+            .blue .accordion a i {
+                margin-right: 6px;
+            }
+
+        .blue .accordion ul a {
+            padding: 10px 10px 10px 25px;
+        }
+
+            .blue .accordion ul a:hover, .blue .accordion ul a:focus {
+                background: none repeat scroll 0 0 #293846;
+            }
+
+        .blue .accordion a.dcjq-parent, .blue .accordion a.dcjq-parent:hover {
+        }
+
+            .blue .accordion a.dcjq-parent.active {
+                background: #18a689;
+                border-left: 4px solid #202226;
+            }
+
+        .blue .accordion a:hover, .blue .accordion a:focus {
+            background: #202226 !important;
+            color: #fff;
+        }
+
+        .blue .accordion a:active {
+            border-left: 4px solid #202226;
+            background: #293846;
+            color: #fff;
+        }
+
+        .blue .accordion .active {
+            border-left: 4px solid #18a689;
+            background: #18a689;
+            color: #fff;
+        }
+
+ul.nav-second-level > li > a {
+    border-left: 4px solid #18a689;
+    background: none repeat scroll 0 0 #202226;
+}
+
+    ul.nav-second-level > li > a.active {
+        border-left: 4px solid #18a689 !important;
+        background: #181a1d !important;
+    }
+
+body.mini-navbar .navbar-default .nav > li > a {
+    border: none !important;
+    background: none !important;
+}

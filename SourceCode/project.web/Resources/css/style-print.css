@@ -1,0 +1,80 @@
+﻿.page{background: none repeat scroll 0 0 white;display: block;font-family: Times New Roman;font-size: 12pt;
+    margin: 0 auto;padding: 0;width: 850px;}
+.row-full{display:table;clear:both;width:100%;margin:5px 0;}
+.col-1, .col-2{float: left;width: 425px;}
+.col-1-thongke{float: left;width: 550px;}
+.col-2-thongke{float: left;width: 300px;}
+.header-1{text-align: center;}
+.header-1 p{margin: 0;}
+.line-shape-1{border-bottom: 1px solid #000;margin: 0 auto;width: 130px;margin-top: 3px;}
+.line-shape-2{border-bottom: 1px solid #000;margin: 0 auto;width: 190px;margin-top: 3px;}
+.header-2{text-align: center;margin-top: 20px;}
+.header-2 .title-1{font-size: 16pt;font-weight: bold;margin: 5px;}
+.header-2 .title-2{font-size: 14pt;font-weight: bold;margin: 3px;}
+.header-2 .title-3{font-style: italic;margin: 10px;}
+.header-3, .header-4{margin-top: 10px;}
+.label-name{width: 35%;float: left;}
+.label-value{width: 65%;float: left;}
+.label-10{float: left;margin-right: 10px;text-align: right;width: 30px;}
+.label-mota{float: left;margin-left: 50%;}
+.label-tinchi{float: left;margin-right: 10px;text-align: right;width: 30px;}
+.label-chuyennganh{float: left;margin-left: 60px;}
+.label-chuyennganhchitiet{float: left;margin-left: 90px;}
+.label-demuc{float: left;margin-left: 20px;}
+.t-indent-30{text-indent: 30px;}
+.content{margin-top: 0px;}
+.table-mienmon{font-size: 11pt;}
+.table-mienmon table{border-collapse: collapse;border: 2px solid #000;}
+.table-mienmon table thead, .table-mienmon table thead tr, .table-mienmon table thead tr th
+{border-collapse: collapse;border: 1px solid #000;text-align: center;}
+.table-mienmon table thead{border-bottom: 2px solid #000;}
+.table-mienmon table tbody, .table-mienmon table tbody tr, .table-mienmon table tbody tr td
+{border-collapse: collapse;border-left: 1px solid #000;border-right: 1px solid #000;
+    border-top: 1px solid #bcbcbc;border-bottom: 1px solid #bcbcbc;}
+.table-mienmon table tr th, .table-mienmon table tr td
+{padding-left: 2px;padding-right: 2px;}
+.stt{width: 30px;}
+.mahocphan{width: 70px;}
+.tenhocphan{}
+.nhomtinchi{border: 1px solid #000 !important;}
+.sotinchi{width: 50px;}
+.mahptruoc{width: 70px;}
+.mientru{width: 50px;}
+.footer-signal{text-align: center;margin-top: 20px;margin-bottom: 150px;}
+.footer-signal p{margin: 0;}
+.footer-thongke{/*font-weight: bold;*/margin-top: 10px;}
+.notes{font-weight: normal;font-style: italic;}
+
+.t-bold{font-weight: bold;}
+.t-italic{font-style: italic;}
+.t-center{text-align: center;}
+.t-left{text-align: left;}
+.t-right{text-align: right;}
+.t-upper {text-transform: uppercase;}
+.t-lower {text-transform: lowercase;}
+.t-capitalize {text-transform: capitalize;}
+
+
+.level{}
+.level1{font-weight: bold;border-top: 1px solid #000 !important;}
+.level2{font-weight: bold;background: #ddd;}
+.level3{font-weight: bold;background: #ddd;font-style: italic;}
+.level4{font-weight: bold;font-style: italic;}
+.level5{}
+.level6{font-style: italic;}
+.level7{font-weight: bold;font-style: italic;text-decoration: underline;}
+
+
+@media print{
+    .page{margin: 0;box-shadow: 0;}
+}
+
+.lbl-cap-text {display:inline-block;}
+.lbl-cap-text:first-letter {text-transform: uppercase;}
+
+.t-tran-cap{text-transform: capitalize;}
+.t-tran-up{text-transform: uppercase;}
+.t-tran-low{text-transform: lowercase;}
+
+
+.space-sign {margin-bottom: 100px !important;}

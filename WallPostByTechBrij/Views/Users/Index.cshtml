@@ -1,0 +1,68 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            @*các thao tác*@
+            <div class="row p-b-10">
+                <div class="col-sm-5">
+                    <div class="input-group">
+                        <input id="txtKeySearch" placeholder="Thông tin cần tìm" onkeypress="return EnterEvent(event, 'txtKeySearch', 'btnSearch', 'ajaxSearchList')"
+                               class="form-control" />                       
+                        <span class="input-group-btn">
+                            <button id="btnSearch" type="submit" class="btn btn-sm btn-primary" data-otf-target="#ListResult" data-otf-action="@Url.Action("LoadListUsers", "Users", null, Request.Url.Scheme)" onclick="ajaxSearchList('txtKeySearch', 'btnSearch');">
+                                Tìm kiếm
+                            </button>
+                        </span>
+                    </div>
+
+                </div>
+                <div class="col-sm-1">
+                </div>
+                <div class="col-sm-3">
+                    <div class="pull-right">
+                        @Html.ActionLink("Thêm mới", "Create", "Users", new { @class = "btn btn-primary" })
+                        <button data-otf-mutil="true"
+                                data-otf-ajax="true"
+                                data-otf-confirm="Bạn có chắc chắn muôn xóa?"
+                                data-otf-target="#ListResult"
+                                data-otf-action-target="@Url.Action("LoadListUsers", "Users")?page=1"
+                                data-otf-action="@Url.Action("Delete", "Users", null, Request.Url.Scheme)?diugresu="
+                                class=" btn btn-white text-left text-danger"
+                                title="Xóa"
+                                onclick="deleteListItem(this)">
+                            <i class="fa fa-trash-o"></i> Xóa
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="ibox">
+                        <div class="ibox-content">
+                            <div class="mail-box" id="ListResult">
+                                @*Phai chuyen kieu moi truyen va duoc*@
+                                @Html.Partial("_PartialListUsers")
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@*Popup all control*@
+<div class="modal inmodal fade" id="modalCreateUser" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" id="CreateUser">
+        @Html.Partial("_PartialPopupCreateUser")
+    </div>
+</div>
+<div class="modal inmodal fade" id="modalEditUser" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" id="EditUser">
+        @Html.Partial("_PartialPopupEditUser")
+    </div>
+</div>

@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<div class="wrapper wrapper-content  animated fadeInRight">
+    <a id="thongtindanhsachmonhoc"
+       onclick="GetTabDanhSachMonHoc(this);"
+       data-otf-target="#danhsachmonhoc"
+       data-otf-action="@Url.Action("LoadDanhSachMon", "ChuongTrinhGiangDay")">Tài liệu bài giảng</a>
+
+    <button type="button"
+            class="btn btn-primary"
+            data-toggle="modal"
+            data-target="#modalCreateMon">
+        Thêm
+    </button>
+
+    <div class="row">
+        <div class="col-lg-4" id="danhsachmonhoc">
+
+        </div>
+    </div>
+
+    <div class="modal inmodal fade" id="modalCreateMon" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            @Html.Partial("_PartialThemMoiMonGiangDay", new chuongtv01082015.library.chuong.MonHoc())
+        </div>
+    </div>
+
+    <div class="modal inmodal fade" id="modalEditMon" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            @Html.Partial("_PartialChinhSuaMonHoc", new chuongtv01082015.library.chuong.MonHoc())
+        </div>
+    </div>
+</div>

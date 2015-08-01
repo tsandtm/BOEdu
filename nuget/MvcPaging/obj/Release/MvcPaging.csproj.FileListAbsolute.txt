@@ -1,0 +1,9 @@
+D:\THANHDAI18HT\SVN\team_mvc\mvc_day2\nuget\MvcPaging\bin\Release\MvcPaging.dll
+D:\THANHDAI18HT\SVN\team_mvc\mvc_day2\nuget\MvcPaging\bin\Release\MvcPaging.pdb
+D:\THANHDAI18HT\SVN\team_mvc\mvc_day2\nuget\MvcPaging\obj\Release\MvcPaging.dll
+D:\THANHDAI18HT\SVN\team_mvc\mvc_day2\nuget\MvcPaging\obj\Release\MvcPaging.pdb
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\nuget\MvcPaging\bin\Release\MvcPaging.dll
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\nuget\MvcPaging\bin\Release\MvcPaging.pdb
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\nuget\MvcPaging\obj\Release\MvcPaging.csprojResolveAssemblyReference.cache
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\nuget\MvcPaging\obj\Release\MvcPaging.dll
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\nuget\MvcPaging\obj\Release\MvcPaging.pdb

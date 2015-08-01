@@ -1,0 +1,453 @@
+﻿body{font-size:13px; font-family: Tahoma;color:#192939;margin:0px;padding:0px;background:url(../img/bg_body.jpg) center 100px no-repeat #fff;}
+a{text-decoration:none !important;transition: all 0.5s ease 0s;}
+.clear{clear:both;}
+.f-left{float:left;}
+.f-right{float:right;}
+.ts-sort{ 
+   margin-right: 5px;
+margin-top: 5px;
+width: 400px;
+text-align: right;
+}
+/*padding marrign*/
+.l-padding-10{padding-left:10px;}
+.l-margin-10{margin-left:10px;}
+.t-margin-10{margin-top:10px;}
+.l-margin-30{margin-left:30px;}
+.a-right{text-align:right;}
+
+/*end padding*/
+
+
+/*font size*/
+.fs-24{font-size:24px !important;}
+.fs-14{font-size:14px !important;}
+/*end font size*/
+
+
+/*Custom boottrap*/
+.navbar{border-radius:0 !important;}
+.panel{border-radius:0 !important;}
+.panel-heading{border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;}
+.panel-info{border-color:#cdcdcd !important;}
+label{font-weight:normal !important;display: block !important;}
+td label{font-weight:normal !important;display: inline-block !important;padding-left:5px;}
+.lux-step .text{font-weight:bold;}
+.form-control{border-radius:0 !important;}
+h1{margin:0px 0px 20px 0px !important;font-size: 25px !important;}
+.ts-fix-label{text-align: left !important;}
+/*Custom boottrap*/
+
+
+/*--------------header---------*/
+.main-content {
+    background: url("../img/bg2_body.gif") repeat scroll center center / cover rgba(0, 0, 0, 0);
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.ts-head {
+    background: url("../img/bg3_body.png") repeat-x scroll center 0 rgba(0, 0, 0, 0);
+    height: 100%;
+}
+.head-1 {
+    height: 300px;
+    padding: 0;
+    /*text-align: center;*/
+}
+.log-cart {
+    margin: 0 auto;
+    position: relative;
+    width: 980px;
+}
+.cart_header {
+    float: left;
+    height: 95px;
+    padding: 22px 0 0;
+    width: 300px;
+}
+.cart_header b {
+    color: #edd59d;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 14px;
+}
+.cart_header a {
+    color: #fff;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 14px;
+    text-decoration: none;
+}
+.cart_header a:hover {
+    text-decoration: underline !important;
+    color:#edd569;
+}
+.navigation2 {
+    float: right;
+padding: 26px 0 0;
+text-align: right;
+width: 200px;
+}
+.navigation2 a {
+    color: #fff;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 14px;
+    text-decoration: none;
+}
+.logo {
+    float: left;
+    height: 147px;
+    padding: 0;
+    vertical-align: top;
+}
+.group-menu {
+    float: right;
+}
+.ts-search {
+    color: White;
+    height: 47px;
+    padding: 0 0 5px 53px;
+    text-align: right;
+    vertical-align: middle;
+    width: 100%;
+}
+.ts-menu {
+    background-color: black;
+    opacity: 0.6;
+    width: 100%;
+}
+.ts-menu ul {
+    height: 55px;
+    list-style: outside none none;
+    margin-top: 35px;
+    padding-left: 0;
+}
+.ts-menu ul li {
+    float: left;
+}
+.ts-menu ul li a {
+    color: White;
+    cursor: pointer;
+    display: block;
+    font-family: Tahoma;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 18px;
+    padding: 19px 15px 18px;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: auto;
+}
+.ts-menu ul li a:hover {
+    color: #f6733a;
+}
+/*--------------end header---------*/
+
+/*----------body*/
+.main_table {
+    margin: 0 auto;
+    width: 980px;
+}
+.box_width_left {
+    float: left;
+    padding: 0 20px 0 0;
+    width: 249px;
+}
+.content_width_td {margin-bottom: 15px;
+    padding: 15px;
+    margin-left:250px;background: url(../img/wrapper_c.png) 0px 0px repeat;
+    width:730px;
+    display:table;
+    
+}
+
+
+
+/*------------------------mega menu----------*/
+.ts-mega-menu{background: url(../img/wrapper_c.png) 0px 0px repeat;}
+.ts-title{background-color: #264b84;
+    color: white;
+    font-size: 19px;
+    font-weight: bold;
+    line-height: 19px;
+    margin: 0;
+    opacity: 0.85;
+    padding: 25px 0 14px 24px;
+    text-align: left;
+    text-transform: uppercase;}
+/*------------------------end mega menu----------*/
+
+
+
+       
+/* Top level menu links style
+---------------------------------------*/
+#menu-v li, #menu-v a {zoom:1;} /* Hacks for IE6, IE7 */
+#menu-v, #menu-v ul
+{
+    list-style:none;
+    /* Main Menu Item widths */
+    position: relative;
+    display:block;
+    z-index:9;
+    padding-left: 25px;
+    text-align: left;
+}
+         
+#menu-v li
+{
+}
+#menu-v li a
+{
+    color: #0a2030;
+    display: block;
+    padding: 5px 0 7px;
+    text-decoration: none;
+    text-transform: uppercase;
+    /*overflow: auto; force hasLayout in IE7 */
+}
+#menu-v li a:hover{color: #f6733a;}
+#menu-v ul li a
+{
+}
+                
+#menu-v li a.arrow:hover
+{
+}
+        
+/*Sub level menu items
+---------------------------------------*/
+#menu-v li ul
+{
+    position: absolute;
+    width: 200px; /*Sub Menu Items width */
+    visibility:hidden;
+}
+        
+#menu-v a.arrow
+{
+}
+#menu-v li:hover, #menu-v li.onhover
+{
+    background-position:0 -62px;
+}
+#menu-v ul li
+{
+    background: rgba(255, 255, 255, 1);
+    background-image:none;
+}
+#menu-v ul li:hover, #menu-v ul li.onhover
+{
+    background: #FFF;
+    background-image:none;
+}
+        
+/* Holly Hack for IE \
+* html #menu-v  li
+{
+    float:left;
+    height: 1%;
+}
+* html #menu-v  li a
+{
+    height: 1%;
+}*/
+/* End */
+
+
+
+
+
+
+/*-------box ------------*/
+.cont_heading_table
+{
+    margin: 0px 0px 0px 0px;
+    background: url(../img/cont_heading_td.gif) 0px 0px repeat-x;
+}
+.cont_heading_td
+{
+    color: #0a2030;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.cont_heading_td
+{
+    height: 30px;
+    padding: 0px 8px 0px 8px;
+    vertical-align: top;
+    background: url(../img/cont_heading_td.gif) 0px 100% repeat-x;
+}
+.content_wrapper3_table
+{
+    margin: 9px 0px 3px 0px;
+    display:inline-block;
+}
+.content_wrapper3_table
+{
+    margin: 9px 0px 3px 0px;
+}
+
+.box-product
+{
+    height: 305px;
+    width: 167px;
+    float: left;
+    margin: 0 0 10px 0;
+    padding: 0 0 10px 0;
+}
+.box-product-span
+{
+    width: 10px;
+    height: 245px;
+    float: left;
+}
+.box-product .p-img
+{
+    display: table-cell;
+    height: 190px;
+    text-align: center;
+    vertical-align: middle;
+    width: 167px;
+    border: 3px solid #cdcdcd;
+}
+.box-product .p-name
+{
+    padding: 5px 0px 4px 0px;
+    height: 45px;
+    vertical-align: top;
+    text-align: center;
+    overflow:hidden;
+}
+.box-product .p-name a
+{
+    
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: normal;
+}
+.box-product .p-name a:hover
+{
+    color:#a3a3a3;
+}
+
+.box-product .p-price
+{
+    color: #192939;
+    font-size: 22px;
+    line-height: 22px;
+    padding: 0px 0px 10px 0px;
+    vertical-align: middle;
+    height: 28px;
+    text-align: center;
+}
+.bg_button2-act:hover						{background-color:#c8744d !important;}
+.bg_button22-act:hover					{background-color:#47545d !important;}
+.box-product .p-cart
+{
+    text-align: center;
+}
+.box-product .p-cart a
+{
+    font-family:Tahomal !important;
+    color:White !important;
+    font-size: 11px;
+    font-weight: bold;
+     white-space: nowrap;
+     padding: 5px 25px;
+}
+.box-product .lux-price {
+display: inline-block;
+zoom: 1;
+bottom: auto;
+color: green;
+display: inline-block;
+font-size: 179%;
+left: 50%;
+line-height: 25px;
+text-align: center;
+width: 167px;
+}
+.box-product .lux-price .lux-price-old {
+color: green;
+font-size: 50%;
+    padding: 0;
+}
+.box-product .lux-price .lux-price-new {
+color: red;
+font-family: "Roboto",sans-serif;
+font-size: 21px;
+    font-weight: bold;
+    padding: 0;
+}
+/*------- end box ------------*/
+
+/************ box login **************/
+.box-registry, .box-login
+{
+    float: left;
+    padding-top: 10px;
+    width: 345px;
+}
+.box-registry .boder, .box-login .boder
+{
+    border: 1px solid;
+    padding: 10px;
+     line-height: 30px;
+}
+.box-registry span, .box-login span
+{
+    padding-left:10px;
+    font-weight:bold;
+}
+
+
+/************ end box login **************/
+
+
+
+/* ************************************************************************************* */
+.footer 			{padding:0px 0px 0px 0px; border-top:1px solid #3a4b58;
+        			  margin: 0 auto;
+    position: relative;
+    width: 980px;} 
+.footer_td			{text-align:left;padding:24px 0px 20px 37px; width:600px;float:left;}
+.footer2_td			{float:right; text-align:right;padding:15px 16px 30px 24px;}
+.footer .footer2_td		{vertical-align:middle;}
+.footer		  	  {color:#3a4c58; font-size:13px; line-height:23px; font-weight:normal;  vertical-align:middle;}	
+.footer td 		  {color:#3a4c58; font-size:13px; line-height:23px; font-weight:normal;  vertical-align:middle;}			
+.footer a 		  {color:#3a4c58; font-size:13px; line-height:23px; font-weight:normal;  text-decoration:none;} 			
+.footer a:hover   {color:#3a4c58;text-decoration:underline;}
+	
+.footer span 	  		{color:#3a4c58; font-size:13px; font-weight:normal; margin-left:-16px; display:block; margin-bottom:0px; margin-left:-5px}
+
+.footer b				{color:#3a4c58; font-size:13px; font-weight:normal;  text-decoration:none;}
+.footer b a 	  		{color:#3a4c58; font-size:13px; font-weight:normal;  text-decoration:none;}			
+.footer b a:hover 		{color:#3a4c58; text-decoration:underline;}
+/* ************************************************************************************* */
+
+
+/* *******************begin BreadCrumbs *************/
+.breadcrumbs {
+	margin: 0 0 8px;
+    overflow: hidden;
+    padding: 8px;
+}
+.breadcrumbs ul{list-style:none;padding:0;margin:0;}
+.breadcrumbs li { float:left; display:table;}
+.breadcrumbs li a {text-decoration:none; font-weight:bold;  }
+.breadcrumbs li a:hover {}
+.breadcrumbs li span {	display:inline-block;	margin:0 8px 0 6px;}
+.breadcrumbs li strong {font-weight:normal; }
+/* *******************end BreadCrumbs *************/
+
+
+

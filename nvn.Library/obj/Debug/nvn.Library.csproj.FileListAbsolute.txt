@@ -1,0 +1,103 @@
+D:\ProjectDangLam\ThuLaoGiangDay\nvn18082012\nvn.Library\bin\Debug\nvn.Library.dll
+D:\ProjectDangLam\ThuLaoGiangDay\nvn18082012\nvn.Library\bin\Debug\nvn.Library.pdb
+D:\ProjectDangLam\ThuLaoGiangDay\nvn18082012\nvn.Library\obj\Debug\ResolveAssemblyReference.cache
+D:\ProjectDangLam\ThuLaoGiangDay\nvn18082012\nvn.Library\obj\Debug\nvn.Library.dll
+D:\ProjectDangLam\ThuLaoGiangDay\nvn18082012\nvn.Library\obj\Debug\nvn.Library.pdb
+D:\My Private\CoreSettupProject\settup a web\nvn18082012\nvn.Library\bin\Debug\nvn.Library.dll
+D:\My Private\CoreSettupProject\settup a web\nvn18082012\nvn.Library\bin\Debug\nvn.Library.pdb
+D:\My Private\CoreSettupProject\settup a web\nvn18082012\nvn.Library\obj\Debug\ResolveAssemblyReference.cache
+D:\My Private\CoreSettupProject\settup a web\nvn18082012\nvn.Library\obj\Debug\nvn.Library.dll
+D:\My Private\CoreSettupProject\settup a web\nvn18082012\nvn.Library\obj\Debug\nvn.Library.pdb
+D:\My Private\OtherProcejct\Customer Service\SourceCodeCustommerService\nvn.Library\bin\Debug\nvn.Library.dll
+D:\My Private\OtherProcejct\Customer Service\SourceCodeCustommerService\nvn.Library\bin\Debug\nvn.Library.pdb
+D:\My Private\OtherProcejct\Customer Service\SourceCodeCustommerService\nvn.Library\obj\Debug\ResolveAssemblyReference.cache
+D:\My Private\OtherProcejct\Customer Service\SourceCodeCustommerService\nvn.Library\obj\Debug\nvn.Library.dll
+D:\My Private\OtherProcejct\Customer Service\SourceCodeCustommerService\nvn.Library\obj\Debug\nvn.Library.pdb
+D:\My Private\OtherProcejct\CustomerService_SVN\SourceCodeCustommerService\nvn.Library\bin\Debug\nvn.Library.dll
+D:\My Private\OtherProcejct\CustomerService_SVN\SourceCodeCustommerService\nvn.Library\bin\Debug\nvn.Library.pdb
+D:\My Private\OtherProcejct\CustomerService_SVN\SourceCodeCustommerService\nvn.Library\obj\Debug\ResolveAssemblyReference.cache
+D:\My Private\OtherProcejct\CustomerService_SVN\SourceCodeCustommerService\nvn.Library\obj\Debug\nvn.Library.dll
+D:\My Private\OtherProcejct\CustomerService_SVN\SourceCodeCustommerService\nvn.Library\obj\Debug\nvn.Library.pdb
+E:\Project\CustomerService_SVN\SourceCodeCustommerService\nvn.Library\bin\Debug\nvn.Library.dll
+E:\Project\CustomerService_SVN\SourceCodeCustommerService\nvn.Library\bin\Debug\nvn.Library.pdb
+E:\Project\CustomerService_SVN\SourceCodeCustommerService\nvn.Library\obj\Debug\ResolveAssemblyReference.cache
+E:\Project\CustomerService_SVN\SourceCodeCustommerService\nvn.Library\obj\Debug\nvn.Library.dll
+E:\Project\CustomerService_SVN\SourceCodeCustommerService\nvn.Library\obj\Debug\nvn.Library.pdb
+E:\Project\CustomerService_SVN\tsandtm-crm-22052013\SourceCodeCustommerService\nvn.Library\bin\Debug\nvn.Library.dll
+E:\Project\CustomerService_SVN\tsandtm-crm-22052013\SourceCodeCustommerService\nvn.Library\bin\Debug\nvn.Library.pdb
+E:\Project\CustomerService_SVN\tsandtm-crm-22052013\SourceCodeCustommerService\nvn.Library\obj\Debug\ResolveAssemblyReference.cache
+E:\Project\CustomerService_SVN\tsandtm-crm-22052013\SourceCodeCustommerService\nvn.Library\obj\Debug\nvn.Library.dll
+E:\Project\CustomerService_SVN\tsandtm-crm-22052013\SourceCodeCustommerService\nvn.Library\obj\Debug\nvn.Library.pdb
+D:\My Private\OtherProcejct\tsandtm-crm\SourceCodeCustommerService\nvn.Library\bin\Debug\nvn.Library.dll
+D:\My Private\OtherProcejct\tsandtm-crm\SourceCodeCustommerService\nvn.Library\bin\Debug\nvn.Library.pdb
+D:\My Private\OtherProcejct\tsandtm-crm\SourceCodeCustommerService\nvn.Library\obj\Debug\ResolveAssemblyReference.cache
+D:\My Private\OtherProcejct\tsandtm-crm\SourceCodeCustommerService\nvn.Library\obj\Debug\nvn.Library.dll
+D:\My Private\OtherProcejct\tsandtm-crm\SourceCodeCustommerService\nvn.Library\obj\Debug\nvn.Library.pdb
+D:\My Private\CoreSettupProject\CoreProject\nvn.Library\bin\Debug\nvn.Library.dll
+D:\My Private\CoreSettupProject\CoreProject\nvn.Library\bin\Debug\nvn.Library.pdb
+D:\My Private\CoreSettupProject\CoreProject\nvn.Library\obj\Debug\ResolveAssemblyReference.cache
+D:\My Private\CoreSettupProject\CoreProject\nvn.Library\obj\Debug\nvn.Library.dll
+D:\My Private\CoreSettupProject\CoreProject\nvn.Library\obj\Debug\nvn.Library.pdb
+D:\ProjectDangLam\hutech_internalsystem\SourceCode\nvn.Library\bin\Debug\nvn.Library.dll
+D:\ProjectDangLam\hutech_internalsystem\SourceCode\nvn.Library\bin\Debug\nvn.Library.pdb
+D:\ProjectDangLam\hutech_internalsystem\SourceCode\nvn.Library\obj\Debug\nvn.Library.dll
+D:\ProjectDangLam\hutech_internalsystem\SourceCode\nvn.Library\obj\Debug\nvn.Library.pdb
+D:\THANHDAI18HT\SVN\DoanhNghiep\SourceCode\nvn.Library\bin\Debug\nvn.Library.dll
+D:\THANHDAI18HT\SVN\DoanhNghiep\SourceCode\nvn.Library\bin\Debug\nvn.Library.pdb
+D:\THANHDAI18HT\SVN\DoanhNghiep\SourceCode\nvn.Library\obj\Debug\nvn.Library.dll
+D:\THANHDAI18HT\SVN\DoanhNghiep\SourceCode\nvn.Library\obj\Debug\nvn.Library.pdb
+D:\Project\OnProgress\hutech_internalsystem\SourceCodeo\nvn.Library\bin\Debug\nvn.Library.dll
+D:\Project\OnProgress\hutech_internalsystem\SourceCodeo\nvn.Library\bin\Debug\nvn.Library.pdb
+D:\Project\OnProgress\hutech_internalsystem\SourceCodeo\nvn.Library\obj\Debug\nvn.Library.dll
+D:\Project\OnProgress\hutech_internalsystem\SourceCodeo\nvn.Library\obj\Debug\nvn.Library.pdb
+E:\tsandtm_data\c_mvc\mvc_day2\nvn.Library\bin\Debug\nvn.Library.dll
+E:\tsandtm_data\c_mvc\mvc_day2\nvn.Library\bin\Debug\nvn.Library.pdb
+E:\tsandtm_data\c_mvc\mvc_day2\nvn.Library\obj\Debug\nvn.Library.dll
+E:\tsandtm_data\c_mvc\mvc_day2\nvn.Library\obj\Debug\nvn.Library.pdb
+D:\My Private\tsandtm_data\c_mvc\mvc_day2\nvn.Library\bin\Debug\nvn.Library.dll
+D:\My Private\tsandtm_data\c_mvc\mvc_day2\nvn.Library\bin\Debug\nvn.Library.pdb
+D:\My Private\tsandtm_data\c_mvc\mvc_day2\nvn.Library\obj\Debug\nvn.Library.dll
+D:\My Private\tsandtm_data\c_mvc\mvc_day2\nvn.Library\obj\Debug\nvn.Library.pdb
+E:\tsandtm_data\c_mvc\mvc_day2\nvn.Library\obj\Debug\nvn.Library.csprojResolveAssemblyReference.cache
+D:\ProjectDangLam\team_mvc\mvc_day2\nvn.Library\bin\Debug\nvn.Library.dll
+D:\ProjectDangLam\team_mvc\mvc_day2\nvn.Library\bin\Debug\nvn.Library.pdb
+D:\ProjectDangLam\team_mvc\mvc_day2\nvn.Library\obj\Debug\nvn.Library.dll
+D:\ProjectDangLam\team_mvc\mvc_day2\nvn.Library\obj\Debug\nvn.Library.pdb
+C:\Users\CTV0010291\Desktop\New folder\nvn.Library\bin\Debug\nvn.Library.dll
+C:\Users\CTV0010291\Desktop\New folder\nvn.Library\bin\Debug\nvn.Library.pdb
+C:\Users\CTV0010291\Desktop\New folder\nvn.Library\obj\Debug\nvn.Library.dll
+C:\Users\CTV0010291\Desktop\New folder\nvn.Library\obj\Debug\nvn.Library.pdb
+F:\svn_hutech\team_mvc\mvc_day2\nvn.Library\bin\Debug\nvn.Library.dll
+F:\svn_hutech\team_mvc\mvc_day2\nvn.Library\bin\Debug\nvn.Library.pdb
+F:\svn_hutech\team_mvc\mvc_day2\nvn.Library\obj\Debug\nvn.Library.csprojResolveAssemblyReference.cache
+F:\svn_hutech\team_mvc\mvc_day2\nvn.Library\obj\Debug\nvn.Library.dll
+F:\svn_hutech\team_mvc\mvc_day2\nvn.Library\obj\Debug\nvn.Library.pdb
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\nvn.Library\bin\Debug\nvn.Library.dll
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\nvn.Library\bin\Debug\nvn.Library.pdb
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\nvn.Library\obj\Debug\nvn.Library.dll
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\nvn.Library\obj\Debug\nvn.Library.pdb
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\nvn.Library\obj\Debug\nvn.Library.csprojResolveAssemblyReference.cache
+D:\SVN\Project\mvc_hutech_internalsystem\SourceCode\nvn.Library\bin\Debug\nvn.Library.dll
+D:\SVN\Project\mvc_hutech_internalsystem\SourceCode\nvn.Library\bin\Debug\nvn.Library.pdb
+D:\SVN\Project\mvc_hutech_internalsystem\SourceCode\nvn.Library\obj\Debug\nvn.Library.csprojResolveAssemblyReference.cache
+D:\SVN\Project\mvc_hutech_internalsystem\SourceCode\nvn.Library\obj\Debug\nvn.Library.dll
+D:\SVN\Project\mvc_hutech_internalsystem\SourceCode\nvn.Library\obj\Debug\nvn.Library.pdb
+E:\HoaDM\Dropbox\demo_Hackacademy\SourceCode\nvn.Library\bin\Debug\nvn.Library.dll
+E:\HoaDM\Dropbox\demo_Hackacademy\SourceCode\nvn.Library\bin\Debug\nvn.Library.pdb
+E:\HoaDM\Dropbox\demo_Hackacademy\SourceCode\nvn.Library\obj\Debug\nvn.Library.csprojResolveAssemblyReference.cache
+E:\HoaDM\Dropbox\demo_Hackacademy\SourceCode\nvn.Library\obj\Debug\nvn.Library.dll
+E:\HoaDM\Dropbox\demo_Hackacademy\SourceCode\nvn.Library\obj\Debug\nvn.Library.pdb
+G:\Drive\Dropbox\demo_Hackacademy\SourceCode\nvn.Library\bin\Debug\nvn.Library.dll
+G:\Drive\Dropbox\demo_Hackacademy\SourceCode\nvn.Library\bin\Debug\nvn.Library.pdb
+G:\Drive\Dropbox\demo_Hackacademy\SourceCode\nvn.Library\obj\Debug\nvn.Library.csprojResolveAssemblyReference.cache
+G:\Drive\Dropbox\demo_Hackacademy\SourceCode\nvn.Library\obj\Debug\nvn.Library.dll
+G:\Drive\Dropbox\demo_Hackacademy\SourceCode\nvn.Library\obj\Debug\nvn.Library.pdb
+G:\Drive\Dropbox\BOEdu\nvn.Library\bin\Debug\nvn.Library.dll
+G:\Drive\Dropbox\BOEdu\nvn.Library\bin\Debug\nvn.Library.pdb
+G:\Drive\Dropbox\BOEdu\nvn.Library\obj\Debug\nvn.Library.csprojResolveAssemblyReference.cache
+G:\Drive\Dropbox\BOEdu\nvn.Library\obj\Debug\nvn.Library.dll
+G:\Drive\Dropbox\BOEdu\nvn.Library\obj\Debug\nvn.Library.pdb
+D:\BOEdu\nvn.Library\bin\Debug\nvn.Library.dll
+D:\BOEdu\nvn.Library\bin\Debug\nvn.Library.pdb
+D:\BOEdu\nvn.Library\obj\Debug\nvn.Library.dll
+D:\BOEdu\nvn.Library\obj\Debug\nvn.Library.pdb

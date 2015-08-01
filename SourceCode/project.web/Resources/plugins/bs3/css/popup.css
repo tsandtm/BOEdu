@@ -1,0 +1,35 @@
+﻿/*---------Edit info about class------------*/
+#ContenPopup {/*border:solid 1px #000000;*/z-index:99999;display:none;background:#FFF;}
+#ContenPopup .log-content1{display: block;height: 30px;width: 290px;padding:10px;background-color:White;overflow-y: auto;}
+#ContenPopup .log-content{display: block;height: 200px;width: 365px;padding:10px;background-color:White;overflow-y: auto;border-left: 1px solid #ddd;}
+.PopupEditInfoAboutClass{width:700px;top: 15%;left: 54%; margin-left: -30%;margin-top:-100px;}
+.PopupEditPrice{width:450px;top: 30%;left: 64%; margin-left: -30%;margin-top:-100px;}
+.PopupEditSubject{width:400px;top: 30%;left: 64%; margin-left: -30%;margin-top:-100px;}
+.PopupCongTacKhac{width:400px;top: 50%;left: 64%; margin-left: -30%;margin-top:-100px;}
+.PopupEditKPositionTitle{width:400px;top: 30%;left: 60%; margin-left: -30%;margin-top:-100px;}
+.PopupTacVu{width:300px;top: 30%;left: 64%; margin-left: -30%;margin-top:-100px;}
+.PopupDetailDataPlan{width:600px;top: 15%;left: 54%; margin-left: -30%;margin-top:-100px;}
+.PopupOtherMoney{width:400px;top: 30%;left: 64%; margin-left: -30%;margin-top:-100px;}
+.PopupKPositionTitle{width:400px;top: 30%;left: 64%; margin-left: -30%;margin-top:-100px;}
+
+
+
+div#ts-popup-bg {position:absolute;top:0;bottom:0;left:0;right:0;z-index:99;background:#000;display:none;z-index:9999}              
+
+
+
+.ts-popup-content {float:left;padding:5px;}              
+              
+/*------------------popup tac vu------------*/
+#ts-popup{z-index:99999;display:none;background:#FFF;}
+.bigbox {width:500px; top: 15%;left: 54%; margin-left: -30%;margin-top:-100px;}
+.popupbox-530 {width:530px; top: 15%;left: 54%; margin-left: -30%;margin-top:-100px;}
+.contentbox {margin: 0;min-width: 300px;overflow: hidden;padding: 0;width: 300px;display: block;}
+.lightbox-boxhead {height:35px;line-height:35px;padding-left:10px;border-top:1px solid #ffffff;border-bottom: 1px solid #A8AAB4;color: #333;background-color: #d9d9d9;}
+.lightbox-boxhead .boxhead-content { color: #333;float: left;font-size: 14px;width: 100%;}
+.lightbox-boxhead .boxhead-content span {line-height:35px;font-weight: bold; font-size:16px;}
+.lightbox-boxbody {margin: 5px 0;padding: 5px 25px;}
+.lightbox-boxbody span{}
+.lightbox-boxfoot {height: 40px;padding: 5px 10px 5px 0;border-top: 1px dashed #A8AAB4;}
+
+              

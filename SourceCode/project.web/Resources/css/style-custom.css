@@ -1,0 +1,250 @@
+﻿
+.poupclosefix{bottom: 0;
+    position: fixed;
+    width: 929px;}
+
+/*margin*/
+.m-h-none{margin-top: 0;margin-bottom: 0;}
+.m-h-2{margin-top: 2px;margin-bottom: 2px;}
+.m-h-5{margin-top: 5px;margin-bottom: 5px;}
+.m-w-none{margin-left: 0 !important;margin-right: 0 !important;}
+.m-h-5{margin-top: 5px;margin-bottom: 5px;}
+.m-w-5{margin-left: 5px;margin-right: 5px;}
+.m-t-none{margin-top: 0px;}
+.m-r-none{margin-right: 0px !important;}
+.m-b-none{margin-bottom: 0px;}
+.m-l-none{margin-left: 0px !important;}
+.m-t-5{margin-top: 5px;}
+.m-r-5{margin-right: 5px;}
+.m-b-5{margin-bottom: 5px;}
+.m-l-5{margin-left: 5px;}
+.m-t-10{margin-top: 10px;}
+.m-r-10{margin-right: 10px;}
+.m-b-10{margin-bottom: 10px;}
+.m-l-10{margin-left: 10px;}
+.m-t-20{margin-top: 20px;}
+.m-r-20{margin-right: 20px;}
+.m-b-20{margin-bottom: 20px;}
+.m-l-20{margin-left: 20px;}
+
+/*padding*/
+.p-t-none{padding-top: 0 !important;}
+.p-r-none{padding-right: 0 !important;}
+.p-b-none{padding-bottom: 0 !important;}
+.p-l-none{padding-left: 0 !important;}
+.p-5{padding: 5px;}
+.p-w-5{padding-left: 5px !important;padding-right: 5px !important;}
+.p-t-5{padding-top: 5px;}
+.p-r-5{padding-right: 5px;}
+.p-b-5{padding-bottom: 5px;}
+.p-l-5{padding-left: 5px;}
+.p-t-10{padding-top: 10px;}
+.p-r-10{padding-right: 10px;}
+.p-b-10{padding-bottom: 10px;}
+.p-l-10{padding-left: 10px;}
+
+/*background*/
+.no-bg{background: none !important;}
+.bg-white{background: #fff;}
+
+/*width*/
+.w-full{width: 100%;}
+.w-50{width: 50px;}
+.w-100{width:100px !important;}
+.w-150{width:150px !important;}
+.w-200{width: 200px;}
+/*height*/
+.h-min-50{min-height: 50px;}
+.h-min-200{min-height: 200px;}
+.h-50{height: 50px;}
+
+/*border*/
+.b-none{border: none !important;}
+
+
+/*font*/
+.text-size-20{font-size: 20px;}
+
+/*text*/
+.text-italic{font-style: italic;}
+.text-bold{font-weight: bold;}
+.text-nodecoration{text-decoration: none;}
+.text-nodecoration:hover{text-decoration: none;}
+.text-left{text-align: left !important;}
+.text-right{text-align: right !important;}
+.text-upper {text-transform: uppercase;}
+.text-lower {text-transform: lowercase;}
+.text-capitalize {text-transform: capitalize;}
+
+/*button*/
+.btn-uploadfile{margin-right: 20px;}
+.btn-deletefile{margin-left: -3%;margin-top: -30%;}
+.btn-noline{border: medium none !important;font-size: 25px;}
+.btn-hrm{border: 1px solid #1eacae !important;box-shadow: 2px -2px 0 #1eacae;color: #1eacae;font-size: 13px;}
+.btn-cancel{color: #1872ab;cursor: pointer;font-weight: bold;text-decoration: none;}
+.btn-cancel:hover{color: #1c84c6;}
+.btn-add{padding-top: 6px;padding-bottom: 6px;background-color: #3e5c9a;color: #FFFFFF;}
+.btn-add:hover, .btn-add:focus{color: #fff;}
+.btn-reset{padding-top: 6px;padding-bottom: 6px;background-color: #f7a54a;color: #FFFFFF;}
+.btn-reset:hover, .btn-reset:focus{color: #fff;background:#f7a54a;}
+.btn-delete{padding-top: 6px;padding-bottom: 6px;background-color: #ed5565;color: #FFFFFF;}
+.btn-delete:hover, .btn-delete:focus{color: #fff;background:#ec4758;}
+.btn-excel{background-color: #1ab394;border-color: #1ab394;color: #ffffff;border-radius: 3px;padding: 8px 12px;cursor: pointer;display: inline-block;font-size: 14px;
+    font-weight: 400;line-height: 1.42857;margin-bottom: 0;text-align: center;vertical-align: middle;white-space: nowrap;text-decoration: none;}
+.btn-excel i::before{color: #fff !important;}
+.btn-excel:hover{background-color: #18a689;border-color: #18a689;color: #FFFFFF;text-decoration: none;}
+.btn-adderror i{color: #ea394c !important;}
+.btn-adderror:hover{text-decoration: none !important;color: #ed5565 !important;cursor: pointer;}
+.btn-convert{padding: 23px 12px !important;}
+.btn-more{padding-top: 6px;padding-bottom: 6px;background-color: #c2c2c2;color: #FFFFFF;}
+.btn-more:hover, .btn-more:focus{color: #fff;}
+.btn-print{padding-top: 6px;padding-bottom: 6px;background-color: #1ab394;color: #FFFFFF;}
+.btn-print:hover, .btn-add:focus{color: #fff;}
+
+/*style riêng*/
+.div-img-center{ display: block;margin-left: auto;margin-right: auto;padding: 0;text-align: center;}
+.div-img-center img {margin:0 auto;}
+img.avatar{width: 48px;}
+.hoadm-menu-fixed{top: 0;left: 0;bottom: 0;background: #2b2e33;width: 220px;}
+.lnk-user{text-decoration: none;}
+.lnk-user:hover{text-decoration: none;}
+span.chuongtvdiv{margin: 5px;}
+span.chuongtvdiv i{color: #000;}
+.hr-title{margin-bottom: 10px !important;margin-top: 5px !important;border-bottom: 1px solid #ddd !important;}
+.current{font-weight: bold;}
+.lbl-valid{color: Red;font-weight: normal !important;padding-left: 2px;}
+.div-logoCompany{}
+.img-logoCompany{min-height: 100px;padding: 5px;}
+.icon-lienhe{width: 20px;}
+.panel-popup{margin-bottom: 0 !important;}
+.ErrorRow{color: Red;}
+.error{color: Red;}
+
+/*style custom của bootstrap*/
+.box-title{border-bottom: 2px solid #1eacae;margin-bottom: 15px;}
+.logo-mini{width: 40px;}
+/*.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12{padding-left: 10px !important;padding-right: 10px !important;} del hoadm 01062015*/
+@media (max-width:768px){
+    .hide-sm{display: none;width: 0;height: 0;opacity: 0;visibility: collapse;}
+}
+@media (max-width:992px){
+    .hide-md{display: none;width: 0;height: 0;opacity: 0;visibility: collapse;}
+}
+.chosen-container{width: 100% !important;}
+.chosen-container .chosen-drop{width: 250px !important;}
+.nav.nav-tabs li.active{background: #fff;}
+.demoarea input[type="file"]{width: 100% !important;}
+.control-label{font-weight:normal!important;}
+
+
+/*tile cấu hình cơ bản*/
+.status{height: 130px;}
+.status .panel-heading{padding: 0 10px !important;}
+.status .panel-title{color: #fff;font-family: Arial,sans-serif;font-size: 80px;font-weight: bold;letter-spacing: -0.8px;line-height: 45px;padding-top: 20px;margin-top: 0;}
+.status .panel-body{color: #333;}
+/*end tile cấu hình cơ bản*/
+
+/*upload*/
+.img-fileupload{width: 50px;height: 40px;}
+.img-box{padding: 5px;}
+.block-img{display: inline;float: left;margin: 5px;height: 110px;width: 150px;border: 1px solid #e7eaec;}
+.block-img .none-bg{background-position: center center;border: 0 none;margin: 0 auto;outline: 0 none;padding: 0;}
+.block-img img{border: 0 none;margin: 0 auto;outline: 0 none;padding: 0;}
+.block-img:hover .title{display: block;}
+.block-img .title{bottom: 0px;color: #fff;display: none;font-size: 12px;font-weight: 700;left: 0px;padding-top: 10px;position: absolute;right: 0px;text-overflow: ellipsis;text-shadow: 0 0 3px rgba(0,0,0,.75);z-index: 3;}
+.block-img .div-title{font-size: 19px !important;cursor: auto;min-height: 19px;line-height: 18px;padding: 0 10px 5px;}
+.block-img .bg-title{bottom: 0;height: 100%;left: 0;position: absolute;right: 0;top: 0;width: 100%;z-index: -1;}
+.block-img .fancybox img{width: 150px;height: 110px;}
+/*end upload*/
+
+
+/*tootip cho textbox search*/
+#elementToHide{display: none;}
+.showtooltip:focus + #elementToHide{display: block;position: absolute;width: 200px;background: #fff;padding: 5px;
+    z-index: 15;top: 35px;border: 1px solid #f8ac59;-webkit-border-radius: 0 10px 0 10px;-moz-border-radius: 0 10px 0 10px;border-radius: 0 10px 0 10px;}
+/*end tootip cho textbox search*/
+
+/*editor*/
+.note-editable{border-left: 1px solid #e5e6e9;border-right: 1px solid #e5e6e9;}
+.h-editor-250 .note-editable{min-height: 250px !important;}
+/*end editor*/
+
+/*step to step*/
+.steps-box{display:block;}
+.steps-box .steps-bar{display: block;position: relative;width: 100%;}
+.steps-box ul{list-style: outside none none !important;margin: 0;padding: 0;}
+.steps-box ul li{width: 25%;float: left;display: block;padding: 0;}
+.steps-box .steps-bar .current a{background: #1ab394 none repeat scroll 0 0;color: #fff;cursor: default;border-radius: 5px;display: block;margin: 0 0.5em 0.5em;padding: 8px;text-decoration: none;width: auto;}
+.steps-box .steps-bar a{background: #eee none repeat scroll 0 0;color: #aaa;cursor: default;border-radius: 5px;display: block;margin: 0 0.5em 0.5em;padding: 8px;text-decoration: none;width: auto;}
+.steps-box .steps-content{border-radius: 5px;display: block;margin: 5px 5px 10px;min-height: 120px;overflow: hidden;position: relative;width: auto;}
+.steps-box .steps-content .error{padding: 5px 1.5%;}
+.steps-box .steps-content .steps-body{float: left;height: 95%;padding: 1.5%;width: 100%;}
+.steps-box .steps-action{display: block;position: relative;text-align: right;width: 100%; border-bottom: 1px dashed #cdcdcd;}
+.steps-box .steps-action ul{display: inline-block;text-align: right;list-style: outside none none !important;margin: 0;padding: 0;}
+.steps-box .steps-action ul li{margin: 0 0.5em;}
+.steps-box .steps-action ul disable a.disable{background: #eee none repeat scroll 0 0;color: #aaa;}
+.steps-box .steps-action ul a{background: #1ab394 none repeat scroll 0 0;border-radius: 5px;color: #fff;display: block;padding: 0.5em 1em;text-decoration: none;}
+.td-center tr td, .td-center tr th{text-align: center;}
+/*end step to step*/
+
+/*button edit list*/
+.showme{display: none;}
+.showhim td{height: 40px;vertical-align: middle;line-height: 25px !important;}
+.showhim:hover .showme{display: block;}
+.showhim:hover .hideme{display: none;}
+.showhim .showme a{margin-bottom: 0pc !important;}
+.current{font-weight: bold;}
+/*end button edit list*/
+
+.ghichu{color: #1c84c6;padding: 5px;font-style:italic;}
+tr.table-header{border-bottom: 2px solid;}
+tr.table-header td,.table-header th{font-weight: bold;}
+
+
+/*thông tin sinh viên*/
+.info-member{clear: both;position: relative !important;top: 5px !important;margin: 5px 0;}
+.info-member .center{width: 407px;padding: 10px 30px ;text-align:left;}
+.effect{position: relative;}
+.effect:before, .effect5:after{z-index: -1;position: absolute;content: "";bottom: 25px;left: 10px;width: 50%;top: 80%;max-width:300px;
+  background: #777;-webkit-box-shadow: 0 35px 20px #777;-moz-box-shadow: 0 35px 20px #777;box-shadow: 0 35px 20px #777;-webkit-transform: rotate(-8deg);
+  -moz-transform: rotate(-8deg);-o-transform: rotate(-8deg);-ms-transform: rotate(-8deg);transform: rotate(-8deg);}
+.effect:after{-webkit-transform: rotate(8deg);-moz-transform: rotate(8deg);-o-transform: rotate(8deg);-ms-transform: rotate(8deg);transform: rotate(8deg);right: 10px;left: auto;}
+/*end thông tin sinh viên*/
+
+
+/*xét miễn giảm*/
+.level{}
+.level1{font-weight: bold;}
+.level2{font-weight: bold;background: #ddd;}
+.level3{font-weight: bold;background: #ddd;font-style:italic;}
+.level4{font-weight: bold;font-style:italic;}
+.level5{}
+.level6{font-style:italic;}
+.level7{font-weight: bold;font-style:italic;text-decoration: underline;}
+.table-mienmon{}
+.table-mienmon .table > thead > tr > th, .table-mienmon .table > tbody > tr > th, .table-mienmon .table > tfoot > tr > th, 
+.table-mienmon .table > thead > tr > td, .table-mienmon .table > tbody > tr > td, .table-mienmon .table > tfoot > tr > td
+{padding: 3px 5px;vertical-align:middle;}
+.table-mienmon .input-sm, .form-group-sm .form-control{height: 25px;padding: 2px 5px;}
+.table-mienmon .label-header{background: #ddd;font-weight: bold;}
+.button-chuyenganh{margin-bottom: 5px;color: #1c84c6;background: #fff;border-color: #1c84c6;font-size: 12px;line-height: 1.5;padding: 5px 10px;cursor: pointer;transition: all 0.5s ease 0s;}
+.button-chuyenganh:hover{transition: all 0.5s ease 0s;background-color: #1a7bb9;border-color: #1a7bb9;color: #fff;}
+.button-chuyenganh-active{margin-bottom: 5px;background-color: #1c84c6;border-color: #1c84c6;color: #fff;font-size: 12px;line-height: 1.5;padding: 5px 10px;}
+.button-chuyenganh-active:hover{color: #fff;}
+.button-chuyensau{margin-bottom: 5px;color: #1ab394;border-radius: 50px;background: #fff;border-color: #1ab394;font-size: 12px;line-height: 1.5;padding: 5px 10px;}
+.button-chuyensau:hover{transition: all 0.5s ease 0s;background-color: #1ab394;border-color: #1ab394;color: #fff;}
+.button-chuyensau-active{margin-bottom: 5px;border-radius: 50px;background-color: #1ab394;border-color: #1ab394;color: #fff;font-size: 12px;line-height: 1.5;padding: 5px 10px;}
+.button-chuyensau-active:hover{color: #fff;}
+/*end xét miễn giảm*/
+
+/*show chương trình đào tạo*/
+
+thead.thead-center tr td, thead.thead-center tr th{vertical-align: middle; text-align: center;}
+.table-chuongtrinhdaotao{}
+.cssKhongTichLuy{font-style: italic;}
+.cssTichLuy{}
+/*end show chương trình đào tạo*/
+
+.t-tran-cap{text-transform: capitalize;}
+.t-tran-up{text-transform: uppercase;}
+.t-tran-low{text-transform: lowercase;}

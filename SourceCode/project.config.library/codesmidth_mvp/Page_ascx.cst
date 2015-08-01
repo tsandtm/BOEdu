@@ -1,0 +1,228 @@
+﻿<%-- 
+Name:  			C# giao dien quan ly danh sach (UserControl)
+Author: 		To Van Chuong
+Description: 	Tao mot giao dien quan ly danh sach tu table
+Last Modified:	24-02-2014
+
+--%>
+<%@ CodeTemplate Language="C#" TargetLanguage="Html" Src="" Inherits="CodeSmith.BaseTemplates.SqlCodeTemplate" Debug="False" Description="Template description here." %>
+<%@ Property Name="SourceTable" Type="SchemaExplorer.TableSchema" Category="Context" Description="Table that the object is based on." %>
+
+<%@ Property Name="Inherits" Type="System.String" Default="project.web" Category="Context" Description="Duong dan va luu file" %>
+<%@ Property Name="Author" Type="System.String" Default="To Van Chuong" Category="Style" Description="Author" %>
+
+<%@ Property Name="TablePrefix" Type="System.String" Default="tbl_" Category="Style" Description="Table Prfix" %>
+<%@ Property Name="RemoveEndingS" Type="System.Boolean" Default="true" Category="Style" Description="If table name ends in s, class name will not if this is set to true." %>
+
+<%@ Property Name="GenerateWebControls" Type="System.Boolean" Default="True" Optional="False" Category="Optional" Description="neu set true thi asp.net control se duoc tao." %>
+
+
+<%@ Assembly Name="CodeSmith.BaseTemplates" %>
+<%@ Assembly Name="System.Data" %>
+<%@ Assembly Name="SchemaExplorer" %>
+<%@ Import Namespace="SchemaExplorer" %>
+<%@ Import Namespace="System.Data" %>
+<%@ Import Namespace="CodeSmith.BaseTemplates" %>
+<%%--   
+Author:					<%= Author %>
+Created:				<%= DateTime.Now.Year.ToString() %>-<%= DateTime.Now.Month.ToString() %>-<%= DateTime.Now.Day.ToString() %>
+Last Modified:			<%= DateTime.Now.Year.ToString() %>-<%= DateTime.Now.Month.ToString() %>-<%= DateTime.Now.Day.ToString() %>
+ --%>
+<% if (SourceTable.PrimaryKey == null) throw new ApplicationException("chua chon bang vao SourceTable."); %>
+<% ColumnSchema primaryKey = SourceTable.PrimaryKey.MemberColumns[0]; %>
+
+
+<%%@ Page Title="" Language="C#" MasterPageFile="~/App_Masters/Website.Master" AutoEventWireup="true"
+    CodeBehind="Page<% =GetClassName() %>.aspx.cs" Inherits="<%= Inherits %>.Page<% =GetClassName() %>" %>
+
+<%%@ Register src="Add<% =GetClassName() %>Control.ascx" tagname="Add<% =GetClassName() %>Control" tagprefix="uc1" %>
+<%%@ Register src="List<% =GetClassName() %>Control.ascx" tagname="List<% =GetClassName() %>Control" tagprefix="uc2" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolderHead" runat="server">
+Quản lý <% =GetClassName() %>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderTitle" runat="server">
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolderBreadcrumb" runat="server">
+   <li class="active">Quản lý <% =GetClassName() %></li>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolderContent" runat="server">
+    <uc2:List<% =GetClassName() %>Control ID="List<% =GetClassName() %>Control1"  runat="server" />
+    <uc1:Add<% =GetClassName() %>Control ID="Add<% =GetClassName() %>Control1"  runat="server" />
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="ContentPlaceHolderFooter" runat="server">
+</asp:Content>
+<asp:Content ID="Content6" ContentPlaceHolderID="ContentPlaceHolderScript" runat="server">
+</asp:Content>
+
+
+         
+<script runat="template">
+
+
+public string GetClassName()
+{
+	
+	if ((this.RemoveEndingS)
+		&&(SourceTable.Name.EndsWith("s"))
+		)
+	{
+		return RemovePrefix(SourceTable.Name.Substring(0,SourceTable.Name.Length -1));
+	}
+	else
+	{
+		return RemovePrefix(SourceTable.Name);
+	}
+}
+
+public string RemovePrefix(string TableName)
+{
+
+	return TableName.Replace(TablePrefix,"");
+}
+
+public string GetPrivateName(string ColumnName)
+{
+	
+
+	return ColumnName.Substring(0,1).ToLower() + ColumnName.Substring(1,ColumnName.Length -1);
+}
+
+public string GetParamName(String columnName)
+{
+	if(columnName == "ID")
+		return "id";
+	
+	string firstLetter = columnName.Substring(0,1).ToLower();
+	string Result = firstLetter + columnName.Remove(0,1);
+	
+	return Result;
+}
+
+public string GetDefaultValueString(ColumnSchema column)
+{
+	switch(column.DataType)
+	{	
+		case DbType.Guid: 
+			return " = Guid.Empty";
+		
+		case DbType.Int32 : 
+			return " = -1";
+		
+		case DbType.AnsiString :
+		case DbType.AnsiStringFixedLength :
+		case DbType.String :
+		case DbType.StringFixedLength :
+		
+			return " = string.Empty";
+		
+		default:
+		{
+			return string.Empty;
+		}
+		
+	}
+	
+	
+	
+
+}
+
+public bool IsComparible(ColumnSchema column)
+{
+	switch(GetSqlDbType(column))
+	{
+		case "Char" :
+		case "NChar" :
+		case "VarChar" :
+		case "NVarChar" :
+		case "Text" :
+		case "NText" :
+		case "Int" :
+		case "DateTime" :
+		return true;
+		
+		break;
+	
+		default:
+			return false;
+		
+	}
+	
+	
+	
+
+}
+
+public string GetReaderConversion(ColumnSchema column)
+{
+	if (column.Name.EndsWith("TypeCode")) return column.Name;
+	
+	switch (column.DataType)
+	{
+		case DbType.AnsiString: return "reader[\"" + column.Name + "\"].ToString();";
+		case DbType.AnsiStringFixedLength: return "reader[\"" + column.Name + "\"].ToString();";
+		case DbType.Binary: return "Byte[]";
+		case DbType.Boolean: return "Convert.ToBoolean(reader[\"" + column.Name + "\"]);";
+		case DbType.Byte: return "Convert.ToByte(reader[\"" + column.Name + "\"]);";
+		case DbType.Currency: return "Convert.ToDecimal(reader[\"" + column.Name + "\"]);";
+		case DbType.Date: return "Convert.ToDateTime(reader[\"" + column.Name + "\"]);";
+		case DbType.DateTime: return "Convert.ToDateTime(reader[\"" + column.Name + "\"]);";
+		case DbType.Decimal: return "Convert.ToDecimal(reader[\"" + column.Name + "\"]);";
+		case DbType.Double: return "Convert.ToDouble(reader[\"" + column.Name + "\"]);";
+		case DbType.Guid: return "new Guid(reader[\"" + column.Name + "\"].ToString());";
+		case DbType.Int16: return "Convert.ToInt16(reader[\"" + column.Name + "\"]);";
+		case DbType.Int32: return "Convert.ToInt32(reader[\"" + column.Name + "\"]);";
+		case DbType.Int64: return "Convert.ToInt64(reader[\"" + column.Name + "\"]);";
+		case DbType.SByte: return "Convert.ToSByte(reader[\"" + column.Name + "\"]);";
+		case DbType.Single: return "Convert.ToSingle(reader[\"" + column.Name + "\"]);";
+		case DbType.String: return "reader[\"" + column.Name + "\"].ToString();";
+		case DbType.StringFixedLength: return "reader[\"" + column.Name + "\"].ToString();";
+		
+		default:
+		{
+			return "__UNKNOWN__" + column.NativeType;
+		}
+	}
+}
+
+
+
+public string GetVBDataType(ColumnSchema column)
+{
+	if (column.Name.EndsWith("TypeCode")) return column.Name;
+	
+	switch (column.DataType)
+	{
+		case DbType.AnsiString: return "String";
+		case DbType.AnsiStringFixedLength: return "String";
+		case DbType.Binary: return "Byte()";
+		case DbType.Boolean: return "Boolean";
+		case DbType.Byte: return "Byte";
+		case DbType.Currency: return "Decimal";
+		case DbType.Date: return "DateTime";
+		case DbType.DateTime: return "DateTime";
+		case DbType.Decimal: return "Decimal";
+		case DbType.Double: return "Double";
+		case DbType.Guid: return "Guid";
+		case DbType.Int16: return "Short";
+		case DbType.Int32: return "Integer";
+		case DbType.Int64: return "Long";
+		case DbType.Object: return "Object";
+		case DbType.SByte: return "SByte";
+		case DbType.Single: return "Float";
+		case DbType.String: return "String";
+		case DbType.StringFixedLength: return "String";
+		case DbType.Time: return "TimeSpan";
+		case DbType.UInt16: return "UShort";
+		case DbType.UInt32: return "UInt";
+		case DbType.UInt64: return "ULong";
+		case DbType.VarNumeric: return "Decimal";
+		default:
+		{
+			return "__UNKNOWN__" + column.NativeType;
+		}
+	}
+}
+	
+</script>

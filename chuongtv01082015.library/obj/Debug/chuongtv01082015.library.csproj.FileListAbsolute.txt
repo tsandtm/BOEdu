@@ -1,0 +1,14 @@
+D:\SVN\BOEdu\chuongtv01082015.library\obj\Debug\chuongtv01082015.library.csprojResolveAssemblyReference.cache
+D:\SVN\BOEdu\chuongtv01082015.library\bin\Debug\chuongtv01082015.library.dll
+D:\SVN\BOEdu\chuongtv01082015.library\bin\Debug\chuongtv01082015.library.pdb
+D:\SVN\BOEdu\chuongtv01082015.library\bin\Debug\project.config.library.dll
+D:\SVN\BOEdu\chuongtv01082015.library\bin\Debug\project.config.library.pdb
+D:\SVN\BOEdu\chuongtv01082015.library\obj\Debug\chuongtv01082015.library.dll
+D:\SVN\BOEdu\chuongtv01082015.library\obj\Debug\chuongtv01082015.library.pdb
+D:\BOEdu\chuongtv01082015.library\bin\Debug\chuongtv01082015.library.dll
+D:\BOEdu\chuongtv01082015.library\bin\Debug\chuongtv01082015.library.pdb
+D:\BOEdu\chuongtv01082015.library\bin\Debug\project.config.library.dll
+D:\BOEdu\chuongtv01082015.library\bin\Debug\project.config.library.pdb
+D:\BOEdu\chuongtv01082015.library\obj\Debug\chuongtv01082015.library.csprojResolveAssemblyReference.cache
+D:\BOEdu\chuongtv01082015.library\obj\Debug\chuongtv01082015.library.dll
+D:\BOEdu\chuongtv01082015.library\obj\Debug\chuongtv01082015.library.pdb

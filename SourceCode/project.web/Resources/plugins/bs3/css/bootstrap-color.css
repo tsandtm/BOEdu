@@ -1,0 +1,1576 @@
+﻿
+.ts-bg-detail {background-color: #b26541 !important;}
+.ts-bg-addcart {background-color: #2e363c !important;}
+.ts-fg-fortuan{color: #edd569 !important;}
+
+
+
+.ts-bg-black {
+  background-color: #000000 !important;
+}
+.ts-bg-white {
+  background-color: #ffffff !important;
+}
+.ts-bg-lime {
+  background-color: #a4c400 !important;
+}
+.ts-bg-green {
+  background-color: #60a917 !important;
+}
+.ts-bg-emerald {
+  background-color: #008a00 !important;
+}
+.ts-bg-teal {
+  background-color: #00aba9 !important;
+}
+.ts-bg-cyan {
+  background-color: #1ba1e2 !important;
+}
+.ts-bg-cobalt {
+  background-color: #0050ef !important;
+}
+.ts-bg-indigo {
+  background-color: #6a00ff !important;
+}
+.ts-bg-violet {
+  background-color: #aa00ff !important;
+}
+.ts-bg-pink {
+  background-color: #dc4fad !important;
+}
+.ts-bg-magenta {
+  background-color: #d80073 !important;
+}
+.ts-bg-crimson {
+  background-color: #a20025 !important;
+}
+.ts-bg-red {
+  background-color: #e51400 !important;
+}
+.ts-bg-orange {
+  background-color: #fa6800 !important;
+}
+.ts-bg-amber {
+  background-color: #f0a30a !important;
+}
+.ts-bg-yellow {
+  background-color: #e3c800 !important;
+}
+.ts-bg-brown {
+  background-color: #825a2c !important;
+}
+.ts-bg-olive {
+  background-color: #6d8764 !important;
+}
+.ts-bg-steel {
+  background-color: #647687 !important;
+}
+.ts-bg-mauve {
+  background-color: #76608a !important;
+}
+.ts-bg-taupe {
+  background-color: #87794e !important;
+}
+.ts-bg-gray {
+  background-color: #555555 !important;
+}
+.ts-bg-dark {
+  background-color: #333333 !important;
+}
+.ts-bg-darker {
+  background-color: #222222 !important;
+}
+.ts-bg-transparent {
+  background-color: transparent !important;
+}
+.ts-bg-darkBrown {
+  background-color: #63362f !important;
+}
+.ts-bg-darkCrimson {
+  background-color: #640024 !important;
+}
+.ts-bg-darkMagenta {
+  background-color: #81003c !important;
+}
+.ts-bg-darkIndigo {
+  background-color: #4b0096 !important;
+}
+.ts-bg-darkCyan {
+  background-color: #1b6eae !important;
+}
+.ts-bg-darkCobalt {
+  background-color: #00356a !important;
+}
+.ts-bg-darkTeal {
+  background-color: #004050 !important;
+}
+.ts-bg-darkEmerald {
+  background-color: #003e00 !important;
+}
+.ts-bg-darkGreen {
+  background-color: #128023 !important;
+}
+.ts-bg-darkOrange {
+  background-color: #bf5a15 !important;
+}
+.ts-bg-darkRed {
+  background-color: #9a1616 !important;
+}
+.ts-bg-darkPink {
+  background-color: #9a165a !important;
+}
+.ts-bg-darkViolet {
+  background-color: #57169a !important;
+}
+.ts-bg-darkBlue {
+  background-color: #16499a !important;
+}
+.ts-bg-lightBlue {
+  background-color: #4390df !important;
+}
+.ts-bg-lightRed {
+  background-color: #ff2d19 !important;
+}
+.ts-bg-lightGreen {
+  background-color: #7ad61d !important;
+}
+.ts-bg-lighterBlue {
+  background-color: #00ccff !important;
+}
+.ts-bg-lightTeal {
+  background-color: #45fffd !important;
+}
+.ts-bg-lightOlive {
+  background-color: #78aa1c !important;
+}
+.ts-bg-lightOrange {
+  background-color: #c29008 !important;
+}
+.ts-bg-lightPink {
+  background-color: #f472d0 !important;
+}
+.ts-bg-grayDark {
+  background-color: #333333 !important;
+}
+.ts-bg-grayDarker {
+  background-color: #222222 !important;
+}
+.ts-bg-grayLight {
+  background-color: #999999 !important;
+}
+.ts-bg-grayLighter {
+  background-color: #eeeeee !important;
+}
+.ts-bg-blue {
+  background-color: #00aff0 !important;
+}
+.ts-fg-black {
+  color: #000000 !important;
+}
+.ts-fg-white {
+  color: #ffffff !important;
+}
+.ts-fg-lime {
+  color: #a4c400 !important;
+}
+.ts-fg-green {
+  color: #60a917 !important;
+}
+.ts-fg-emerald {
+  color: #008a00 !important;
+}
+.ts-fg-teal {
+  color: #00aba9 !important;
+}
+.ts-fg-cyan {
+  color: #1ba1e2 !important;
+}
+.ts-fg-cobalt {
+  color: #0050ef !important;
+}
+.ts-fg-indigo {
+  color: #6a00ff !important;
+}
+.ts-fg-violet {
+  color: #aa00ff !important;
+}
+.ts-fg-pink {
+  color: #dc4fad !important;
+}
+.ts-fg-magenta {
+  color: #d80073 !important;
+}
+.ts-fg-crimson {
+  color: #a20025 !important;
+}
+.ts-fg-red {
+  color: #e51400 !important;
+}
+.ts-fg-orange {
+  color: #fa6800 !important;
+}
+.ts-fg-amber {
+  color: #f0a30a !important;
+}
+.ts-fg-yellow {
+  color: #e3c800 !important;
+}
+.ts-fg-brown {
+  color: #825a2c !important;
+}
+.ts-fg-olive {
+  color: #6d8764 !important;
+}
+.ts-fg-steel {
+  color: #647687 !important;
+}
+.ts-fg-mauve {
+  color: #76608a !important;
+}
+.ts-fg-taupe {
+  color: #87794e !important;
+}
+.ts-fg-gray {
+  color: #555555 !important;
+}
+.ts-fg-dark {
+  color: #333333 !important;
+}
+.ts-fg-darker {
+  color: #222222 !important;
+}
+.ts-fg-transparent {
+  color: transparent !important;
+}
+.ts-fg-darkBrown {
+  color: #63362f !important;
+}
+.ts-fg-darkCrimson {
+  color: #640024 !important;
+}
+.ts-fg-darkMagenta {
+  color: #81003c !important;
+}
+.ts-fg-darkIndigo {
+  color: #4b0096 !important;
+}
+.ts-fg-darkCyan {
+  color: #1b6eae !important;
+}
+.ts-fg-darkCobalt {
+  color: #00356a !important;
+}
+.ts-fg-darkTeal {
+  color: #004050 !important;
+}
+.ts-fg-darkEmerald {
+  color: #003e00 !important;
+}
+.ts-fg-darkGreen {
+  color: #128023 !important;
+}
+.ts-fg-darkOrange {
+  color: #bf5a15 !important;
+}
+.ts-fg-darkRed {
+  color: #9a1616 !important;
+}
+.ts-fg-darkPink {
+  color: #9a165a !important;
+}
+.ts-fg-darkViolet {
+  color: #57169a !important;
+}
+.ts-fg-darkBlue {
+  color: #16499a !important;
+}
+.ts-fg-lightBlue {
+  color: #4390df !important;
+}
+.ts-fg-lighterBlue {
+  color: #00ccff !important;
+}
+.ts-fg-lightTeal {
+  color: #45fffd !important;
+}
+.ts-fg-lightOlive {
+  color: #78aa1c !important;
+}
+.ts-fg-lightOrange {
+  color: #c29008 !important;
+}
+.ts-fg-lightPink {
+  color: #f472d0 !important;
+}
+.ts-fg-lightRed {
+  color: #ff2d19 !important;
+}
+.ts-fg-lightGreen {
+  color: #7ad61d !important;
+}
+.ts-fg-grayDark {
+  color: #333333 !important;
+}
+.ts-fg-grayDarker {
+  color: #222222 !important;
+}
+.ts-fg-grayLight {
+  color: #999999 !important;
+}
+.ts-fg-grayLighter {
+  color: #eeeeee !important;
+}
+.ts-fg-blue {
+  color: #00aff0 !important;
+}
+.ts-ol-black {
+  outline-color: #000000 !important;
+}
+.ts-ol-white {
+  outline-color: #ffffff !important;
+}
+.ts-ol-lime {
+  outline-color: #a4c400 !important;
+}
+.ts-ol-green {
+  outline-color: #60a917 !important;
+}
+.ts-ol-emerald {
+  outline-color: #008a00 !important;
+}
+.ts-ol-teal {
+  outline-color: #00aba9 !important;
+}
+.ts-ol-cyan {
+  outline-color: #1ba1e2 !important;
+}
+.ts-ol-cobalt {
+  outline-color: #0050ef !important;
+}
+.ts-ol-indigo {
+  outline-color: #6a00ff !important;
+}
+.ts-ol-violet {
+  outline-color: #aa00ff !important;
+}
+.ts-ol-pink {
+  outline-color: #dc4fad !important;
+}
+.ts-ol-magenta {
+  outline-color: #d80073 !important;
+}
+.ts-ol-crimson {
+  outline-color: #a20025 !important;
+}
+.ts-ol-red {
+  outline-color: #e51400 !important;
+}
+.ts-ol-orange {
+  outline-color: #fa6800 !important;
+}
+.ts-ol-amber {
+  outline-color: #f0a30a !important;
+}
+.ts-ol-yellow {
+  outline-color: #e3c800 !important;
+}
+.ts-ol-brown {
+  outline-color: #825a2c !important;
+}
+.ts-ol-olive {
+  outline-color: #6d8764 !important;
+}
+.ts-ol-steel {
+  outline-color: #647687 !important;
+}
+.ts-ol-mauve {
+  outline-color: #76608a !important;
+}
+.ts-ol-taupe {
+  outline-color: #87794e !important;
+}
+.ts-ol-gray {
+  outline-color: #555555 !important;
+}
+.ts-ol-dark {
+  outline-color: #333333 !important;
+}
+.ts-ol-darker {
+  outline-color: #222222 !important;
+}
+.ts-ol-transparent {
+  outline-color: transparent !important;
+}
+.ts-ol-darkBrown {
+  outline-color: #63362f !important;
+}
+.ts-ol-darkCrimson {
+  outline-color: #640024 !important;
+}
+.ts-ol-darkMagenta {
+  outline-color: #81003c !important;
+}
+.ts-ol-darkIndigo {
+  outline-color: #4b0096 !important;
+}
+.ts-ol-darkCyan {
+  outline-color: #1b6eae !important;
+}
+.ts-ol-darkCobalt {
+  outline-color: #00356a !important;
+}
+.ts-ol-darkTeal {
+  outline-color: #004050 !important;
+}
+.ts-ol-darkEmerald {
+  outline-color: #003e00 !important;
+}
+.ts-ol-darkGreen {
+  outline-color: #128023 !important;
+}
+.ts-ol-darkOrange {
+  outline-color: #bf5a15 !important;
+}
+.ts-ol-darkRed {
+  outline-color: #9a1616 !important;
+}
+.ts-ol-darkPink {
+  outline-color: #9a165a !important;
+}
+.ts-ol-darkViolet {
+  outline-color: #57169a !important;
+}
+.ts-ol-darkBlue {
+  outline-color: #16499a !important;
+}
+.ts-ol-lightBlue {
+  outline-color: #4390df !important;
+}
+.ts-ol-lighterBlue {
+  outline-color: #00ccff !important;
+}
+.ts-ol-lightTeal {
+  outline-color: #45fffd !important;
+}
+.ts-ol-lightOlive {
+  outline-color: #78aa1c !important;
+}
+.ts-ol-lightOrange {
+  outline-color: #c29008 !important;
+}
+.ts-ol-lightPink {
+  outline-color: #f472d0 !important;
+}
+.ts-ol-lightRed {
+  outline-color: #ff2d19 !important;
+}
+.ts-ol-lightGreen {
+  outline-color: #7ad61d !important;
+}
+.ts-ol-grayDark {
+  outline-color: #333333 !important;
+}
+.ts-ol-grayDarker {
+  outline-color: #222222 !important;
+}
+.ts-ol-grayLight {
+  outline-color: #999999 !important;
+}
+.ts-ol-grayLighter {
+  outline-color: #eeeeee !important;
+}
+.ts-ol-blue {
+  outline-color: #00aff0 !important;
+}
+.ts-bd-black {
+  border-color: #000000 !important;
+}
+.ts-bd-white {
+  border-color: #ffffff !important;
+}
+.ts-bd-lime {
+  border-color: #a4c400 !important;
+}
+.ts-bd-green {
+  border-color: #60a917 !important;
+}
+.ts-bd-emerald {
+  border-color: #008a00 !important;
+}
+.ts-bd-teal {
+  border-color: #00aba9 !important;
+}
+.ts-bd-cyan {
+  border-color: #1ba1e2 !important;
+}
+.ts-bd-cobalt {
+  border-color: #0050ef !important;
+}
+.ts-bd-indigo {
+  border-color: #6a00ff !important;
+}
+.ts-bd-violet {
+  border-color: #aa00ff !important;
+}
+.ts-bd-pink {
+  border-color: #dc4fad !important;
+}
+.ts-bd-magenta {
+  border-color: #d80073 !important;
+}
+.ts-bd-crimson {
+  border-color: #a20025 !important;
+}
+.ts-bd-red {
+  border-color: #e51400 !important;
+}
+.ts-bd-orange {
+  border-color: #fa6800 !important;
+}
+.ts-bd-amber {
+  border-color: #f0a30a !important;
+}
+.ts-bd-yellow {
+  border-color: #e3c800 !important;
+}
+.ts-bd-brown {
+  border-color: #825a2c !important;
+}
+.ts-bd-olive {
+  border-color: #6d8764 !important;
+}
+.ts-bd-steel {
+  border-color: #647687 !important;
+}
+.ts-bd-mauve {
+  border-color: #76608a !important;
+}
+.ts-bd-taupe {
+  border-color: #87794e !important;
+}
+.ts-bd-gray {
+  border-color: #555555 !important;
+}
+.ts-bd-dark {
+  border-color: #333333 !important;
+}
+.ts-bd-darker {
+  border-color: #222222 !important;
+}
+.ts-bd-transparent {
+  border-color: transparent !important;
+}
+.ts-bd-darkBrown {
+  border-color: #63362f !important;
+}
+.ts-bd-darkCrimson {
+  border-color: #640024 !important;
+}
+.ts-bd-darkMagenta {
+  border-color: #81003c !important;
+}
+.ts-bd-darkIndigo {
+  border-color: #4b0096 !important;
+}
+.ts-bd-darkCyan {
+  border-color: #1b6eae !important;
+}
+.ts-bd-darkCobalt {
+  border-color: #00356a !important;
+}
+.ts-bd-darkTeal {
+  border-color: #004050 !important;
+}
+.ts-bd-darkEmerald {
+  border-color: #003e00 !important;
+}
+.ts-bd-darkGreen {
+  border-color: #128023 !important;
+}
+.ts-bd-darkOrange {
+  border-color: #bf5a15 !important;
+}
+.ts-bd-darkRed {
+  border-color: #9a1616 !important;
+}
+.ts-bd-darkPink {
+  border-color: #9a165a !important;
+}
+.ts-bd-darkViolet {
+  border-color: #57169a !important;
+}
+.ts-bd-darkBlue {
+  border-color: #16499a !important;
+}
+.ts-bd-lightBlue {
+  border-color: #4390df !important;
+}
+.ts-bd-lightTeal {
+  border-color: #45fffd !important;
+}
+.ts-bd-lightOlive {
+  border-color: #78aa1c !important;
+}
+.ts-bd-lightOrange {
+  border-color: #c29008 !important;
+}
+.ts-bd-lightPink {
+  border-color: #f472d0 !important;
+}
+.ts-bd-lightRed {
+  border-color: #ff2d19 !important;
+}
+.ts-bd-lightGreen {
+  border-color: #7ad61d !important;
+}
+.ts-bd-grayDark {
+  border-color: #333333 !important;
+}
+.ts-bd-grayDarker {
+  border-color: #222222 !important;
+}
+.ts-bd-grayLight {
+  border-color: #999999 !important;
+}
+.ts-bd-grayLighter {
+  border-color: #eeeeee !important;
+}
+.ts-bd-blue {
+  border-color: #00aff0 !important;
+}
+.ts-bg-hover-black:hover {
+  background-color: #000000 !important;
+}
+.ts-bg-hover-white:hover {
+  background-color: #ffffff !important;
+}
+.ts-bg-hover-lime:hover {
+  background-color: #a4c400 !important;
+}
+.ts-bg-hover-green:hover {
+  background-color: #60a917 !important;
+}
+.ts-bg-hover-emerald:hover {
+  background-color: #008a00 !important;
+}
+.ts-bg-hover-teal:hover {
+  background-color: #00aba9 !important;
+}
+.ts-bg-hover-cyan:hover {
+  background-color: #1ba1e2 !important;
+}
+.ts-bg-hover-cobalt:hover {
+  background-color: #0050ef !important;
+}
+.ts-bg-hover-indigo:hover {
+  background-color: #6a00ff !important;
+}
+.ts-bg-hover-violet:hover {
+  background-color: #aa00ff !important;
+}
+.ts-bg-hover-pink:hover {
+  background-color: #dc4fad !important;
+}
+.ts-bg-hover-magenta:hover {
+  background-color: #d80073 !important;
+}
+.ts-bg-hover-crimson:hover {
+  background-color: #a20025 !important;
+}
+.ts-bg-hover-red:hover {
+  background-color: #e51400 !important;
+}
+.ts-bg-hover-orange:hover {
+  background-color: #fa6800 !important;
+}
+.ts-bg-hover-amber:hover {
+  background-color: #f0a30a !important;
+}
+.ts-bg-hover-yellow:hover {
+  background-color: #e3c800 !important;
+}
+.ts-bg-hover-brown:hover {
+  background-color: #825a2c !important;
+}
+.ts-bg-hover-olive:hover {
+  background-color: #6d8764 !important;
+}
+.ts-bg-hover-steel:hover {
+  background-color: #647687 !important;
+}
+.ts-bg-hover-mauve:hover {
+  background-color: #76608a !important;
+}
+.ts-bg-hover-taupe:hover {
+  background-color: #87794e !important;
+}
+.ts-bg-hover-gray:hover {
+  background-color: #555555 !important;
+}
+.ts-bg-hover-dark:hover {
+  background-color: #333333 !important;
+}
+.ts-bg-hover-darker:hover {
+  background-color: #222222 !important;
+}
+.ts-bg-hover-transparent:hover {
+  background-color: transparent !important;
+}
+.ts-bg-hover-darkBrown:hover {
+  background-color: #63362f !important;
+}
+.ts-bg-hover-darkCrimson:hover {
+  background-color: #640024 !important;
+}
+.ts-bg-hover-darkMagenta:hover {
+  background-color: #81003c !important;
+}
+.ts-bg-hover-darkIndigo:hover {
+  background-color: #4b0096 !important;
+}
+.ts-bg-hover-darkCyan:hover {
+  background-color: #1b6eae !important;
+}
+.ts-bg-hover-darkCobalt:hover {
+  background-color: #00356a !important;
+}
+.ts-bg-hover-darkTeal:hover {
+  background-color: #004050 !important;
+}
+.ts-bg-hover-darkEmerald:hover {
+  background-color: #003e00 !important;
+}
+.ts-bg-hover-darkGreen:hover {
+  background-color: #128023 !important;
+}
+.ts-bg-hover-darkOrange:hover {
+  background-color: #bf5a15 !important;
+}
+.ts-bg-hover-darkRed:hover {
+  background-color: #9a1616 !important;
+}
+.ts-bg-hover-darkPink:hover {
+  background-color: #9a165a !important;
+}
+.ts-bg-hover-darkViolet:hover {
+  background-color: #57169a !important;
+}
+.ts-bg-hover-darkBlue:hover {
+  background-color: #16499a !important;
+}
+.ts-bg-hover-lightBlue:hover {
+  background-color: #4390df !important;
+}
+.ts-bg-hover-lightTeal:hover {
+  background-color: #45fffd !important;
+}
+.ts-bg-hover-lightOlive:hover {
+  background-color: #78aa1c !important;
+}
+.ts-bg-hover-lightOrange:hover {
+  background-color: #c29008 !important;
+}
+.ts-bg-hover-lightPink:hover {
+  background-color: #f472d0 !important;
+}
+.ts-bg-hover-lightRed:hover {
+  background-color: #ff2d19 !important;
+}
+.ts-bg-hover-lightGreen:hover {
+  background-color: #7ad61d !important;
+}
+.ts-bg-hover-grayDark:hover {
+  background-color: #333333 !important;
+}
+.ts-bg-hover-grayDarker:hover {
+  background-color: #222222 !important;
+}
+.ts-bg-hover-grayLight:hover {
+  background-color: #999999 !important;
+}
+.ts-bg-hover-grayLighter:hover {
+  background-color: #eeeeee !important;
+}
+.ts-bg-hover-blue:hover {
+  background-color: #00aff0 !important;
+}
+.ts-fg-hover-black:hover {
+  color: #000000 !important;
+}
+.ts-fg-hover-white:hover {
+  color: #ffffff !important;
+}
+.ts-fg-hover-lime:hover {
+  color: #a4c400 !important;
+}
+.ts-fg-hover-green:hover {
+  color: #60a917 !important;
+}
+.ts-fg-hover-emerald:hover {
+  color: #008a00 !important;
+}
+.ts-fg-hover-teal:hover {
+  color: #00aba9 !important;
+}
+.ts-fg-hover-cyan:hover {
+  color: #1ba1e2 !important;
+}
+.ts-fg-hover-cobalt:hover {
+  color: #0050ef !important;
+}
+.ts-fg-hover-indigo:hover {
+  color: #6a00ff !important;
+}
+.ts-fg-hover-violet:hover {
+  color: #aa00ff !important;
+}
+.ts-fg-hover-pink:hover {
+  color: #dc4fad !important;
+}
+.ts-fg-hover-magenta:hover {
+  color: #d80073 !important;
+}
+.ts-fg-hover-crimson:hover {
+  color: #a20025 !important;
+}
+.ts-fg-hover-red:hover {
+  color: #e51400 !important;
+}
+.ts-fg-hover-orange:hover {
+  color: #fa6800 !important;
+}
+.ts-fg-hover-amber:hover {
+  color: #f0a30a !important;
+}
+.ts-fg-hover-yellow:hover {
+  color: #e3c800 !important;
+}
+.ts-fg-hover-brown:hover {
+  color: #825a2c !important;
+}
+.ts-fg-hover-olive:hover {
+  color: #6d8764 !important;
+}
+.ts-fg-hover-steel:hover {
+  color: #647687 !important;
+}
+.ts-fg-hover-mauve:hover {
+  color: #76608a !important;
+}
+.ts-fg-hover-taupe:hover {
+  color: #87794e !important;
+}
+.ts-fg-hover-gray:hover {
+  color: #555555 !important;
+}
+.ts-fg-hover-dark:hover {
+  color: #333333 !important;
+}
+.ts-fg-hover-darker:hover {
+  color: #222222 !important;
+}
+.ts-fg-hover-transparent:hover {
+  color: transparent !important;
+}
+.ts-fg-hover-darkBrown:hover {
+  color: #63362f !important;
+}
+.ts-fg-hover-darkCrimson:hover {
+  color: #640024 !important;
+}
+.ts-fg-hover-darkMagenta:hover {
+  color: #81003c !important;
+}
+.ts-fg-hover-darkIndigo:hover {
+  color: #4b0096 !important;
+}
+.ts-fg-hover-darkCyan:hover {
+  color: #1b6eae !important;
+}
+.ts-fg-hover-darkCobalt:hover {
+  color: #00356a !important;
+}
+.ts-fg-hover-darkTeal:hover {
+  color: #004050 !important;
+}
+.ts-fg-hover-darkEmerald:hover {
+  color: #003e00 !important;
+}
+.ts-fg-hover-darkGreen:hover {
+  color: #128023 !important;
+}
+.ts-fg-hover-darkOrange:hover {
+  color: #bf5a15 !important;
+}
+.ts-fg-hover-darkRed:hover {
+  color: #9a1616 !important;
+}
+.ts-fg-hover-darkPink:hover {
+  color: #9a165a !important;
+}
+.ts-fg-hover-darkViolet:hover {
+  color: #57169a !important;
+}
+.ts-fg-hover-darkBlue:hover {
+  color: #16499a !important;
+}
+.ts-fg-hover-lightBlue:hover {
+  color: #4390df !important;
+}
+.ts-fg-hover-lightTeal:hover {
+  color: #45fffd !important;
+}
+.ts-fg-hover-lightOlive:hover {
+  color: #78aa1c !important;
+}
+.ts-fg-hover-lightOrange:hover {
+  color: #c29008 !important;
+}
+.ts-fg-hover-lightPink:hover {
+  color: #f472d0 !important;
+}
+.ts-fg-hover-lightRed:hover {
+  color: #ff2d19 !important;
+}
+.ts-fg-hover-lightGreen:hover {
+  color: #7ad61d !important;
+}
+.ts-fg-hover-grayDark:hover {
+  color: #333333 !important;
+}
+.ts-fg-hover-grayDarker:hover {
+  color: #222222 !important;
+}
+.ts-fg-hover-grayLight:hover {
+  color: #999999 !important;
+}
+.ts-fg-hover-grayLighter:hover {
+  color: #eeeeee !important;
+}
+.ts-fg-hover-blue:hover {
+  color: #00aff0 !important;
+}
+.ts-bg-active-black:active {
+  background-color: #000000 !important;
+}
+.ts-bg-active-white:active {
+  background-color: #ffffff !important;
+}
+.ts-bg-active-lime:active {
+  background-color: #a4c400 !important;
+}
+.ts-bg-active-green:active {
+  background-color: #60a917 !important;
+}
+.ts-bg-active-emerald:active {
+  background-color: #008a00 !important;
+}
+.ts-bg-active-teal:active {
+  background-color: #00aba9 !important;
+}
+.ts-bg-active-cyan:active {
+  background-color: #1ba1e2 !important;
+}
+.ts-bg-active-cobalt:active {
+  background-color: #0050ef !important;
+}
+.ts-bg-active-indigo:active {
+  background-color: #6a00ff !important;
+}
+.ts-bg-active-violet:active {
+  background-color: #aa00ff !important;
+}
+.ts-bg-active-pink:active {
+  background-color: #dc4fad !important;
+}
+.ts-bg-active-magenta:active {
+  background-color: #d80073 !important;
+}
+.ts-bg-active-crimson:active {
+  background-color: #a20025 !important;
+}
+.ts-bg-active-red:active {
+  background-color: #e51400 !important;
+}
+.ts-bg-active-orange:active {
+  background-color: #fa6800 !important;
+}
+.ts-bg-active-amber:active {
+  background-color: #f0a30a !important;
+}
+.ts-bg-active-yellow:active {
+  background-color: #e3c800 !important;
+}
+.ts-bg-active-brown:active {
+  background-color: #825a2c !important;
+}
+.ts-bg-active-olive:active {
+  background-color: #6d8764 !important;
+}
+.ts-bg-active-steel:active {
+  background-color: #647687 !important;
+}
+.ts-bg-active-mauve:active {
+  background-color: #76608a !important;
+}
+.ts-bg-active-taupe:active {
+  background-color: #87794e !important;
+}
+.ts-bg-active-gray:active {
+  background-color: #555555 !important;
+}
+.ts-bg-active-dark:active {
+  background-color: #333333 !important;
+}
+.ts-bg-active-darker:active {
+  background-color: #222222 !important;
+}
+.ts-bg-active-transparent:active {
+  background-color: transparent !important;
+}
+.ts-bg-active-darkBrown:active {
+  background-color: #63362f !important;
+}
+.ts-bg-active-darkCrimson:active {
+  background-color: #640024 !important;
+}
+.ts-bg-active-darkMagenta:active {
+  background-color: #81003c !important;
+}
+.ts-bg-active-darkIndigo:active {
+  background-color: #4b0096 !important;
+}
+.ts-bg-active-darkCyan:active {
+  background-color: #1b6eae !important;
+}
+.ts-bg-active-darkCobalt:active {
+  background-color: #00356a !important;
+}
+.ts-bg-active-darkTeal:active {
+  background-color: #004050 !important;
+}
+.ts-bg-active-darkEmerald:active {
+  background-color: #003e00 !important;
+}
+.ts-bg-active-darkGreen:active {
+  background-color: #128023 !important;
+}
+.ts-bg-active-darkOrange:active {
+  background-color: #bf5a15 !important;
+}
+.ts-bg-active-darkRed:active {
+  background-color: #9a1616 !important;
+}
+.ts-bg-active-darkPink:active {
+  background-color: #9a165a !important;
+}
+.ts-bg-active-darkViolet:active {
+  background-color: #57169a !important;
+}
+.ts-bg-active-darkBlue:active {
+  background-color: #16499a !important;
+}
+.ts-bg-active-lightBlue:active {
+  background-color: #4390df !important;
+}
+.ts-bg-active-lightTeal:active {
+  background-color: #45fffd !important;
+}
+.ts-bg-active-lightOlive:active {
+  background-color: #78aa1c !important;
+}
+.ts-bg-active-lightOrange:active {
+  background-color: #c29008 !important;
+}
+.ts-bg-active-lightPink:active {
+  background-color: #f472d0 !important;
+}
+.ts-bg-active-lightRed:active {
+  background-color: #ff2d19 !important;
+}
+.ts-bg-active-lightGreen:active {
+  background-color: #7ad61d !important;
+}
+.ts-bg-active-grayDark:active {
+  background-color: #333333 !important;
+}
+.ts-bg-active-grayDarker:active {
+  background-color: #222222 !important;
+}
+.ts-bg-active-grayLight:active {
+  background-color: #999999 !important;
+}
+.ts-bg-active-grayLighter:active {
+  background-color: #eeeeee !important;
+}
+.ts-bg-active-blue:active {
+  background-color: #00aff0 !important;
+}
+.ts-fg-active-black:active {
+  color: #000000 !important;
+}
+.ts-fg-active-white:active {
+  color: #ffffff !important;
+}
+.ts-fg-active-lime:active {
+  color: #a4c400 !important;
+}
+.ts-fg-active-green:active {
+  color: #60a917 !important;
+}
+.ts-fg-active-emerald:active {
+  color: #008a00 !important;
+}
+.ts-fg-active-teal:active {
+  color: #00aba9 !important;
+}
+.ts-fg-active-cyan:active {
+  color: #1ba1e2 !important;
+}
+.ts-fg-active-cobalt:active {
+  color: #0050ef !important;
+}
+.ts-fg-active-indigo:active {
+  color: #6a00ff !important;
+}
+.ts-fg-active-violet:active {
+  color: #aa00ff !important;
+}
+.ts-fg-active-pink:active {
+  color: #dc4fad !important;
+}
+.ts-fg-active-magenta:active {
+  color: #d80073 !important;
+}
+.ts-fg-active-crimson:active {
+  color: #a20025 !important;
+}
+.ts-fg-active-red:active {
+  color: #e51400 !important;
+}
+.ts-fg-active-orange:active {
+  color: #fa6800 !important;
+}
+.ts-fg-active-amber:active {
+  color: #f0a30a !important;
+}
+.ts-fg-active-yellow:active {
+  color: #e3c800 !important;
+}
+.ts-fg-active-brown:active {
+  color: #825a2c !important;
+}
+.ts-fg-active-olive:active {
+  color: #6d8764 !important;
+}
+.ts-fg-active-steel:active {
+  color: #647687 !important;
+}
+.ts-fg-active-mauve:active {
+  color: #76608a !important;
+}
+.ts-fg-active-taupe:active {
+  color: #87794e !important;
+}
+.ts-fg-active-gray:active {
+  color: #555555 !important;
+}
+.ts-fg-active-dark:active {
+  color: #333333 !important;
+}
+.ts-fg-active-darker:active {
+  color: #222222 !important;
+}
+.ts-fg-active-transparent:active {
+  color: transparent !important;
+}
+.ts-fg-active-darkBrown:active {
+  color: #63362f !important;
+}
+.ts-fg-active-darkCrimson:active {
+  color: #640024 !important;
+}
+.ts-fg-active-darkMagenta:active {
+  color: #81003c !important;
+}
+.ts-fg-active-darkIndigo:active {
+  color: #4b0096 !important;
+}
+.ts-fg-active-darkCyan:active {
+  color: #1b6eae !important;
+}
+.ts-fg-active-darkCobalt:active {
+  color: #00356a !important;
+}
+.ts-fg-active-darkTeal:active {
+  color: #004050 !important;
+}
+.ts-fg-active-darkEmerald:active {
+  color: #003e00 !important;
+}
+.ts-fg-active-darkGreen:active {
+  color: #128023 !important;
+}
+.ts-fg-active-darkOrange:active {
+  color: #bf5a15 !important;
+}
+.ts-fg-active-darkRed:active {
+  color: #9a1616 !important;
+}
+.ts-fg-active-darkPink:active {
+  color: #9a165a !important;
+}
+.ts-fg-active-darkViolet:active {
+  color: #57169a !important;
+}
+.ts-fg-active-darkBlue:active {
+  color: #16499a !important;
+}
+.ts-fg-active-lightBlue:active {
+  color: #4390df !important;
+}
+.ts-fg-active-lightTeal:active {
+  color: #45fffd !important;
+}
+.ts-fg-active-lightOlive:active {
+  color: #78aa1c !important;
+}
+.ts-fg-active-lightOrange:active {
+  color: #c29008 !important;
+}
+.ts-fg-active-lightPink:active {
+  color: #f472d0 !important;
+}
+.ts-fg-active-lightRed:active {
+  color: #ff2d19 !important;
+}
+.ts-fg-active-lightGreen:active {
+  color: #7ad61d !important;
+}
+.ts-fg-active-grayDark:active {
+  color: #333333 !important;
+}
+.ts-fg-active-grayDarker:active {
+  color: #222222 !important;
+}
+.ts-fg-active-grayLight:active {
+  color: #999999 !important;
+}
+.ts-fg-active-grayLighter:active {
+  color: #eeeeee !important;
+}
+.ts-fg-active-blue:active {
+  color: #00aff0 !important;
+}
+.ts-bg-focus-black:focus {
+  background-color: #000000 !important;
+}
+.ts-bg-focus-white:focus {
+  background-color: #ffffff !important;
+}
+.ts-bg-focus-lime:focus {
+  background-color: #a4c400 !important;
+}
+.ts-bg-focus-green:focus {
+  background-color: #60a917 !important;
+}
+.ts-bg-focus-emerald:focus {
+  background-color: #008a00 !important;
+}
+.ts-bg-focus-teal:focus {
+  background-color: #00aba9 !important;
+}
+.ts-bg-focus-cyan:focus {
+  background-color: #1ba1e2 !important;
+}
+.ts-bg-focus-cobalt:focus {
+  background-color: #0050ef !important;
+}
+.ts-bg-focus-indigo:focus {
+  background-color: #6a00ff !important;
+}
+.ts-bg-focus-violet:focus {
+  background-color: #aa00ff !important;
+}
+.ts-bg-focus-pink:focus {
+  background-color: #dc4fad !important;
+}
+.ts-bg-focus-magenta:focus {
+  background-color: #d80073 !important;
+}
+.ts-bg-focus-crimson:focus {
+  background-color: #a20025 !important;
+}
+.ts-bg-focus-red:focus {
+  background-color: #e51400 !important;
+}
+.ts-bg-focus-orange:focus {
+  background-color: #fa6800 !important;
+}
+.ts-bg-focus-amber:focus {
+  background-color: #f0a30a !important;
+}
+.ts-bg-focus-yellow:focus {
+  background-color: #e3c800 !important;
+}
+.ts-bg-focus-brown:focus {
+  background-color: #825a2c !important;
+}
+.ts-bg-focus-olive:focus {
+  background-color: #6d8764 !important;
+}
+.ts-bg-focus-steel:focus {
+  background-color: #647687 !important;
+}
+.ts-bg-focus-mauve:focus {
+  background-color: #76608a !important;
+}
+.ts-bg-focus-taupe:focus {
+  background-color: #87794e !important;
+}
+.ts-bg-focus-gray:focus {
+  background-color: #555555 !important;
+}
+.ts-bg-focus-dark:focus {
+  background-color: #333333 !important;
+}
+.ts-bg-focus-darker:focus {
+  background-color: #222222 !important;
+}
+.ts-bg-focus-transparent:focus {
+  background-color: transparent !important;
+}
+.ts-bg-focus-darkBrown:focus {
+  background-color: #63362f !important;
+}
+.ts-bg-focus-darkCrimson:focus {
+  background-color: #640024 !important;
+}
+.ts-bg-focus-darkMagenta:focus {
+  background-color: #81003c !important;
+}
+.ts-bg-focus-darkIndigo:focus {
+  background-color: #4b0096 !important;
+}
+.ts-bg-focus-darkCyan:focus {
+  background-color: #1b6eae !important;
+}
+.ts-bg-focus-darkCobalt:focus {
+  background-color: #00356a !important;
+}
+.ts-bg-focus-darkTeal:focus {
+  background-color: #004050 !important;
+}
+.ts-bg-focus-darkEmerald:focus {
+  background-color: #003e00 !important;
+}
+.ts-bg-focus-darkGreen:focus {
+  background-color: #128023 !important;
+}
+.ts-bg-focus-darkOrange:focus {
+  background-color: #bf5a15 !important;
+}
+.ts-bg-focus-darkRed:focus {
+  background-color: #9a1616 !important;
+}
+.ts-bg-focus-darkPink:focus {
+  background-color: #9a165a !important;
+}
+.ts-bg-focus-darkViolet:focus {
+  background-color: #57169a !important;
+}
+.ts-bg-focus-darkBlue:focus {
+  background-color: #16499a !important;
+}
+.ts-bg-focus-lightBlue:focus {
+  background-color: #4390df !important;
+}
+.ts-bg-focus-lightTeal:focus {
+  background-color: #45fffd !important;
+}
+.ts-bg-focus-lightOlive:focus {
+  background-color: #78aa1c !important;
+}
+.ts-bg-focus-lightOrange:focus {
+  background-color: #c29008 !important;
+}
+.ts-bg-focus-lightPink:focus {
+  background-color: #f472d0 !important;
+}
+.ts-bg-focus-lightRed:focus {
+  background-color: #ff2d19 !important;
+}
+.ts-bg-focus-lightGreen:focus {
+  background-color: #7ad61d !important;
+}
+.ts-bg-focus-grayDark:focus {
+  background-color: #333333 !important;
+}
+.ts-bg-focus-grayDarker:focus {
+  background-color: #222222 !important;
+}
+.ts-bg-focus-grayLight:focus {
+  background-color: #999999 !important;
+}
+.ts-bg-focus-grayLighter:focus {
+  background-color: #eeeeee !important;
+}
+.ts-bg-focus-blue:focus {
+  background-color: #00aff0 !important;
+}
+.ts-fg-focus-black:focus {
+  color: #000000 !important;
+}
+.ts-fg-focus-white:focus {
+  color: #ffffff !important;
+}
+.ts-fg-focus-lime:focus {
+  color: #a4c400 !important;
+}
+.ts-fg-focus-green:focus {
+  color: #60a917 !important;
+}
+.ts-fg-focus-emerald:focus {
+  color: #008a00 !important;
+}
+.ts-fg-focus-teal:focus {
+  color: #00aba9 !important;
+}
+.ts-fg-focus-cyan:focus {
+  color: #1ba1e2 !important;
+}
+.ts-fg-focus-cobalt:focus {
+  color: #0050ef !important;
+}
+.ts-fg-focus-indigo:focus {
+  color: #6a00ff !important;
+}
+.ts-fg-focus-violet:focus {
+  color: #aa00ff !important;
+}
+.ts-fg-focus-pink:focus {
+  color: #dc4fad !important;
+}
+.ts-fg-focus-magenta:focus {
+  color: #d80073 !important;
+}
+.ts-fg-focus-crimson:focus {
+  color: #a20025 !important;
+}
+.ts-fg-focus-red:focus {
+  color: #e51400 !important;
+}
+.ts-fg-focus-orange:focus {
+  color: #fa6800 !important;
+}
+.ts-fg-focus-amber:focus {
+  color: #f0a30a !important;
+}
+.ts-fg-focus-yellow:focus {
+  color: #e3c800 !important;
+}
+.ts-fg-focus-brown:focus {
+  color: #825a2c !important;
+}
+.ts-fg-focus-olive:focus {
+  color: #6d8764 !important;
+}
+.ts-fg-focus-steel:focus {
+  color: #647687 !important;
+}
+.ts-fg-focus-mauve:focus {
+  color: #76608a !important;
+}
+.ts-fg-focus-taupe:focus {
+  color: #87794e !important;
+}
+.ts-fg-focus-gray:focus {
+  color: #555555 !important;
+}
+.ts-fg-focus-dark:focus {
+  color: #333333 !important;
+}
+.ts-fg-focus-darker:focus {
+  color: #222222 !important;
+}
+.ts-fg-focus-transparent:focus {
+  color: transparent !important;
+}
+.ts-fg-focus-darkBrown:focus {
+  color: #63362f !important;
+}
+.ts-fg-focus-darkCrimson:focus {
+  color: #640024 !important;
+}
+.ts-fg-focus-darkMagenta:focus {
+  color: #81003c !important;
+}
+.ts-fg-focus-darkIndigo:focus {
+  color: #4b0096 !important;
+}
+.ts-fg-focus-darkCyan:focus {
+  color: #1b6eae !important;
+}
+.ts-fg-focus-darkCobalt:focus {
+  color: #00356a !important;
+}
+.ts-fg-focus-darkTeal:focus {
+  color: #004050 !important;
+}
+.ts-fg-focus-darkEmerald:focus {
+  color: #003e00 !important;
+}
+.ts-fg-focus-darkGreen:focus {
+  color: #128023 !important;
+}
+.ts-fg-focus-darkOrange:focus {
+  color: #bf5a15 !important;
+}
+.ts-fg-focus-darkRed:focus {
+  color: #9a1616 !important;
+}
+.ts-fg-focus-darkPink:focus {
+  color: #9a165a !important;
+}
+.ts-fg-focus-darkViolet:focus {
+  color: #57169a !important;
+}
+.ts-fg-focus-darkBlue:focus {
+  color: #16499a !important;
+}
+.ts-fg-focus-lightBlue:focus {
+  color: #4390df !important;
+}
+.ts-fg-focus-lightTeal:focus {
+  color: #45fffd !important;
+}
+.ts-fg-focus-lightOlive:focus {
+  color: #78aa1c !important;
+}
+.ts-fg-focus-lightOrange:focus {
+  color: #c29008 !important;
+}
+.ts-fg-focus-lightPink:focus {
+  color: #f472d0 !important;
+}
+.ts-fg-focus-lightRed:focus {
+  color: #ff2d19 !important;
+}
+.ts-fg-focus-lightGreen:focus {
+  color: #7ad61d !important;
+}
+.ts-fg-focus-grayDark:focus {
+  color: #333333 !important;
+}
+.ts-fg-focus-grayDarker:focus {
+  color: #222222 !important;
+}
+.ts-fg-focus-grayLight:focus {
+  color: #999999 !important;
+}
+.ts-fg-focus-grayLighter:focus {
+  color: #eeeeee !important;
+}
+.ts-fg-focus-blue:focus {
+  color: #00aff0 !important;
+}

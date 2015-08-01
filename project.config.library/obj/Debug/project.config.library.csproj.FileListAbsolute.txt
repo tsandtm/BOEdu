@@ -1,0 +1,110 @@
+D:\Project\OnProgress\hutech_internalsystem\SourceCode\project.config.library\bin\Debug\project.config.library.dll
+D:\Project\OnProgress\hutech_internalsystem\SourceCode\project.config.library\bin\Debug\project.config.library.pdb
+D:\Project\OnProgress\hutech_internalsystem\SourceCode\project.config.library\bin\Debug\nvn.Library.dll
+D:\Project\OnProgress\hutech_internalsystem\SourceCode\project.config.library\obj\Debug\project.config.library.dll
+D:\Project\OnProgress\hutech_internalsystem\SourceCode\project.config.library\obj\Debug\project.config.library.pdb
+D:\ProjectDangLam\hutech_internalsystem\SourceCode\project.config.library\bin\Debug\project.config.library.dll
+D:\ProjectDangLam\hutech_internalsystem\SourceCode\project.config.library\bin\Debug\project.config.library.pdb
+D:\ProjectDangLam\hutech_internalsystem\SourceCode\project.config.library\bin\Debug\nvn.Library.dll
+D:\ProjectDangLam\hutech_internalsystem\SourceCode\project.config.library\obj\Debug\project.config.library.dll
+D:\ProjectDangLam\hutech_internalsystem\SourceCode\project.config.library\obj\Debug\project.config.library.pdb
+D:\THANHDAI18HT\SVN\DoanhNghiep\SourceCode\project.config.library\bin\Debug\project.config.library.dll
+D:\THANHDAI18HT\SVN\DoanhNghiep\SourceCode\project.config.library\bin\Debug\project.config.library.pdb
+D:\THANHDAI18HT\SVN\DoanhNghiep\SourceCode\project.config.library\bin\Debug\nvn.Library.dll
+D:\THANHDAI18HT\SVN\DoanhNghiep\SourceCode\project.config.library\obj\Debug\project.config.library.csprojResolveAssemblyReference.cache
+D:\THANHDAI18HT\SVN\DoanhNghiep\SourceCode\project.config.library\obj\Debug\project.config.library.dll
+D:\THANHDAI18HT\SVN\DoanhNghiep\SourceCode\project.config.library\obj\Debug\project.config.library.pdb
+D:\THANHDAI18HT\SVN\DoanhNghiep\SourceCode\project.config.library\bin\Debug\nvn.Library.pdb
+D:\Project\OnProgress\hutech_internalsystem\SourceCodeo\project.config.library\bin\Debug\project.config.library.dll
+D:\Project\OnProgress\hutech_internalsystem\SourceCodeo\project.config.library\bin\Debug\project.config.library.pdb
+D:\Project\OnProgress\hutech_internalsystem\SourceCodeo\project.config.library\bin\Debug\nvn.Library.dll
+D:\Project\OnProgress\hutech_internalsystem\SourceCodeo\project.config.library\obj\Debug\project.config.library.csprojResolveAssemblyReference.cache
+D:\Project\OnProgress\hutech_internalsystem\SourceCodeo\project.config.library\obj\Debug\project.config.library.dll
+D:\Project\OnProgress\hutech_internalsystem\SourceCodeo\project.config.library\obj\Debug\project.config.library.pdb
+D:\Project\OnProgress\hutech_internalsystem\SourceCodeo\project.config.library\bin\Debug\nvn.Library.pdb
+D:\ProjectDangLam\hutech_internalsystem\SourceCode\project.config.library\obj\Debug\project.config.library.csprojResolveAssemblyReference.cache
+D:\ProjectDangLam\hutech_internalsystem\SourceCode\project.config.library\bin\Debug\nvn.Library.pdb
+E:\tsandtm_data\c_mvc\mvc_day2\project.config.library\obj\Debug\project.config.library.csprojResolveAssemblyReference.cache
+E:\tsandtm_data\c_mvc\mvc_day2\project.config.library\bin\Debug\project.config.library.dll
+E:\tsandtm_data\c_mvc\mvc_day2\project.config.library\bin\Debug\project.config.library.pdb
+E:\tsandtm_data\c_mvc\mvc_day2\project.config.library\bin\Debug\nvn.Library.dll
+E:\tsandtm_data\c_mvc\mvc_day2\project.config.library\bin\Debug\nvn.Library.pdb
+E:\tsandtm_data\c_mvc\mvc_day2\project.config.library\obj\Debug\project.config.library.dll
+E:\tsandtm_data\c_mvc\mvc_day2\project.config.library\obj\Debug\project.config.library.pdb
+D:\My Private\tsandtm_data\c_mvc\mvc_day2\project.config.library\bin\Debug\project.config.library.dll
+D:\My Private\tsandtm_data\c_mvc\mvc_day2\project.config.library\bin\Debug\project.config.library.pdb
+D:\My Private\tsandtm_data\c_mvc\mvc_day2\project.config.library\bin\Debug\nvn.Library.dll
+D:\My Private\tsandtm_data\c_mvc\mvc_day2\project.config.library\bin\Debug\nvn.Library.pdb
+D:\My Private\tsandtm_data\c_mvc\mvc_day2\project.config.library\obj\Debug\project.config.library.csprojResolveAssemblyReference.cache
+D:\My Private\tsandtm_data\c_mvc\mvc_day2\project.config.library\obj\Debug\project.config.library.dll
+D:\My Private\tsandtm_data\c_mvc\mvc_day2\project.config.library\obj\Debug\project.config.library.pdb
+D:\ProjectDangLam\team_mvc\mvc_day2\project.config.library\bin\Debug\project.config.library.dll
+D:\ProjectDangLam\team_mvc\mvc_day2\project.config.library\bin\Debug\project.config.library.pdb
+D:\ProjectDangLam\team_mvc\mvc_day2\project.config.library\bin\Debug\nvn.Library.dll
+D:\ProjectDangLam\team_mvc\mvc_day2\project.config.library\bin\Debug\nvn.Library.pdb
+D:\ProjectDangLam\team_mvc\mvc_day2\project.config.library\obj\Debug\project.config.library.csprojResolveAssemblyReference.cache
+D:\ProjectDangLam\team_mvc\mvc_day2\project.config.library\obj\Debug\project.config.library.dll
+D:\ProjectDangLam\team_mvc\mvc_day2\project.config.library\obj\Debug\project.config.library.pdb
+C:\Users\CTV0010291\Desktop\New folder\project.config.library\bin\Debug\project.config.library.dll
+C:\Users\CTV0010291\Desktop\New folder\project.config.library\bin\Debug\project.config.library.pdb
+C:\Users\CTV0010291\Desktop\New folder\project.config.library\bin\Debug\nvn.Library.dll
+C:\Users\CTV0010291\Desktop\New folder\project.config.library\bin\Debug\nvn.Library.pdb
+C:\Users\CTV0010291\Desktop\New folder\project.config.library\obj\Debug\project.config.library.csprojResolveAssemblyReference.cache
+C:\Users\CTV0010291\Desktop\New folder\project.config.library\obj\Debug\project.config.library.dll
+C:\Users\CTV0010291\Desktop\New folder\project.config.library\obj\Debug\project.config.library.pdb
+F:\svn_hutech\team_mvc\mvc_day2\project.config.library\bin\Debug\project.config.library.dll
+F:\svn_hutech\team_mvc\mvc_day2\project.config.library\bin\Debug\project.config.library.pdb
+F:\svn_hutech\team_mvc\mvc_day2\project.config.library\bin\Debug\nvn.Library.dll
+F:\svn_hutech\team_mvc\mvc_day2\project.config.library\bin\Debug\nvn.Library.pdb
+F:\svn_hutech\team_mvc\mvc_day2\project.config.library\obj\Debug\project.config.library.csprojResolveAssemblyReference.cache
+F:\svn_hutech\team_mvc\mvc_day2\project.config.library\obj\Debug\project.config.library.dll
+F:\svn_hutech\team_mvc\mvc_day2\project.config.library\obj\Debug\project.config.library.pdb
+D:\THANHDAI18HT\SVN\team_mvc\mvc_day2\project.config.library\bin\Debug\project.config.library.dll
+D:\THANHDAI18HT\SVN\team_mvc\mvc_day2\project.config.library\bin\Debug\project.config.library.pdb
+D:\THANHDAI18HT\SVN\team_mvc\mvc_day2\project.config.library\bin\Debug\nvn.Library.dll
+D:\THANHDAI18HT\SVN\team_mvc\mvc_day2\project.config.library\bin\Debug\nvn.Library.pdb
+D:\THANHDAI18HT\SVN\team_mvc\mvc_day2\project.config.library\obj\Debug\project.config.library.csprojResolveAssemblyReference.cache
+D:\THANHDAI18HT\SVN\team_mvc\mvc_day2\project.config.library\obj\Debug\project.config.library.dll
+D:\THANHDAI18HT\SVN\team_mvc\mvc_day2\project.config.library\obj\Debug\project.config.library.pdb
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\project.config.library\bin\Debug\project.config.library.dll
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\project.config.library\bin\Debug\project.config.library.pdb
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\project.config.library\bin\Debug\nvn.Library.dll
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\project.config.library\bin\Debug\nvn.Library.pdb
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\project.config.library\obj\Debug\project.config.library.csprojResolveAssemblyReference.cache
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\project.config.library\obj\Debug\project.config.library.dll
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\project.config.library\obj\Debug\project.config.library.pdb
+D:\SVN\Project\mvc_hutech_internalsystem\SourceCode\project.config.library\bin\Debug\project.config.library.dll
+D:\SVN\Project\mvc_hutech_internalsystem\SourceCode\project.config.library\bin\Debug\project.config.library.pdb
+D:\SVN\Project\mvc_hutech_internalsystem\SourceCode\project.config.library\bin\Debug\nvn.Library.dll
+D:\SVN\Project\mvc_hutech_internalsystem\SourceCode\project.config.library\bin\Debug\nvn.Library.pdb
+D:\SVN\Project\mvc_hutech_internalsystem\SourceCode\project.config.library\obj\Debug\project.config.library.csprojResolveAssemblyReference.cache
+D:\SVN\Project\mvc_hutech_internalsystem\SourceCode\project.config.library\obj\Debug\project.config.library.dll
+D:\SVN\Project\mvc_hutech_internalsystem\SourceCode\project.config.library\obj\Debug\project.config.library.pdb
+E:\HoaDM\Dropbox\demo_Hackacademy\SourceCode\project.config.library\bin\Debug\project.config.library.dll
+E:\HoaDM\Dropbox\demo_Hackacademy\SourceCode\project.config.library\bin\Debug\project.config.library.pdb
+E:\HoaDM\Dropbox\demo_Hackacademy\SourceCode\project.config.library\bin\Debug\nvn.Library.dll
+E:\HoaDM\Dropbox\demo_Hackacademy\SourceCode\project.config.library\bin\Debug\nvn.Library.pdb
+E:\HoaDM\Dropbox\demo_Hackacademy\SourceCode\project.config.library\obj\Debug\project.config.library.csprojResolveAssemblyReference.cache
+E:\HoaDM\Dropbox\demo_Hackacademy\SourceCode\project.config.library\obj\Debug\project.config.library.dll
+E:\HoaDM\Dropbox\demo_Hackacademy\SourceCode\project.config.library\obj\Debug\project.config.library.pdb
+G:\Drive\Dropbox\demo_Hackacademy\SourceCode\project.config.library\bin\Debug\project.config.library.dll
+G:\Drive\Dropbox\demo_Hackacademy\SourceCode\project.config.library\bin\Debug\project.config.library.pdb
+G:\Drive\Dropbox\demo_Hackacademy\SourceCode\project.config.library\bin\Debug\nvn.Library.dll
+G:\Drive\Dropbox\demo_Hackacademy\SourceCode\project.config.library\bin\Debug\nvn.Library.pdb
+G:\Drive\Dropbox\demo_Hackacademy\SourceCode\project.config.library\obj\Debug\project.config.library.csprojResolveAssemblyReference.cache
+G:\Drive\Dropbox\demo_Hackacademy\SourceCode\project.config.library\obj\Debug\project.config.library.dll
+G:\Drive\Dropbox\demo_Hackacademy\SourceCode\project.config.library\obj\Debug\project.config.library.pdb
+G:\Drive\Dropbox\BOEdu\project.config.library\bin\Debug\project.config.library.dll
+G:\Drive\Dropbox\BOEdu\project.config.library\bin\Debug\project.config.library.pdb
+G:\Drive\Dropbox\BOEdu\project.config.library\bin\Debug\nvn.Library.dll
+G:\Drive\Dropbox\BOEdu\project.config.library\bin\Debug\nvn.Library.pdb
+G:\Drive\Dropbox\BOEdu\project.config.library\obj\Debug\project.config.library.csprojResolveAssemblyReference.cache
+G:\Drive\Dropbox\BOEdu\project.config.library\obj\Debug\project.config.library.dll
+G:\Drive\Dropbox\BOEdu\project.config.library\obj\Debug\project.config.library.pdb
+D:\BOEdu\project.config.library\bin\Debug\project.config.library.dll
+D:\BOEdu\project.config.library\bin\Debug\project.config.library.pdb
+D:\BOEdu\project.config.library\bin\Debug\nvn.Library.dll
+D:\BOEdu\project.config.library\bin\Debug\nvn.Library.pdb
+D:\BOEdu\project.config.library\obj\Debug\project.config.library.csprojResolveAssemblyReference.cache
+D:\BOEdu\project.config.library\obj\Debug\project.config.library.dll
+D:\BOEdu\project.config.library\obj\Debug\project.config.library.pdb

@@ -1,0 +1,15 @@
+D:\ProjectDangLam\ThuLaoGiangDay\nvn18082012\nvn.Library\bin\Release\nvn.Library.dll
+D:\ProjectDangLam\ThuLaoGiangDay\nvn18082012\nvn.Library\bin\Release\nvn.Library.pdb
+D:\ProjectDangLam\ThuLaoGiangDay\nvn18082012\nvn.Library\obj\Release\ResolveAssemblyReference.cache
+D:\ProjectDangLam\ThuLaoGiangDay\nvn18082012\nvn.Library\obj\Release\nvn.Library.dll
+D:\ProjectDangLam\ThuLaoGiangDay\nvn18082012\nvn.Library\obj\Release\nvn.Library.pdb
+D:\ProjectDangLam\team_mvc\mvc_day2\nvn.Library\bin\Release\nvn.Library.dll
+D:\ProjectDangLam\team_mvc\mvc_day2\nvn.Library\bin\Release\nvn.Library.pdb
+D:\ProjectDangLam\team_mvc\mvc_day2\nvn.Library\obj\Release\nvn.Library.csprojResolveAssemblyReference.cache
+D:\ProjectDangLam\team_mvc\mvc_day2\nvn.Library\obj\Release\nvn.Library.dll
+D:\ProjectDangLam\team_mvc\mvc_day2\nvn.Library\obj\Release\nvn.Library.pdb
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\nvn.Library\bin\Release\nvn.Library.dll
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\nvn.Library\bin\Release\nvn.Library.pdb
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\nvn.Library\obj\Release\nvn.Library.dll
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\nvn.Library\obj\Release\nvn.Library.pdb
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\nvn.Library\obj\Release\nvn.Library.csprojResolveAssemblyReference.cache

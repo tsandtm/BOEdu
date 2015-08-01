@@ -1,0 +1,10 @@
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\ngocnv.quanlydanhmucthongtin.library\bin\Release\ngocnv.quanlydanhmucthongtin.library.dll
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\ngocnv.quanlydanhmucthongtin.library\bin\Release\ngocnv.quanlydanhmucthongtin.library.pdb
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\ngocnv.quanlydanhmucthongtin.library\bin\Release\nvn.Core.MVP.dll
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\ngocnv.quanlydanhmucthongtin.library\bin\Release\nvn.Library.dll
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\ngocnv.quanlydanhmucthongtin.library\bin\Release\project.config.library.dll
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\ngocnv.quanlydanhmucthongtin.library\bin\Release\nvn.Library.pdb
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\ngocnv.quanlydanhmucthongtin.library\bin\Release\project.config.library.pdb
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\ngocnv.quanlydanhmucthongtin.library\obj\Release\ngocnv10052014.catology.library.csprojResolveAssemblyReference.cache
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\ngocnv.quanlydanhmucthongtin.library\obj\Release\ngocnv.quanlydanhmucthongtin.library.dll
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\ngocnv.quanlydanhmucthongtin.library\obj\Release\ngocnv.quanlydanhmucthongtin.library.pdb

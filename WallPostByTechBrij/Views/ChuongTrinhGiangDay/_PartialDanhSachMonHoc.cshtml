@@ -1,0 +1,50 @@
+﻿@{
+    if (Model != null)
+    {
+        foreach (chuongtv01082015.library.chuong.MonHoc item in Model)
+        {
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>
+                        <a title="@item.MonHocName"><i class="fa fa-folder"></i></a>
+                    </h1>@item.MonHocName
+
+                    <a data-otf-target="#EditMonHoc"
+                       data-otf-method="get"
+                       onclick="ClickEditMonHoc(this)"
+                       data-toggle="modal"
+                       data-target="#modalEditMon"
+                       data-otf-action="@Url.Action("Edit", "ChuongTrinhGiangDay", null, Request.Url.Scheme)?monhocguid=@item.MonHocGuid">
+                        <i class="fa fa-pencil"></i>
+                    </a>
+
+                    <a onclick="ClickXoaMonHoc(this)"
+                       id="deletedanhsachmon"
+                       data-otf-target="#danhsachmonhoc"
+                       data-otf-action="@Url.Action("LoadDanhSachMon", "ChuongTrinhGiangDay")"
+                       data-otf-actionmain="@Url.Action("Delete", "ChuongTrinhGiangDay",null, Request.Url.Scheme)?monhocguid=@item.MonHocGuid"><i class="fa fa-trash-o"></i></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    @foreach (chuongtv01082015.library.chuong.BuoiGiangDay item1 in item.DanhSachBuoiGiangDay)
+                    {
+                        @item1.BuoiGiangName
+                        if (!string.IsNullOrEmpty(item1.linkTaiLieu))
+                        {
+                            <a onclick="XoaFileDinhKem(this)"
+                               data-otf-action="@Url.Action("DeleteLinkURL", "ChuongTrinhGiangDay", null, Request.Url.Scheme)?buoiguid=@item1.BuoiGiangGuid"
+                               data-otf-target="#danhsachmonhoc"
+                               data-otf-actionload="@Url.Action("LoadDanhSachMon", "ChuongTrinhGiangDay")">
+                                @item1.linkTaiLieu
+                            <i class="fa fa-trash-o"></i>
+                        </a>
+                        }
+                        <br />
+                    }
+                </div>
+            </div>
+        }
+    }
+}
+

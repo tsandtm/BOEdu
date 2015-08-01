@@ -1,0 +1,45 @@
+﻿.metro .text-left {
+  text-align: left;
+}
+.metro .text-right {
+  text-align: right;
+}
+.metro .text-center {
+  text-align: center;
+}
+.metro .text-justify {
+  text-align: justify;
+}
+.metro .text-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.metro .text-bold {
+  font-weight: bold;
+}
+.metro .text-normal {
+  font-weight: normal;
+}
+.metro .text-italic {
+  font-style: italic;
+}
+.metro strong {
+  font-family: 'Segoe UI Semibold_', 'Open Sans Bold', Verdana, Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+.metro .text-muted {
+  color: #999999 !important;
+}
+.metro .text-info {
+  color: #1ba1e2 !important;
+}
+.metro .text-alert {
+  color: #e51400 !important;
+}
+.metro .text-warning {
+  color: #fa6800 !important;
+}
+.metro .text-success {
+  color: #60a917 !important;
+}

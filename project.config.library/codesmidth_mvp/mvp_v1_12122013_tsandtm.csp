@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<codeSmith xmlns="http://www.codesmithtools.com/schema/csp.xsd">
+  <variables>
+    <add key="ConnectionString1" value="Data Source=192.168.0.5;Initial Catalog=MienGiamMon_21052015;User ID=coder;Password=123123" />
+      <add key="ConnectionString2" value="Data Source=192.168.0.5;Initial Catalog=MienGiamMon_21052015;User ID=coder;Password=123123" />
+      <add key="ConnectionToDatabase" value="MienGiamMon_21052015" />
+  </variables>
+  <propertySets>
+    <propertySet name="View_add" output="..\Views\SinhVien\IAddSinhVienView.cs" template="IView_Add.cst">
+      <property name="IViewName">IAddSinhVienView</property>
+      <property name="PresenterName">AddSinhVienPresenter</property>
+      <property name="Author">Nguyen Thanh Dai</property>
+      <property name="NameSpaceProject">ntdai21052015.quanlymiengiammon.library</property>
+      <property name="TablePrefix">sv_</property>
+      <property name="RemoveEndingS">True</property>
+      <property name="SourceTable">
+        <connectionString>$(ConnectionString1)</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+        <table>
+          <owner>dbo</owner>
+          <name>sv_SinhVien</name>
+        </table>
+      </property>
+      <property name="OutputFile" />
+    </propertySet>
+    <propertySet name="View_list" output="..\Views\SinhVien\IListSinhVienView.cs" template="IView_List.cst">
+      <property name="IViewName">IListSinhVienView</property>
+      <property name="PresenterName">ListSinhVienPresenter</property>
+      <property name="Author">Nguyen Thanh Dai</property>
+      <property name="NameSpaceProject">ntdai21052015.quanlymiengiammon.library</property>
+      <property name="TablePrefix">sv_</property>
+      <property name="RemoveEndingS">True</property>
+      <property name="SourceTable">
+        <connectionString>$(ConnectionString1)</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+        <table>
+          <owner>dbo</owner>
+          <name>sv_SinhVien</name>
+        </table>
+      </property>
+      <property name="OutputFile" />
+    </propertySet>
+    <propertySet name="dal" output="..\Models\SinhVien\SinhVienBAL.cs" template="BAL.cst">
+      <property name="IViewName">IView</property>
+      <property name="PresenterName">Presenter</property>
+      <property name="Author">Nguyen Thanh Dai</property>
+      <property name="NameSpaceProject">ntdai21052015.quanlymiengiammon.library</property>
+      <property name="TablePrefix">sv_</property>
+      <property name="RemoveEndingS">True</property>
+      <property name="SourceTable">
+        <connectionString>$(ConnectionString1)</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+        <table>
+          <owner>dbo</owner>
+          <name>sv_SinhVien</name>
+        </table>
+      </property>
+      <property name="OutputFile" />
+    </propertySet>
+    <propertySet name="dal" output="..\Models\SinhVien\SinhVienDAL.cs" template="DAL.cst">
+      <property name="IViewName">IView</property>
+      <property name="PresenterName">Presenter</property>
+      <property name="Author">Nguyen Thanh Dai</property>
+      <property name="NameSpaceProject">ntdai21052015.quanlymiengiammon.library</property>
+      <property name="TablePrefix">sv_</property>
+      <property name="RemoveEndingS">True</property>
+        <property name="ConnectionToDatabase">$(ConnectionToDatabase)</property>
+        <property name="SourceTable">
+        <connectionString>$(ConnectionString1)</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+        <table>
+          <owner>dbo</owner>
+          <name>sv_SinhVien</name>
+        </table>
+      </property>
+      <property name="OutputFile" />
+    </propertySet>
+    <propertySet name="ibal" output="..\Models\SinhVien\ISinhVienBAL.cs" template="IBAL.cst">
+      <property name="Author">Nguyen Thanh Dai</property>
+      <property name="NameSpaceProject">ntdai21052015.quanlymiengiammon.library</property>
+      <property name="TablePrefix">sv_</property>
+      <property name="RemoveEndingS">True</property>
+      <property name="SourceTable">
+        <connectionString>$(ConnectionString1)</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+        <table>
+          <owner>dbo</owner>
+          <name>sv_SinhVien</name>
+        </table>
+      </property>
+      <property name="OutputFile" />
+    </propertySet>
+    <propertySet name="e" output="..\Models\SinhVien\SinhVien.cs" template="Entity.cst">
+      <property name="IViewName">IView</property>
+      <property name="PresenterName">Presenter</property>
+      <property name="Author">Nguyen Thanh Dai</property>
+      <property name="NameSpaceProject">ntdai21052015.quanlymiengiammon.library</property>
+      <property name="TablePrefix">sv_</property>
+      <property name="RemoveEndingS">True</property>
+      <property name="SourceTable">
+        <connectionString>$(ConnectionString1)</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+        <table>
+          <owner>dbo</owner>
+          <name>sv_SinhVien</name>
+        </table>
+      </property>
+      <property name="OutputFile" />
+    </propertySet>
+    <propertySet name="pre_add" output="..\Presenters\SinhVien\AddSinhVienPresenter.cs" template="Presenter_Add.cst">
+      <property name="IViewName">IAddSinhVienView</property>
+      <property name="PresenterName">AddSinhVienPresenter</property>
+      <property name="Author">Nguyen Thanh Dai</property>
+      <property name="NameSpaceProject">ntdai21052015.quanlymiengiammon.library</property>
+      <property name="TablePrefix">sv_</property>
+      <property name="RemoveEndingS">True</property>
+      <property name="SourceTable">
+        <connectionString>$(ConnectionString1)</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+        <table>
+          <owner>dbo</owner>
+          <name>sv_SinhVien</name>
+        </table>
+      </property>
+      <property name="OutputFile" />
+    </propertySet>
+    <propertySet name="pre_list" output="..\Presenters\SinhVien\ListSinhVienPresenter.cs" template="Presenter_List.cst">
+      <property name="IViewName">IListSinhVienView</property>
+      <property name="PresenterName">ListSinhVienPresenter</property>
+      <property name="Author">Nguyen Thanh Dai</property>
+      <property name="NameSpaceProject">ntdai21052015.quanlymiengiammon.library</property>
+      <property name="TablePrefix">sv_</property>
+      <property name="RemoveEndingS">True</property>
+      <property name="SourceTable">
+        <connectionString>$(ConnectionString1)</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+        <table>
+          <owner>dbo</owner>
+          <name>sv_SinhVien</name>
+        </table>
+      </property>
+      <property name="OutputFile" />
+    </propertySet>
+    <propertySet name="Add_ascx" output="..\..\project.web\Page\$(ConnectionToDatabase)\FolderSinhVien\AddSinhVienControl.ascx" template="Add_ascx.cst">
+      <property name="Inherits">project.web</property>
+      <property name="Author">Nguyen Thanh Dai</property>
+      <property name="TablePrefix">sv_</property>
+      <property name="RemoveEndingS">True</property>
+      <property name="GenerateWebControls">True</property>
+      <property name="SourceTable">
+        <connectionString>$(ConnectionString1)</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+        <table>
+      <owner>dbo</owner>
+      <name>sv_SinhVien</name>
+    </table>
+      </property>
+      <property name="OutputFile" />
+    </propertySet>
+    <propertySet name="Add_ascx_cs" output="..\..\project.web\Page\$(ConnectionToDatabase)\FolderSinhVien\AddSinhVienControl.ascx.cs" template="Add_ascx_cs.cst">
+      <property name="Inherits">project.web</property>
+      <property name="Author">Nguyen Thanh Dai</property>
+      <property name="NameSpaceProject">ntdai21052015.quanlymiengiammon.library</property>
+      <property name="TablePrefix">sv_</property>
+      <property name="RemoveEndingS">True</property>
+      <property name="GenerateWebControls">True</property>
+      <property name="SourceTable">
+        <connectionString>$(ConnectionString1)</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+        <table>
+      <owner>dbo</owner>
+      <name>sv_SinhVien</name>
+    </table>
+      </property>
+      <property name="OutputFile" />
+    </propertySet>
+    <propertySet name="Add_ascx_designer_cs" output="..\..\project.web\Page\$(ConnectionToDatabase)\FolderSinhVien\AddSinhVienControl.ascx.designer.cs" template="Add_ascx_designer_cs.cst">
+      <property name="Inherits">project.web</property>
+      <property name="Author">Nguyen Thanh Dai</property>
+      <property name="NameSpaceProject">project.web</property>
+      <property name="TablePrefix">sv_</property>
+      <property name="RemoveEndingS">True</property>
+      <property name="GenerateWebControls">True</property>
+      <property name="SourceTable">
+        <connectionString>$(ConnectionString1)</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+        <table>
+      <owner>dbo</owner>
+      <name>sv_SinhVien</name>
+    </table>
+      </property>
+      <property name="OutputFile" />
+    </propertySet>
+    
+      
+      
+      
+      
+      <propertySet name="List_ascx" output="..\..\project.web\Page\$(ConnectionToDatabase)\FolderSinhVien\ListSinhVienControl.ascx" template="List_ascx.cst">
+      <property name="Inherits">project.web</property>
+      <property name="Author">Nguyen Thanh Dai</property>
+      <property name="TablePrefix">sv_</property>
+      <property name="RemoveEndingS">True</property>
+      <property name="GenerateWebControls">True</property>
+      <property name="SourceTable">
+        <connectionString>$(ConnectionString1)</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+        <table>
+      <owner>dbo</owner>
+      <name>sv_SinhVien</name>
+    </table>
+      </property>
+      <property name="OutputFile" />
+    </propertySet>
+    <propertySet name="List_ascx_cs" output="..\..\project.web\Page\$(ConnectionToDatabase)\FolderSinhVien\ListSinhVienControl.ascx.cs" template="List_ascx_cs.cst">
+      <property name="Inherits">project.web</property>
+      <property name="Author">Nguyen Thanh Dai</property>
+      <property name="NameSpaceProject">ntdai21052015.quanlymiengiammon.library</property>
+      <property name="TablePrefix">sv_</property>
+      <property name="RemoveEndingS">True</property>
+      <property name="GenerateWebControls">True</property>
+      <property name="SourceTable">
+        <connectionString>$(ConnectionString1)</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+        <table>
+      <owner>dbo</owner>
+      <name>sv_SinhVien</name>
+    </table>
+      </property>
+      <property name="OutputFile" />
+    </propertySet>
+    <propertySet name="List_ascx_designer_cs" output="..\..\project.web\Page\$(ConnectionToDatabase)\FolderSinhVien\ListSinhVienControl.ascx.designer.cs" template="List_ascx_designer_cs.cst">
+      <property name="Inherits">project.web</property>
+      <property name="Author">Nguyen Thanh Dai</property>
+      <property name="NameSpaceProject">project.web</property>
+      <property name="TablePrefix">sv_</property>
+      <property name="RemoveEndingS">True</property>
+      <property name="GenerateWebControls">True</property>
+      <property name="SourceTable">
+        <connectionString>$(ConnectionString1)</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+        <table>
+      <owner>dbo</owner>
+      <name>sv_SinhVien</name>
+    </table>
+      </property>
+      <property name="OutputFile" />
+    </propertySet>
+      
+
+      <propertySet name="Page_ascx" output="..\..\project.web\Page\$(ConnectionToDatabase)\FolderSinhVien\PageSinhVien.aspx" template="Page_ascx.cst">
+          <property name="Inherits">project.web</property>
+          <property name="Author">Nguyen Thanh Dai</property>
+          <property name="TablePrefix">sv_</property>
+          <property name="RemoveEndingS">True</property>
+          <property name="GenerateWebControls">True</property>
+          <property name="SourceTable">
+              <connectionString>$(ConnectionString1)</connectionString>
+              <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+              <table>
+                  <owner>dbo</owner>
+                  <name>sv_SinhVien</name>
+              </table>
+          </property>
+          <property name="OutputFile" />
+      </propertySet>
+      <propertySet name="Page_ascx_cs" output="..\..\project.web\Page\$(ConnectionToDatabase)\FolderSinhVien\PageSinhVien.aspx.cs" template="Page_ascx_cs.cst">
+          <property name="Inherits">project.web</property>
+          <property name="Author">Nguyen Thanh Dai</property>
+          <property name="NameSpaceProject">ntdai21052015.quanlymiengiammon.library</property>
+          <property name="TablePrefix">sv_</property>
+          <property name="RemoveEndingS">True</property>
+          <property name="GenerateWebControls">True</property>
+          <property name="SourceTable">
+              <connectionString>$(ConnectionString1)</connectionString>
+              <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+              <table>
+                  <owner>dbo</owner>
+                  <name>sv_SinhVien</name>
+              </table>
+          </property>
+          <property name="OutputFile" />
+      </propertySet>
+      <propertySet name="Page_ascx_designer_cs" output="..\..\project.web\Page\$(ConnectionToDatabase)\FolderSinhVien\PageSinhVien.aspx.designer.cs" template="Page_ascx_designer_cs.cst">
+          <property name="Inherits">project.web</property>
+          <property name="Author">Nguyen Thanh Dai</property>
+          <property name="NameSpaceProject">project.web</property>
+          <property name="TablePrefix">sv_</property>
+          <property name="RemoveEndingS">True</property>
+          <property name="GenerateWebControls">True</property>
+          <property name="SourceTable">
+              <connectionString>$(ConnectionString1)</connectionString>
+              <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+              <table>
+                  <owner>dbo</owner>
+                  <name>sv_SinhVien</name>
+              </table>
+          </property>
+          <property name="OutputFile" />
+      </propertySet>
+
+      
+      
+      
+    <propertySet name="StoreProcedure" output="..\ScriptDatabase\FolderSinhVien\StoreSinhVien.sql" template="StoreProc.cst">
+      <property name="Author">Nguyen Thanh Dai</property>
+      <property name="IncludeDrop">True</property>
+      <property name="IncludeInsert">True</property>
+      <property name="IncludeUpdate">True</property>
+      <property name="IncludeDelete">True</property>
+      <property name="IncludeSelect">True</property>
+      <property name="IncludeSelectAll">True</property>
+      <property name="IncludeCount">True</property>
+      <property name="InsertSuffix">_Insert</property>
+      <property name="UpdateSuffix">_Update</property>
+      <property name="DeleteSuffix">_Delete</property>
+      <property name="SelectSuffix">_SelectOne</property>
+      <property name="SelectAllSuffix">_SelectAll</property>
+      <property name="CountSuffix">_GetCount</property>
+      <property name="SourceTable">
+        <connectionString>$(ConnectionString1)</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+        <table>
+          <owner>dbo</owner>
+          <name>sv_SinhVien</name>
+        </table>
+      </property>
+      <property name="OutputFile" />
+    </propertySet>
+  </propertySets>
+</codeSmith>

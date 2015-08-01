@@ -1,0 +1,91 @@
+D:\My Private\OtherProcejct\site_loc\ngocnv.quanlydanhmucthongtin.library\bin\Debug\ngocnv.quanlydanhmucthongtin.library.dll
+D:\My Private\OtherProcejct\site_loc\ngocnv.quanlydanhmucthongtin.library\bin\Debug\ngocnv.quanlydanhmucthongtin.library.pdb
+D:\My Private\OtherProcejct\site_loc\ngocnv.quanlydanhmucthongtin.library\obj\Debug\ResolveAssemblyReference.cache
+D:\My Private\OtherProcejct\site_loc\ngocnv.quanlydanhmucthongtin.library\obj\Debug\ngocnv.quanlydanhmucthongtin.library.dll
+D:\My Private\OtherProcejct\site_loc\ngocnv.quanlydanhmucthongtin.library\obj\Debug\ngocnv.quanlydanhmucthongtin.library.pdb
+F:\svn_103_7_40_48\site_loc\ngocnv.quanlydanhmucthongtin.library\bin\Debug\ngocnv.quanlydanhmucthongtin.library.dll
+F:\svn_103_7_40_48\site_loc\ngocnv.quanlydanhmucthongtin.library\bin\Debug\ngocnv.quanlydanhmucthongtin.library.pdb
+F:\svn_103_7_40_48\site_loc\ngocnv.quanlydanhmucthongtin.library\obj\Debug\ngocnv.quanlydanhmucthongtin.library.dll
+F:\svn_103_7_40_48\site_loc\ngocnv.quanlydanhmucthongtin.library\obj\Debug\ngocnv.quanlydanhmucthongtin.library.pdb
+F:\svn_103_7_40_48\site_loc\ngocnv.quanlydanhmucthongtin.library\obj\Debug\ngocnv10052014.catology.library.csprojResolveAssemblyReference.cache
+D:\My Private\OtherProcejct\site_tuan\ngocnv.quanlydanhmucthongtin.library\bin\Debug\ngocnv.quanlydanhmucthongtin.library.dll
+D:\My Private\OtherProcejct\site_tuan\ngocnv.quanlydanhmucthongtin.library\bin\Debug\ngocnv.quanlydanhmucthongtin.library.pdb
+D:\My Private\OtherProcejct\site_tuan\ngocnv.quanlydanhmucthongtin.library\obj\Debug\ngocnv.quanlydanhmucthongtin.library.dll
+D:\My Private\OtherProcejct\site_tuan\ngocnv.quanlydanhmucthongtin.library\obj\Debug\ngocnv.quanlydanhmucthongtin.library.pdb
+F:\svn_103_7_40_48\site_tuan\ngocnv.quanlydanhmucthongtin.library\bin\Debug\ngocnv.quanlydanhmucthongtin.library.dll
+F:\svn_103_7_40_48\site_tuan\ngocnv.quanlydanhmucthongtin.library\bin\Debug\ngocnv.quanlydanhmucthongtin.library.pdb
+F:\svn_103_7_40_48\site_tuan\ngocnv.quanlydanhmucthongtin.library\obj\Debug\ngocnv.quanlydanhmucthongtin.library.dll
+F:\svn_103_7_40_48\site_tuan\ngocnv.quanlydanhmucthongtin.library\obj\Debug\ngocnv.quanlydanhmucthongtin.library.pdb
+D:\My Private\OtherProcejct\site_tuan\ngocnv.quanlydanhmucthongtin.library\obj\Debug\ngocnv10052014.catology.library.csprojResolveAssemblyReference.cache
+D:\My Private\OtherProcejct\chiBong\ngocnv.quanlydanhmucthongtin.library\bin\Debug\ngocnv.quanlydanhmucthongtin.library.dll
+D:\My Private\OtherProcejct\chiBong\ngocnv.quanlydanhmucthongtin.library\bin\Debug\ngocnv.quanlydanhmucthongtin.library.pdb
+D:\My Private\OtherProcejct\chiBong\ngocnv.quanlydanhmucthongtin.library\obj\Debug\ngocnv.quanlydanhmucthongtin.library.dll
+D:\My Private\OtherProcejct\chiBong\ngocnv.quanlydanhmucthongtin.library\obj\Debug\ngocnv.quanlydanhmucthongtin.library.pdb
+D:\ProjectDangLam\10042014_HoatDongHopTacDoanhNghiep\SourceCode\ngocnv.quanlydanhmucthongtin.library\bin\Debug\ngocnv.quanlydanhmucthongtin.library.dll
+D:\ProjectDangLam\10042014_HoatDongHopTacDoanhNghiep\SourceCode\ngocnv.quanlydanhmucthongtin.library\bin\Debug\ngocnv.quanlydanhmucthongtin.library.pdb
+D:\ProjectDangLam\10042014_HoatDongHopTacDoanhNghiep\SourceCode\ngocnv.quanlydanhmucthongtin.library\obj\Debug\ngocnv.quanlydanhmucthongtin.library.dll
+D:\ProjectDangLam\10042014_HoatDongHopTacDoanhNghiep\SourceCode\ngocnv.quanlydanhmucthongtin.library\obj\Debug\ngocnv.quanlydanhmucthongtin.library.pdb
+D:\SVN\Project\hutech_internalsystem\SourceCode\ngocnv.quanlydanhmucthongtin.library\bin\Debug\ngocnv.quanlydanhmucthongtin.library.dll
+D:\SVN\Project\hutech_internalsystem\SourceCode\ngocnv.quanlydanhmucthongtin.library\bin\Debug\ngocnv.quanlydanhmucthongtin.library.pdb
+D:\SVN\Project\hutech_internalsystem\SourceCode\ngocnv.quanlydanhmucthongtin.library\obj\Debug\ngocnv10052014.catology.library.csprojResolveAssemblyReference.cache
+D:\SVN\Project\hutech_internalsystem\SourceCode\ngocnv.quanlydanhmucthongtin.library\obj\Debug\ngocnv.quanlydanhmucthongtin.library.dll
+D:\SVN\Project\hutech_internalsystem\SourceCode\ngocnv.quanlydanhmucthongtin.library\obj\Debug\ngocnv.quanlydanhmucthongtin.library.pdb
+D:\Project\OnProgress\hutech_internalsystem\SourceCode\ngocnv.quanlydanhmucthongtin.library\bin\Debug\ngocnv.quanlydanhmucthongtin.library.dll
+D:\Project\OnProgress\hutech_internalsystem\SourceCode\ngocnv.quanlydanhmucthongtin.library\bin\Debug\ngocnv.quanlydanhmucthongtin.library.pdb
+D:\Project\OnProgress\hutech_internalsystem\SourceCode\ngocnv.quanlydanhmucthongtin.library\obj\Debug\ngocnv10052014.catology.library.csprojResolveAssemblyReference.cache
+D:\Project\OnProgress\hutech_internalsystem\SourceCode\ngocnv.quanlydanhmucthongtin.library\obj\Debug\ngocnv.quanlydanhmucthongtin.library.dll
+D:\Project\OnProgress\hutech_internalsystem\SourceCode\ngocnv.quanlydanhmucthongtin.library\obj\Debug\ngocnv.quanlydanhmucthongtin.library.pdb
+D:\ProjectDangLam\hutech_internalsystem\SourceCode\ngocnv.quanlydanhmucthongtin.library\bin\Debug\ngocnv.quanlydanhmucthongtin.library.dll
+D:\ProjectDangLam\hutech_internalsystem\SourceCode\ngocnv.quanlydanhmucthongtin.library\bin\Debug\ngocnv.quanlydanhmucthongtin.library.pdb
+D:\ProjectDangLam\hutech_internalsystem\SourceCode\ngocnv.quanlydanhmucthongtin.library\obj\Debug\ngocnv.quanlydanhmucthongtin.library.dll
+D:\ProjectDangLam\hutech_internalsystem\SourceCode\ngocnv.quanlydanhmucthongtin.library\obj\Debug\ngocnv.quanlydanhmucthongtin.library.pdb
+D:\THANHDAI18HT\SVN\DoanhNghiep\SourceCode\ngocnv.quanlydanhmucthongtin.library\bin\Debug\ngocnv.quanlydanhmucthongtin.library.dll
+D:\THANHDAI18HT\SVN\DoanhNghiep\SourceCode\ngocnv.quanlydanhmucthongtin.library\bin\Debug\ngocnv.quanlydanhmucthongtin.library.pdb
+D:\THANHDAI18HT\SVN\DoanhNghiep\SourceCode\ngocnv.quanlydanhmucthongtin.library\bin\Debug\nvn.Library.dll
+D:\THANHDAI18HT\SVN\DoanhNghiep\SourceCode\ngocnv.quanlydanhmucthongtin.library\bin\Debug\project.config.library.dll
+D:\THANHDAI18HT\SVN\DoanhNghiep\SourceCode\ngocnv.quanlydanhmucthongtin.library\bin\Debug\nvn.Library.pdb
+D:\THANHDAI18HT\SVN\DoanhNghiep\SourceCode\ngocnv.quanlydanhmucthongtin.library\bin\Debug\project.config.library.pdb
+D:\THANHDAI18HT\SVN\DoanhNghiep\SourceCode\ngocnv.quanlydanhmucthongtin.library\obj\Debug\ngocnv10052014.catology.library.csprojResolveAssemblyReference.cache
+D:\THANHDAI18HT\SVN\DoanhNghiep\SourceCode\ngocnv.quanlydanhmucthongtin.library\obj\Debug\ngocnv.quanlydanhmucthongtin.library.dll
+D:\THANHDAI18HT\SVN\DoanhNghiep\SourceCode\ngocnv.quanlydanhmucthongtin.library\obj\Debug\ngocnv.quanlydanhmucthongtin.library.pdb
+D:\Project\OnProgress\hutech_internalsystem\SourceCodeo\ngocnv.quanlydanhmucthongtin.library\bin\Debug\ngocnv.quanlydanhmucthongtin.library.dll
+D:\Project\OnProgress\hutech_internalsystem\SourceCodeo\ngocnv.quanlydanhmucthongtin.library\bin\Debug\ngocnv.quanlydanhmucthongtin.library.pdb
+D:\Project\OnProgress\hutech_internalsystem\SourceCodeo\ngocnv.quanlydanhmucthongtin.library\bin\Debug\nvn.Library.dll
+D:\Project\OnProgress\hutech_internalsystem\SourceCodeo\ngocnv.quanlydanhmucthongtin.library\bin\Debug\project.config.library.dll
+D:\Project\OnProgress\hutech_internalsystem\SourceCodeo\ngocnv.quanlydanhmucthongtin.library\bin\Debug\nvn.Library.pdb
+D:\Project\OnProgress\hutech_internalsystem\SourceCodeo\ngocnv.quanlydanhmucthongtin.library\bin\Debug\project.config.library.pdb
+D:\Project\OnProgress\hutech_internalsystem\SourceCodeo\ngocnv.quanlydanhmucthongtin.library\obj\Debug\ngocnv10052014.catology.library.csprojResolveAssemblyReference.cache
+D:\Project\OnProgress\hutech_internalsystem\SourceCodeo\ngocnv.quanlydanhmucthongtin.library\obj\Debug\ngocnv.quanlydanhmucthongtin.library.dll
+D:\Project\OnProgress\hutech_internalsystem\SourceCodeo\ngocnv.quanlydanhmucthongtin.library\obj\Debug\ngocnv.quanlydanhmucthongtin.library.pdb
+D:\ProjectDangLam\hutech_internalsystem\SourceCode\ngocnv.quanlydanhmucthongtin.library\bin\Debug\nvn.Library.dll
+D:\ProjectDangLam\hutech_internalsystem\SourceCode\ngocnv.quanlydanhmucthongtin.library\bin\Debug\project.config.library.dll
+D:\ProjectDangLam\hutech_internalsystem\SourceCode\ngocnv.quanlydanhmucthongtin.library\bin\Debug\nvn.Library.pdb
+D:\ProjectDangLam\hutech_internalsystem\SourceCode\ngocnv.quanlydanhmucthongtin.library\bin\Debug\project.config.library.pdb
+D:\ProjectDangLam\hutech_internalsystem\SourceCode\ngocnv.quanlydanhmucthongtin.library\obj\Debug\ngocnv10052014.catology.library.csprojResolveAssemblyReference.cache
+D:\THANHDAI18HT\SVN\mvc_hutech_internalsystem\SourceCode\ngocnv.quanlydanhmucthongtin.library\bin\Debug\ngocnv.quanlydanhmucthongtin.library.dll
+D:\THANHDAI18HT\SVN\mvc_hutech_internalsystem\SourceCode\ngocnv.quanlydanhmucthongtin.library\bin\Debug\ngocnv.quanlydanhmucthongtin.library.pdb
+D:\THANHDAI18HT\SVN\mvc_hutech_internalsystem\SourceCode\ngocnv.quanlydanhmucthongtin.library\bin\Debug\nvn.Library.dll
+D:\THANHDAI18HT\SVN\mvc_hutech_internalsystem\SourceCode\ngocnv.quanlydanhmucthongtin.library\bin\Debug\project.config.library.dll
+D:\THANHDAI18HT\SVN\mvc_hutech_internalsystem\SourceCode\ngocnv.quanlydanhmucthongtin.library\bin\Debug\nvn.Library.pdb
+D:\THANHDAI18HT\SVN\mvc_hutech_internalsystem\SourceCode\ngocnv.quanlydanhmucthongtin.library\bin\Debug\project.config.library.pdb
+D:\THANHDAI18HT\SVN\mvc_hutech_internalsystem\SourceCode\ngocnv.quanlydanhmucthongtin.library\obj\Debug\ngocnv10052014.catology.library.csprojResolveAssemblyReference.cache
+D:\THANHDAI18HT\SVN\mvc_hutech_internalsystem\SourceCode\ngocnv.quanlydanhmucthongtin.library\obj\Debug\ngocnv.quanlydanhmucthongtin.library.dll
+D:\THANHDAI18HT\SVN\mvc_hutech_internalsystem\SourceCode\ngocnv.quanlydanhmucthongtin.library\obj\Debug\ngocnv.quanlydanhmucthongtin.library.pdb
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\ngocnv.quanlydanhmucthongtin.library\bin\Debug\ngocnv.quanlydanhmucthongtin.library.dll
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\ngocnv.quanlydanhmucthongtin.library\bin\Debug\ngocnv.quanlydanhmucthongtin.library.pdb
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\ngocnv.quanlydanhmucthongtin.library\bin\Debug\nvn.Library.dll
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\ngocnv.quanlydanhmucthongtin.library\bin\Debug\project.config.library.dll
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\ngocnv.quanlydanhmucthongtin.library\bin\Debug\nvn.Library.pdb
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\ngocnv.quanlydanhmucthongtin.library\bin\Debug\project.config.library.pdb
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\ngocnv.quanlydanhmucthongtin.library\obj\Debug\ngocnv10052014.catology.library.csprojResolveAssemblyReference.cache
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\ngocnv.quanlydanhmucthongtin.library\obj\Debug\ngocnv.quanlydanhmucthongtin.library.dll
+D:\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\ngocnv.quanlydanhmucthongtin.library\obj\Debug\ngocnv.quanlydanhmucthongtin.library.pdb
+D:\BOEdu\ngocnv.quanlydanhmucthongtin.library\bin\Debug\ngocnv.quanlydanhmucthongtin.library.dll
+D:\BOEdu\ngocnv.quanlydanhmucthongtin.library\bin\Debug\ngocnv.quanlydanhmucthongtin.library.pdb
+D:\BOEdu\ngocnv.quanlydanhmucthongtin.library\bin\Debug\nvn.Library.dll
+D:\BOEdu\ngocnv.quanlydanhmucthongtin.library\bin\Debug\project.config.library.dll
+D:\BOEdu\ngocnv.quanlydanhmucthongtin.library\bin\Debug\nvn.Library.pdb
+D:\BOEdu\ngocnv.quanlydanhmucthongtin.library\bin\Debug\project.config.library.pdb
+D:\BOEdu\ngocnv.quanlydanhmucthongtin.library\obj\Debug\ngocnv10052014.catology.library.csprojResolveAssemblyReference.cache
+D:\BOEdu\ngocnv.quanlydanhmucthongtin.library\obj\Debug\ngocnv.quanlydanhmucthongtin.library.dll
+D:\BOEdu\ngocnv.quanlydanhmucthongtin.library\obj\Debug\ngocnv.quanlydanhmucthongtin.library.pdb
