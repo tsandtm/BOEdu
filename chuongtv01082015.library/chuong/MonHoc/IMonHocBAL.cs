@@ -16,9 +16,11 @@ namespace chuongtv01082015.library.chuong
         List<MonHoc> GetAll();
         int GetCount();
 
-        List<MonHoc> GetAllMonHocTheoGiangVien(Guid GiangVienGuid);
+        List<MonHoc> GetAllMonHocTheoGiangVien(int Userid);
 
         bool DeleteLinkURL(Guid monhoc);
+
+        bool ThemTaiLieuVaoCapDienTu(Guid fileguid, int userlogin);
     }
 }
 

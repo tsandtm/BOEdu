@@ -12,9 +12,9 @@ namespace _project.library.hoa
         bool Delete(int userID);
         int Save(Users item);
         Users GetUsers(int userID);
-        List<Users> GetPage(int pageNumber, int pageSize, out int totalRow);
-        List<Users> GetAll();
-
+        List<Users> GetPage(int pageNumber, int pageSize, out int totalRow, string q);
+        List<Users> GetAll(string q);
+        bool ResetPass(int userID, string p);
     }
 }
 

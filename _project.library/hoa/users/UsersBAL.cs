@@ -15,6 +15,7 @@ namespace _project.library.hoa
         private int Create(Users item)
         {
             int rowsAffected = UsersDAL.Create(item);
+            item.UserId = rowsAffected;
             return rowsAffected > 0 ? item.UserId : 0;
         }
         private int Update(Users item)
@@ -60,27 +61,33 @@ namespace _project.library.hoa
         /// <param name="pageNumber">The page number.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="totalPages">total pages</par
-        public List<Users> GetPage(int pageNumber, int pageSize, out int totalPages)
+        public List<Users> GetPage(int pageNumber, int pageSize, out int totalPages, string q)
         {
             totalPages = 1;
-            IDataReader reader = UsersDAL.GetPage(pageNumber, pageSize, out totalPages);
+            IDataReader reader = UsersDAL.GetPage(pageNumber, pageSize, out totalPages, q);
             return UsersDTO.LoadListFromReader(reader);
         }
-        public int GetCount()
+        public int GetCount(string q)
         {
-            return UsersDAL.GetCount();
+            return UsersDAL.GetCount(q);
         }
 
         /// <summary>
         /// Gets an IList with all instances of Users.
         /// </summary>
-        public List<Users> GetAll()
+        public List<Users> GetAll(string q)
         {
-            IDataReader reader = UsersDAL.GetAll();
+            IDataReader reader = UsersDAL.GetAll(q);
             return UsersDTO.LoadListFromReader(reader);
         }
-        #endregion       
+        #endregion
 
+
+
+        public bool ResetPass(int userID, string p)
+        {
+            return UsersDAL.ResetPass(userID, p);
+        }
     }
 }
 

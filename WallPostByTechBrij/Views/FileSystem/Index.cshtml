@@ -1,0 +1,77 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<button onclick="tsOpenPopup(this)" 
+        data-otf-target="#FileList"
+        data-otf-action="@Url.Action("LoadList", "FileSystem", null, Request.Url.Scheme)?q=7e55be15-c62e-4f71-803f-3edb93a08fbb"
+        class="btn btn-add" 
+        title="Load file">
+    <i class="fa fa-floppy-o"></i> Load file
+</button>
+
+<button onclick="tsOpenPopup(this)"
+        data-otf-target="#pnlUpload"
+        data-otf-action="@Url.Action("Index2", "FileSystem", null, Request.Url.Scheme)"
+        class="btn btn-add"
+        title="Load file">
+    <i class="fa fa-floppy-o"></i> save itemGuid
+</button>
+
+
+<div id="pnlUpload">
+    @*@{ViewBag.ItemGuid = new Guid("7e55be15-c62e-4f71-803f-3edb93a08fbb"); }*@
+    @if (ViewBag.ItemGuid != null)
+    {
+        <form id="my-awesome-dropzone" class="dropzone" action="@Url.Action("CreateFiles", "FileSystem", new { itemguid = @ViewBag.ItemGuid, id=7 })" method="post" enctype="multipart/form-data" style="min-height: 120px !important;padding: 5px !important;">
+            <div class="dropzone-previews"></div>
+        </form>
+        <div id="FileList">
+            @Html.Partial("_PartialListFiles")
+        </div>
+    }
+</div>
+
+
+@section Styles {
+    @Styles.Render("~/plugins/fancyboxStyles")
+    @Styles.Render("~/plugins/dropZoneStyles")
+}
+
+@section Scripts {
+    @Scripts.Render("~/plugins/fancybox")
+    @Scripts.Render("~/plugins/dropZone")
+<script>
+    $(document).ready(function () {
+
+        // Fancy box 
+        $('.fancybox').fancybox({
+            openEffect: 'none',
+            closeEffect: 'none'
+        });
+
+
+        // Dropzone Upload files
+        Dropzone.options.myAwesomeDropzone = {
+            autoProcessQueue: true,
+            parallelUploads: 1,
+            maxFiles: 100,
+            paramName: "files",
+            uploadMultiple: false,
+            maxFilesize: 1000,
+            init: function () {
+                var myDropzone = this;
+                this.on("complete", function (data) {
+                });
+                this.on("queuecomplete", function (file) {
+                    $("#FileList").load('@Url.Action("LoadList", "FileSystem", null, Request.Url.Scheme)?q=@ViewBag.ItemGuid');
+                    myDropzone.removeAllFiles();
+                });
+                this.on("errormultiple", function (files, response) {
+                });
+            }
+        }
+    });
+    </script>
+}

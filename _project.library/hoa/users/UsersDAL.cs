@@ -34,7 +34,7 @@ namespace _project.library.hoa
             //sph.DefineSqlParameter("@UpdatedDate", SqlDbType.DateTime, ParameterDirection.Input, item.UpdatedDate);
             sph.DefineSqlParameter("@FullName", SqlDbType.NVarChar, 25, ParameterDirection.Input, item.FullName);
 
-            int rowsAffected = sph.ExecuteNonQuery();
+            int rowsAffected =Convert.ToInt32(sph.ExecuteScalar());
             return rowsAffected;
         }
 
@@ -89,25 +89,25 @@ namespace _project.library.hoa
         /// <summary>
         /// Gets a count of rows in the UserProfile table.
         /// </summary>
-        public static int GetCount()
+        public static int GetCount(string q)
         {
-            return Convert.ToInt32(SqlHelper.ExecuteScalar(
-                ConnectionStringStatic.GetReadConnectionString(),
-                CommandType.StoredProcedure,
-                "UserProfile_hoadm01082015_GetCount",
-                null));
+            SqlParameterHelper sph = new SqlParameterHelper(ConnectionStringStatic.GetReadConnectionString(), "UserProfile_hoadm01082015_GetCount", 1);
+            sph.DefineSqlParameter("@KeySearch", SqlDbType.NVarChar, 256, ParameterDirection.Input, q);
+
+            return Convert.ToInt32(sph.ExecuteScalar());
+
+
         }
 
         /// <summary>
         /// Gets an IDataReader with all rows in the UserProfile table.
         /// </summary>
-        public static IDataReader GetAll()
+        public static IDataReader GetAll(string q)
         {
-            return SqlHelper.ExecuteReader(
-                ConnectionStringStatic.GetReadConnectionString(),
-                CommandType.StoredProcedure,
-                "UserProfile_hoadm01082015_SelectAll",
-                null);
+            SqlParameterHelper sph = new SqlParameterHelper(ConnectionStringStatic.GetReadConnectionString(), "UserProfile_hoadm01082015_SelectAll", 1);
+            sph.DefineSqlParameter("@KeySearch", SqlDbType.NVarChar, 256, ParameterDirection.Input, q);
+
+            return sph.ExecuteReader();
         }
 
         /// <summary>
@@ -119,19 +119,31 @@ namespace _project.library.hoa
         public static IDataReader GetPage(
            int pageNumber,
            int pageSize,
-           out int totalrow)
+           out int totalrow,
+            string q)
         {
             totalrow = 0;
-            totalrow = GetCount();
+            totalrow = GetCount(q);
 
-            SqlParameterHelper sph = new SqlParameterHelper(ConnectionStringStatic.GetReadConnectionString(), "UserProfile_hoadm01082015_SelectPage", 2);
+            SqlParameterHelper sph = new SqlParameterHelper(ConnectionStringStatic.GetReadConnectionString(), "UserProfile_hoadm01082015_SelectPage", 3);
             sph.DefineSqlParameter("@PageNumber", SqlDbType.Int, ParameterDirection.Input, pageNumber);
             sph.DefineSqlParameter("@PageSize", SqlDbType.Int, ParameterDirection.Input, pageSize);
+            sph.DefineSqlParameter("@KeySearch", SqlDbType.NVarChar, 256, ParameterDirection.Input, q);
 
             return sph.ExecuteReader();
         }
 
 
+
+        internal static bool ResetPass(int userID, string p)
+        {
+            SqlParameterHelper sph = new SqlParameterHelper(ConnectionStringStatic.GetWriteConnectionString(), "UserProfile_hoadm01082015_ResetPass", 1);
+            sph.DefineSqlParameter("@UserID", SqlDbType.Int, ParameterDirection.Input, userID);
+            sph.DefineSqlParameter("@Text", SqlDbType.NVarChar, 50, ParameterDirection.Input, p);
+            
+            int rowsAffected = sph.ExecuteNonQuery();
+            return (rowsAffected > 0);
+        }
     }
 
 }

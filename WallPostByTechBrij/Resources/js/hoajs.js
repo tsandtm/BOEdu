@@ -91,66 +91,6 @@ function GetTabThongTinLienHe(element) {
     return true;
 }
 
-//gán action cho sự kiện nhấn enter trong textbox tìm kiếm
-function EnterEvent(event, textbox, button, ajaxEvent) {
-    if (event.which == 13) {
-        //$('#buttonsearch').trigger('submit');
-        //$('#txtdoanhnghiep').select();
-        //ajaxSearchListDoanhNghiep();
-        $('#' + textbox).select();
-        ajaxSearchList(textbox, button);
-    }
-}
-
-// HoaDM function() lay tat ca dieu kien loc cua filter de dung ham get chung
-// theo thu tu truong du lieu luu tru
-function GetDataFilter(textboxsearch) {
-    //var stringSearch = "";
-    // position 0: textbox key search, id textbox truyen vao
-    var stringSearch = $("#" + textboxsearch).val().trim().replace("_", "");
-
-    //quan ly tuyen dung
-    //position 1: doanhnghiepguid
-    var doanhnghiepguid = $("#hiddenFieldValue").val();
-    stringSearch += "_" + doanhnghiepguid;
-    //position 2: tungay
-    var tungay = $("#inputTuNgay").val();
-    stringSearch += "_" + tungay;
-    //position 3: denngay
-    var denngay = $("#inputDenNgay").val();
-    stringSearch += "_" + denngay;
-    //continue
-
-    //danh sach doanh nghiep
-    //position 4: nganhngheguid
-    var nganhngheguid = $("#ddlnganhnghe").val();
-    stringSearch += "_" + nganhngheguid;
-    //end danh sach doanh nghiep
-
-    //continue quan ly tuyen dung
-    //position 5: doituongthamgiaguid
-    var doituongthamgiaguid = $("#ddlListDoiTuongThamGia").val();
-    stringSearch += "_" + doituongthamgiaguid;
-    //position 6: hinhthuclamviecguid
-    var hinhthuclamviecguid = $("#ddlListHinhThucLamViec").val();
-    stringSearch += "_" + hinhthuclamviecguid;
-    //position 7: vitrituyendungguid
-    var vitrituyendungguid = $("#ddlListViTriTuyenDung").val();
-    stringSearch += "_" + vitrituyendungguid;
-    //end quan ly tuyen dung
-
-    return stringSearch;
-}
-
-//search danh sách dung chung
-function ajaxSearchList(textbox, button) {
-    var $button = $("#" + button);
-    var idList = $button.attr("data-otf-target");
-    var textSearch = GetDataFilter(textbox);
-    textSearch = textSearch.replace(" ", "+");
-    //alert(textSearch);
-    $(idList).load($button.attr("data-otf-action") + "?q=" + textSearch);
-}
 
 //export danh sách dùng chung
 function ajaxSearchListForExcel(textbox, button) {
@@ -329,6 +269,40 @@ function openPopupQuanLyTuyenDung(element) {
 
 }
 
+
+
+
+
+//gán action cho sự kiện nhấn enter trong textbox tìm kiếm
+function EnterEvent(event, textbox, button, ajaxEvent) {
+    if (event.which == 13) {
+        //$('#buttonsearch').trigger('submit');
+        //$('#txtdoanhnghiep').select();
+        //ajaxSearchListDoanhNghiep();
+        $('#' + textbox).select();
+        ajaxSearchList(textbox, button);
+    }
+}
+
+// HoaDM function() lay tat ca dieu kien loc cua filter de dung ham get chung
+// theo thu tu truong du lieu luu tru
+function GetDataFilter(textboxsearch) {
+    //var stringSearch = "";
+    // position 0: textbox key search, id textbox truyen vao
+    var stringSearch = $("#" + textboxsearch).val().trim().replace("_", "");
+
+    return stringSearch;
+}
+
+//search danh sách dung chung
+function ajaxSearchList(textbox, button) {
+    var $button = $("#" + button);
+    var idList = $button.attr("data-otf-target");
+    var textSearch = GetDataFilter(textbox);
+    textSearch = textSearch.replace(" ", "+");
+    //alert(textSearch);
+    $(idList).load($button.attr("data-otf-action") + "&q=" + textSearch);
+}
 
 function openPopupUsers(element) {
     var $button = $(element);

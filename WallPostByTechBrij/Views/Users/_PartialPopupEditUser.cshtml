@@ -40,14 +40,28 @@
                 @*row 2*@
                 <div class="form-horizontal">
                     <div class="form-group">
-                        @Html.LabelFor(model => Model.Password, new { @class = "col-sm-2 control-label" })
-                        <div class="col-sm-4">
-                            @Html.TextBoxFor(model => Model.Password, new { @class = "form-control" })
+                        @Html.LabelFor(model => Model.NgaySinh, new { @class = "col-sm-2 control-label" })
+                        <div class="col-sm-4" id="data_ngaysinh">
+                            <div class="input-group date">
+                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                @Html.TextBoxFor(model => Model.NgaySinh, new { @class = "form-control" })
+
+                            </div>
                         </div>
-                        @Html.LabelFor(model => Model.Password, new { @class = "col-sm-2 control-label" })
+                        @Html.LabelFor(model => Model.DienThoai, new { @class = "col-sm-2 control-label" })
                         <div class="col-sm-4">
-                            @Html.TextBoxFor(model => Model.Password, new { @class = "form-control" })
+                            @Html.TextBoxFor(model => Model.DienThoai, new { @class = "form-control" })
                         </div>
+                    </div>
+                </div>
+                @*row 3*@
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        @Html.LabelFor(model => Model.DiaChi, new { @class = "col-sm-2 control-label" })
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(model => Model.DiaChi, new { @class = "form-control" })
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -55,7 +69,7 @@
         <div class="modal-footer">
             <button class="btn btn-primary" type="submit">Save</button>
             hoặc
-            <a data-dismiss="modal" data-otf-method="get" data-target="#modalEditUser" data-otf-action="@Url.Action("LoadListUsers", "Users")?page=1" data-otf-target="#ListUsers" onclick="getView(this);">Quay lại</a>
+            <a data-dismiss="modal" data-otf-method="get" data-target="#modalEditUser" data-otf-action="@Url.Action("LoadListUsers", "Users")?page=1" data-otf-target="#ListResult" onclick="getView(this);">Quay lại</a>
         </div>
     }
 </div>

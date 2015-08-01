@@ -13,7 +13,11 @@ namespace chuongtv01082015.library.chuong
         public  string  BuoiGiangName { get ; set ;}
         public  Guid  MonHocGuid { get ; set ;}
 
-        public string linkTaiLieu { get; set; }
+        public string ClientFileName { get; set; }
+        public string ServerFileName { get; set; }
+        public string FileSize { get; set; }
+        public Guid FileSystemGuid { get; set; }
+
         #endregion
     }
 }

@@ -1,95 +1,67 @@
 ﻿@using WallPostByTechBrij.Helpers
 @model List<WallPostByTechBrij.Controllers.TreeViewLocation>
 
+@if (Roles.IsUserInRole("GiangVien"))
+{
+    <a href="#" onclick="uploadFileForTask()">abc</a>
+}
 
 
-@*<div class="row">
-    <div class="col-md-4">
-
-        @(Html.TreeView(Model)
-    .EmptyContent("No locations have been defined yet!")
-    .Children(m => m.ChildLocations)
-    .HtmlAttributes(new { id = "tree" })
-    .ChildrenHtmlAttributes(new { @class = "subItem" })
-    .ItemText(m => m.Name)
-    .ItemTemplate(
-    @<text>
-        <a class="nodela" href="#@item.Id">@item.Name</a>
-    </text>)
-        )
-
-    </div>
-    <div class="col-md-8">testafrafr</div>
+@*bien luu catology khi xu ly colick*@
+<input id="TextboxValueHidden" type="hidden" class="form-control" value="83E14AA7-707D-4479-B489-4777768FCC7A" title="@Url.Action("CreateFiles", "FileSystem", null, Request.Url.Scheme)">
+<form id="myAwesomeDropzone"
+      data-otf-target="#ListFileOfFolder"
+      class="dropzone"
+      action="@Url.Action("CreateFiles", "FileSystem", null, Request.Url.Scheme)"
+      method="post"
+      enctype="multipart/form-data" style="min-height: 50px !important; padding: 5px !important;">
+    <div class="dropzone-previews"></div>
+</form>
+<div id="ListFileOfFolder">
+    @Html.Partial("~/Views/FileSystem/_PartialListFiles.cshtml")
 </div>
 
 @section Scripts {
-
     <script type="text/javascript">
-
-        $.fn.extend({
-            treed: function (o) {
-
-                var openedClass = 'glyphicon-minus-sign';
-                var closedClass = 'glyphicon-plus-sign';
-
-                if (typeof o != 'undefined') {
-                    if (typeof o.openedClass != 'undefined') {
-                        openedClass = o.openedClass;
-                    }
-                    if (typeof o.closedClass != 'undefined') {
-                        closedClass = o.closedClass;
-                    }
-                };
-
-                //initialize each of the top levels
-                var tree = $(this);
-                tree.addClass("tree");
-                tree.find('li').has("ul").each(function () {
-                    var branch = $(this); //li with children ul
-                    branch.prepend("<i class='indicator glyphicon " + closedClass + "'></i>");
-                    branch.addClass('branch');
-                    branch.on('click', function (e) {
-                        if (this == e.target) {
-                            var icon = $(this).children('i:first');
-                            icon.toggleClass(openedClass + " " + closedClass);
-                            $(this).children().children().toggle();
-                        }
-                    })
-                    branch.children().children().toggle();
-                });
-                //fire event from the dynamically added icon
-                tree.find('.branch .indicator').each(function () {
-                    $(this).on('click', function () {
-                        
-                        $(this).closest('li').click();
-                    });
-                });
-                //fire event to open branch if the li contains an anchor instead of text
-                tree.find('.branch>a').each(function () {
-                    $(this).on('click', function (e) {
-                        alert("cha");
-                        //$(this).closest('li').click();
-                        //e.preventDefault();
-                    });
-                });
-                //fire event to open branch if the li contains a button instead of text
-                tree.find('.branch>button').each(function () {
-                    $(this).on('click', function (e) {
-                        
-                        $(this).closest('li').click();
-                        e.preventDefault();
-                    });
-                });
-            }
-        });
-
-        //Initialization of treeviews
-
-        $('#tree').treed();
-
+        //guid thu muc test
+        //83E14AA7-707D-4479-B489-4777768FCC7A
+        function uploadFileForTask() {
+            var abc = $("#TextboxValueHidden").val();
+            $("form#myAwesomeDropzone").attr('action', $("#TextboxValueHidden").attr("title") + "?catGuid=" + $("#TextboxValueHidden").val());
+            //$("#my-awesome-dropzone div.dz-message").click();
+            $("#ListFileOfFolder").load('@(Url.Action("LoadList", "FileSystem", null, Request.Url.Scheme))?catGuid=' + abc);
+        }
 
         $(document).ready(function () {
 
+            Dropzone.options.myAwesomeDropzone = {
+                autoProcessQueue: true,
+                parallelUploads: 1,
+                maxFiles: 100,
+                paramName: "files",
+                uploadMultiple: false,
+                maxFilesize: 1000,
+                // Dropzone settings
+                init: function () {
+                    var myDropzone = this;
+                    this.on("complete", function (data) {
+                        //var res = eval('(' + data.xhr.responseText + ')');
+                        //var res = JSON.parse(data.xhr.responseText);
+
+                    });
+                    this.on("queuecomplete", function (file) {
+                        var abc = $("#TextboxValueHidden").val();
+                        $("#ListFileOfFolder").load('@(Url.Action("LoadList", "FileSystem", null, Request.Url.Scheme))?catGuid=' + abc);
+                        myDropzone.removeAllFiles();
+                    });
+                    this.on("errormultiple", function (files, response) {
+                    });
+                    this.on("processing", function (file) {
+                        this.options.url = $("form#myAwesomeDropzone").attr("action");
+                    });
+                }
+            }
         });
     </script>
-}*@
+}
+                    

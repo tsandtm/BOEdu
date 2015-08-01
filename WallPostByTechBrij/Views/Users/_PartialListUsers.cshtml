@@ -67,6 +67,7 @@
                        data-otf-target="#EditUser"
                        data-target="#modalEditUser"
                        onclick="openPopupUsers(this)">Sửa</a>
+                    @Html.ActionLink("Reset Pass", "ResetPass", "Users", new { diugresu = @item.UserId })
                 </td>
             </tr>
         }

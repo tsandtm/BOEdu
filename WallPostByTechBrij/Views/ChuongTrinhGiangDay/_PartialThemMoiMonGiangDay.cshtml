@@ -15,7 +15,7 @@
 
         @Html.AntiForgeryToken()
         @Html.HiddenFor(model => Model.MonHocGuid)
-        @Html.HiddenFor(model => Model.GiangVienGuid)
+        @Html.HiddenFor(model => Model.Userid)
 
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
@@ -64,7 +64,7 @@
         <div class="modal-footer">
             <button id="buttonSaveLienHe" class="btn btn-primary btn-sm" type="submit"><i class="fa fa-floppy-o"></i> Save</button>
             hoặc
-            <a>Quay lại</a>
+            <a data-dismiss="modal">Quay lại</a>
         </div>
     }
 </div>

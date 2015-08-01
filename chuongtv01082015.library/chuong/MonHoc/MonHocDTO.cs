@@ -20,7 +20,7 @@ namespace chuongtv01082015.library.chuong
                 catch { }
                 item.MonHocName = reader["MonHocName"].ToString();
                 item.MonHocID = reader["MonHocID"].ToString();
-                try { item.GiangVienGuid = new Guid(reader["GiangVienGuid"].ToString()); }
+                try { item.Userid = Convert.ToInt32(reader["Userid"].ToString()); }
                 catch { }
                 try
                 {
@@ -44,7 +44,7 @@ namespace chuongtv01082015.library.chuong
                     catch { }
                     item.MonHocName = reader["MonHocName"].ToString();
                     item.MonHocID = reader["MonHocID"].ToString();
-                    try { item.GiangVienGuid = new Guid(reader["GiangVienGuid"].ToString()); }
+                    try { item.Userid = Convert.ToInt32(reader["Userid"].ToString()); }
                     catch { }
                     items.Add(item);
                 }
@@ -69,13 +69,17 @@ namespace chuongtv01082015.library.chuong
                     catch { }
                     item.MonHocName = reader["MonHocName"].ToString();
                     item.MonHocID = reader["MonHocID"].ToString();
-                    try { item.GiangVienGuid = new Guid(reader["GiangVienGuid"].ToString()); }
+                    try { item.Userid = Convert.ToInt32(reader["Userid"].ToString()); }
                     catch { }
                     try { item.BuoiGiangGuid = new Guid(reader["BuoiGiangGuid"].ToString()); }
                     catch { }
                     item.BuoiGiangID = reader["BuoiGiangID"].ToString();
                     item.BuoiGiangName = reader["BuoiGiangName"].ToString();
-                    item.LinkUrl = reader["LinkFile"].ToString();
+                    item.ClientFileName = reader["ClientFileName"].ToString();
+                    item.ServerFileName = reader["ServerFileName"].ToString();
+                    item.FileSize = reader["FileSize"].ToString();
+                    try { item.FileSystemGuid = new Guid(reader["FileSystemGuid"].ToString()); }
+                    catch { }
                     items.Add(item);
                 }
             }
@@ -107,9 +111,18 @@ namespace chuongtv01082015.library.chuong
                         b.BuoiGiangGuid = items[i].BuoiGiangGuid;
                         b.BuoiGiangID = items[i].BuoiGiangID;
                         b.BuoiGiangName = items[i].BuoiGiangName;
-                        b.linkTaiLieu = items[i].LinkUrl;
+                        b.ClientFileName = items[i].ClientFileName;
+                        b.ServerFileName = items[i].ServerFileName;
+                        b.FileSize = items[i].FileSize;
+                        b.FileSystemGuid = items[i].FileSystemGuid;
+
                         m.DanhSachBuoiGiangDay.Add(b);
                         i++;
+                        if (i >= count)
+                        {
+                            Returnitems.Add(m);
+                            break;
+                        }
                     }
                     if (items[i].MonHocGuid == items[i - 1].MonHocGuid)
                     {
@@ -117,7 +130,10 @@ namespace chuongtv01082015.library.chuong
                         b.BuoiGiangGuid = items[i].BuoiGiangGuid;
                         b.BuoiGiangID = items[i].BuoiGiangID;
                         b.BuoiGiangName = items[i].BuoiGiangName;
-                        b.linkTaiLieu = items[i].LinkUrl;
+                        b.ClientFileName = items[i].ClientFileName;
+                        b.ServerFileName = items[i].ServerFileName;
+                        b.FileSize = items[i].FileSize;
+                        b.FileSystemGuid = items[i].FileSystemGuid;
                         m.DanhSachBuoiGiangDay.Add(b);
                         flag = true;
                         i++;

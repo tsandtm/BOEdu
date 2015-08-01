@@ -89,10 +89,10 @@ namespace chuongtv01082015.library.chuong
         #endregion
 
 
-        public List<MonHoc> GetAllMonHocTheoGiangVien(Guid GiangVienGuid)
+        public List<MonHoc> GetAllMonHocTheoGiangVien(int Userid)
         {
             MonHocDAL itemDAL = new MonHocDAL();
-            IDataReader reader = itemDAL.GetAllMonHocTheoGiangVien(GiangVienGuid);
+            IDataReader reader = itemDAL.GetAllMonHocTheoGiangVien(Userid);
             return MonHocDTO.LoadListFromReaderForList(reader);
         }
 
@@ -102,6 +102,13 @@ namespace chuongtv01082015.library.chuong
 
             MonHocDAL itemDAL = new MonHocDAL();
             return itemDAL.DeleteLinkURL(monhoc);
+        }
+
+
+        public bool ThemTaiLieuVaoCapDienTu(Guid fileguid, int userlogin)
+        {
+            MonHocDAL itemDAL = new MonHocDAL();
+            return itemDAL.ThemTaiLieuVaoCapDienTu(fileguid, userlogin);
         }
     }
 }

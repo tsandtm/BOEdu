@@ -576,19 +576,14 @@ namespace project.config.library.Utilities
         {
             get
             {
-                return "00000000-0000-0000-0000-000000000000"; //8
-                //cập nhật thêm nếu thêm trường tìm kiếm vào hàm GetDataFilter trong hoa.js
-                // position 0: textbox key search, id textbox truyen vao
-                //quan ly tuyen dung
-                //position 1: doanhnghiepguid
-                //position 2: tungay
-                //position 3: denngay
-                //position 5: doituongthamgiaguid
-                //position 6: hinhthuclamviecguid
-                //position 7: vitrituyendungguid
-
-                //danh sach doanh nghiep
-                //position 4: nganhngheguid
+                return "00000000-0000-0000-0000-000000000000";               
+            }
+        }
+        public static string PW_DEFAULT
+        {
+            get
+            {
+                return "AGarDH0+ygYLmyKQ9sDA+wGwKbWXPvdh9zeC9m1/o0J7aNhe23lGx5uPg2YzkbwS/g==";
             }
         }
         #endregion

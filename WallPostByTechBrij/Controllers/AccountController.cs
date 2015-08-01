@@ -23,6 +23,7 @@ namespace WallPostByTechBrij.Controllers
         [AllowAnonymous]
         public ActionResult Login(string returnUrl)
         {
+            
             ViewBag.ReturnUrl = returnUrl;
             return View();
         }
@@ -53,7 +54,6 @@ namespace WallPostByTechBrij.Controllers
         public ActionResult LogOff()
         {
             WebSecurity.Logout();
-
             return RedirectToAction("Index", "Home");
         }
 

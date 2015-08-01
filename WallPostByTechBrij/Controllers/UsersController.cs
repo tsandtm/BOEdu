@@ -18,11 +18,11 @@ namespace project.web.mvc.Controllers
         //
         // GET: /Users/
 
-        public ActionResult Index(int? page)
+        public ActionResult Index(int? page, string q)
         {
             int currentPageIndex = page.HasValue ? page.Value : 1;
             int totalRows = 0;
-            IList<Users> allEmployee = itemUserBAL.GetPage(currentPageIndex, DefaultPageSize, out totalRows);
+            IList<Users> allEmployee = itemUserBAL.GetPage(currentPageIndex, DefaultPageSize, out totalRows, q);
             var listPaged = allEmployee.ToPagedList(currentPageIndex, DefaultPageSize, totalRows);
 
             if (listPaged == null)
@@ -33,7 +33,7 @@ namespace project.web.mvc.Controllers
             return View();
         }
 
-        public ActionResult LoadListUsers(int? page)
+        public ActionResult LoadListUsers(int? page, string q)
         {
             ViewBag.Title = "Browse all products";
 
@@ -41,7 +41,7 @@ namespace project.web.mvc.Controllers
             int totalRows = 0;
 
             // tim kiem theo dieu kien
-            IList<Users> allEmployee = itemUserBAL.GetPage(currentPageIndex, DefaultPageSize, out totalRows);
+            IList<Users> allEmployee = itemUserBAL.GetPage(currentPageIndex, DefaultPageSize, out totalRows, q);
             var listPaged = allEmployee.ToPagedList(currentPageIndex, DefaultPageSize, totalRows);
 
             if (listPaged == null)
@@ -117,10 +117,21 @@ namespace project.web.mvc.Controllers
         [HttpPost]
         public ActionResult Delete(string diugresu)
         {
-
+            //Lưu ý khóa ngoại ở các bảng phân quyền của user
             try
             {
                 itemUserBAL.Delete(Int32.Parse(diugresu));
+            }
+            catch { return Json("error", JsonRequestBehavior.AllowGet); }
+            return Json("ok", JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpPost]
+        public ActionResult ResetPass(string diugresu)
+        {
+            try
+            {
+                itemUserBAL.ResetPass(Int32.Parse(diugresu), ConstantVariable.PW_DEFAULT);
             }
             catch { return Json("error", JsonRequestBehavior.AllowGet); }
             return Json("ok", JsonRequestBehavior.AllowGet);

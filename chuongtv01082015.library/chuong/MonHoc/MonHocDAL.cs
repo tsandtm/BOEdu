@@ -22,7 +22,7 @@ namespace chuongtv01082015.library.chuong
             sph.DefineSqlParameter("@MonHocGuid", SqlDbType.UniqueIdentifier, ParameterDirection.Input, item.MonHocGuid);
             sph.DefineSqlParameter("@MonHocName", SqlDbType.NVarChar, 256, ParameterDirection.Input, item.MonHocName);
             sph.DefineSqlParameter("@MonHocID", SqlDbType.NVarChar, 256, ParameterDirection.Input, item.MonHocID);
-            sph.DefineSqlParameter("@GiangVienGuid", SqlDbType.UniqueIdentifier, ParameterDirection.Input, item.GiangVienGuid);
+            sph.DefineSqlParameter("@Userid", SqlDbType.Int, ParameterDirection.Input, item.Userid);
             sph.DefineSqlParameter("@SoBuoiGiangDay", SqlDbType.Int, ParameterDirection.Input, item.SoBuoiGiangDay);
             int rowsAffected = sph.ExecuteNonQuery();
             return rowsAffected;
@@ -38,7 +38,7 @@ namespace chuongtv01082015.library.chuong
             sph.DefineSqlParameter("@MonHocGuid", SqlDbType.UniqueIdentifier, ParameterDirection.Input, item.MonHocGuid);
             sph.DefineSqlParameter("@MonHocName", SqlDbType.NVarChar, 256, ParameterDirection.Input, item.MonHocName);
             sph.DefineSqlParameter("@MonHocID", SqlDbType.NVarChar, 256, ParameterDirection.Input, item.MonHocID);
-            sph.DefineSqlParameter("@GiangVienGuid", SqlDbType.UniqueIdentifier, ParameterDirection.Input, item.GiangVienGuid);
+            sph.DefineSqlParameter("@Userid", SqlDbType.Int, ParameterDirection.Input, item.Userid);
             sph.DefineSqlParameter("@SoBuoiGiangDay", SqlDbType.Int, ParameterDirection.Input, item.SoBuoiGiangDay);
             int rowsAffected = sph.ExecuteNonQuery();
             return (rowsAffected > 0);
@@ -113,10 +113,10 @@ namespace chuongtv01082015.library.chuong
             return sph.ExecuteReader();
         }
 
-        internal IDataReader GetAllMonHocTheoGiangVien(Guid GiangVienGuid)
+        internal IDataReader GetAllMonHocTheoGiangVien(int Userid)
         {
             SqlParameterHelper sph = new SqlParameterHelper(ConnectionStringStatic.GetReadConnectionString(), "gv_MonHoc_Chuongtv31072015_GetAllMonHocTheoGiangVien", 1);
-            sph.DefineSqlParameter("@GiangVienGuid", SqlDbType.UniqueIdentifier, ParameterDirection.Input, GiangVienGuid);
+            sph.DefineSqlParameter("@Userid", SqlDbType.Int, ParameterDirection.Input, Userid);
             return sph.ExecuteReader();
         }
 
@@ -124,6 +124,15 @@ namespace chuongtv01082015.library.chuong
         {
             SqlParameterHelper sph = new SqlParameterHelper(ConnectionStringStatic.GetWriteConnectionString(), "gv_MonHoc_Chuongtv01082015_DeleteLinkURL", 1);
             sph.DefineSqlParameter("@BuoiGuid", SqlDbType.UniqueIdentifier, ParameterDirection.Input, monhoc);
+            int rowsAffected = sph.ExecuteNonQuery();
+            return (rowsAffected > 0);
+        }
+
+        internal bool ThemTaiLieuVaoCapDienTu(Guid fileguid, int userlogin)
+        {
+            SqlParameterHelper sph = new SqlParameterHelper(ConnectionStringStatic.GetWriteConnectionString(), "gv_MonHoc_Chuongtv01082015_ThemTaiLieuVaoCapDienTu", 2);
+            sph.DefineSqlParameter("@UseridLogin", SqlDbType.Int, ParameterDirection.Input, userlogin);
+            sph.DefineSqlParameter("@FileSystemGuid", SqlDbType.UniqueIdentifier, ParameterDirection.Input, fileguid);
             int rowsAffected = sph.ExecuteNonQuery();
             return (rowsAffected > 0);
         }

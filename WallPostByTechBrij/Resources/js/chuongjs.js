@@ -110,27 +110,16 @@ function XoaDoanhnghiepClick(element) {
 
 // danh cho cap tai lieu ao
 function ClosePopupAndLoadDataChuong(idPopup, idActionLoadList, errormessage) {
-    if (idPopup != 'null')
+
+    if (idPopup != 'null') {
         $(idPopup).modal('hide');
+    }
 
     if (idActionLoadList != 'null') {
         var idList = $(idActionLoadList).attr("data-otf-target");
         $(idList).load($(idActionLoadList).attr("data-otf-action"));
     }
     DialogAlert("", errormessage, 1);
-}
-function GetTabDanhSachMonHoc(element) {
-    var $button = $(element);
-    var idList = $button.attr("data-otf-target");
-    $(idList).load($button.attr("data-otf-action"));
-    return true;
-}
-function ClickEditMonHoc(element) {
-    var $button = $(element);
-    var idList = $button.attr("data-otf-target");
-    $(idList).load($button.attr("data-otf-action"));
-
-    return true;
 }
 
 function ClosePopupAndLoadDataEditChuong(idPopup, idActionLoadList, errormessage) {
@@ -145,6 +134,19 @@ function ClosePopupAndLoadDataEditChuong(idPopup, idActionLoadList, errormessage
     DialogAlert("", errormessage, 1);
 }
 
+function GetTabDanhSachMonHoc(element) {
+    var $button = $(element);
+    var idList = $button.attr("data-otf-target");
+    $(idList).load($button.attr("data-otf-action"));
+    return true;
+}
+function ClickEditMonHoc(element) {
+    var $button = $(element);
+    var idList = $button.attr("data-otf-target");
+    $(idList).load($button.attr("data-otf-action"));
+
+    return true;
+}
 function ReloadDanhSachMon(errormessage) {
 
     DialogAlert("", errormessage, 1);
@@ -185,5 +187,23 @@ function XoaFileDinhKem(element) {
         });
     }
 
-    
+
+}
+
+function ThemFileVaoCap(element) {
+    var $button = $(element);
+    $.ajax({
+        type: "POST",
+        url: $button.attr("data-otf-action"),
+        success: function (data) {
+            if (data == true) {
+                $($button.attr("data-otf-target")).css({ "display": "block" });
+            }
+            else
+                alert('Không thể thêm vui lòng liên hệ quản trị để khắc phục!');
+        },
+        error: function (xhr, ajaxOptions, thrownError) {
+            alert('server bận vui lòng quay lại sau ít phút nữa!');
+        }
+    });
 }

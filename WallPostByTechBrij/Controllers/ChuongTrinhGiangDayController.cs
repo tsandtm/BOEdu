@@ -4,9 +4,13 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using chuongtv01082015.library.chuong;
+using WallPostByTechBrij.Filters;
+using WebMatrix.WebData;
 
 namespace WallPostByTechBrij.Controllers
 {
+    [Authorize]
+    [InitializeSimpleMembership]
     public class ChuongTrinhGiangDayController : Controller
     {
         IMonHocBAL itemBAL = new MonHocBAL();
@@ -14,28 +18,31 @@ namespace WallPostByTechBrij.Controllers
         // GET: /ChuongTrinhGiangDay/
         public ActionResult Index()
         {
+            //return JavaScript("GetTabDanhSachMonHoc('#thongtindanhsachmonhoc')");
             return View();
         }
         public ActionResult CreateChuongTrinhGiangDay(MonHoc item)
         {
+            var flagCreate = false;
             if (item.MonHocGuid == null || item.MonHocGuid == Guid.Empty)
             {
                 item.MonHocGuid = Guid.Empty;
-                item.GiangVienGuid = new Guid("a66e725d-a10a-452e-8dba-f1b63da67048");
+                item.Userid = 1;
+                flagCreate = true;
             }
             Guid trangThai = itemBAL.Save(item);
             if (trangThai != Guid.Empty)
-                if (item.MonHocGuid == Guid.Empty)
+                if (flagCreate)
                     return JavaScript("ClosePopupAndLoadDataChuong('#modalCreateMon','#thongtindanhsachmonhoc','Thực hiện thành công')");
                 else
-                    return JavaScript("ClosePopupAndLoadDataEditChuong('#modalEditLienHe','#thongtindanhsachmonhoc','Thực hiện thành công')");
+                    return JavaScript("ClosePopupAndLoadDataEditChuong('#modalEditMon','#thongtindanhsachmonhoc','Thực hiện thành công')");
             return View();
         }
 
         public ActionResult LoadDanhSachMon()
         {
-            Guid GiangVienGuid = new Guid("a66e725d-a10a-452e-8dba-f1b63da67048");
-            return PartialView("_PartialDanhSachMonHoc", itemBAL.GetAllMonHocTheoGiangVien(GiangVienGuid));
+            int Userid = 1;
+            return PartialView("_PartialDanhSachMonHoc", itemBAL.GetAllMonHocTheoGiangVien(Userid));
         }
 
         [HttpGet]
@@ -98,5 +105,15 @@ namespace WallPostByTechBrij.Controllers
             bool trangThai = itemBAL.DeleteLinkURL(monhoc);
             return Json(trangThai, JsonRequestBehavior.AllowGet);
         }
+
+        [HttpPost]
+        [ActionName("ThemFileVaoCap")]
+        public ActionResult ThemFileVaoCap(Guid fileguid)
+        {
+            int userlogin = WebSecurity.CurrentUserId;
+            bool trangThai = itemBAL.ThemTaiLieuVaoCapDienTu(fileguid, userlogin);
+            return Json(true, JsonRequestBehavior.AllowGet);
+        }
+
     }
 }

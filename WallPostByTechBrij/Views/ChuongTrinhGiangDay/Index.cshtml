@@ -3,20 +3,22 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Chương trinh giảng dạy</h2>
 
 <div class="wrapper wrapper-content  animated fadeInRight">
-    <a id="thongtindanhsachmonhoc"
-       onclick="GetTabDanhSachMonHoc(this);"
-       data-otf-target="#danhsachmonhoc"
-       data-otf-action="@Url.Action("LoadDanhSachMon", "ChuongTrinhGiangDay")">Tài liệu bài giảng</a>
+    <div id="thongtindanhsachmonhoc"
+         data-otf-target="#danhsachmonhoc"
+         data-otf-action="@Url.Action("LoadDanhSachMon", "ChuongTrinhGiangDay")" style="display:none;"></div>
 
-    <button type="button"
-            class="btn btn-primary"
-            data-toggle="modal"
-            data-target="#modalCreateMon">
-        Thêm
-    </button>
+    @if (Roles.IsUserInRole("GiangVien"))
+    {
+        <button type="button"
+                class="btn btn-primary"
+                data-toggle="modal"
+                data-target="#modalCreateMon">
+            Thêm
+        </button>
+    }
 
     <div class="row">
         <div class="col-lg-4" id="danhsachmonhoc">
@@ -36,3 +38,14 @@
         </div>
     </div>
 </div>
+
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            GetTabDanhSachMonHoc('#thongtindanhsachmonhoc');
+        });
+    </script>
+}
+
+

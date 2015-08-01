@@ -11,7 +11,7 @@ namespace chuongtv01082015.library.chuong
         public Guid MonHocGuid { get; set; }
         public string MonHocName { get; set; }
         public string MonHocID { get; set; }
-        public Guid GiangVienGuid { get; set; }
+        public int Userid { get; set; }
         public int SoBuoiGiangDay { get; set; }
 
         // them danh sach giang day
@@ -20,7 +20,11 @@ namespace chuongtv01082015.library.chuong
         public string BuoiGiangID { get; set; }
         public string BuoiGiangName { get; set; }
 
-        public string LinkUrl { get; set; }
+        public string ClientFileName { get; set; }
+        public string ServerFileName { get; set; }
+        public string FileSize { get; set; }
+        public Guid FileSystemGuid { get; set; }
+
         #endregion
     }
 }

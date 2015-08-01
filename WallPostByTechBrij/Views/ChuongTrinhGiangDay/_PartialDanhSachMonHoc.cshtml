@@ -9,20 +9,23 @@
                         <a title="@item.MonHocName"><i class="fa fa-folder"></i></a>
                     </h1>@item.MonHocName
 
-                    <a data-otf-target="#EditMonHoc"
-                       data-otf-method="get"
-                       onclick="ClickEditMonHoc(this)"
-                       data-toggle="modal"
-                       data-target="#modalEditMon"
-                       data-otf-action="@Url.Action("Edit", "ChuongTrinhGiangDay", null, Request.Url.Scheme)?monhocguid=@item.MonHocGuid">
-                        <i class="fa fa-pencil"></i>
-                    </a>
+                    @if (Roles.IsUserInRole("GiangVien"))
+                    {
+                        <a data-otf-target="#EditMonHoc"
+                           data-otf-method="get"
+                           onclick="ClickEditMonHoc(this)"
+                           data-toggle="modal"
+                           data-target="#modalEditMon"
+                           data-otf-action="@Url.Action("Edit", "ChuongTrinhGiangDay", null, Request.Url.Scheme)?monhocguid=@item.MonHocGuid">
+                            <i class="fa fa-pencil">Sua</i>
+                        </a>
 
-                    <a onclick="ClickXoaMonHoc(this)"
-                       id="deletedanhsachmon"
-                       data-otf-target="#danhsachmonhoc"
-                       data-otf-action="@Url.Action("LoadDanhSachMon", "ChuongTrinhGiangDay")"
-                       data-otf-actionmain="@Url.Action("Delete", "ChuongTrinhGiangDay",null, Request.Url.Scheme)?monhocguid=@item.MonHocGuid"><i class="fa fa-trash-o"></i></a>
+                        <a onclick="ClickXoaMonHoc(this)"
+                           id="deletedanhsachmon"
+                           data-otf-target="#danhsachmonhoc"
+                           data-otf-action="@Url.Action("LoadDanhSachMon", "ChuongTrinhGiangDay")"
+                           data-otf-actionmain="@Url.Action("Delete", "ChuongTrinhGiangDay",null, Request.Url.Scheme)?monhocguid=@item.MonHocGuid">Xoa<i class="fa fa-trash-o"></i></a>
+                    }
                 </div>
             </div>
             <div class="row">
@@ -30,15 +33,36 @@
                     @foreach (chuongtv01082015.library.chuong.BuoiGiangDay item1 in item.DanhSachBuoiGiangDay)
                     {
                         @item1.BuoiGiangName
-                        if (!string.IsNullOrEmpty(item1.linkTaiLieu))
+                        if (item1.FileSystemGuid != Guid.Empty)
                         {
-                            <a onclick="XoaFileDinhKem(this)"
-                               data-otf-action="@Url.Action("DeleteLinkURL", "ChuongTrinhGiangDay", null, Request.Url.Scheme)?buoiguid=@item1.BuoiGiangGuid"
-                               data-otf-target="#danhsachmonhoc"
-                               data-otf-actionload="@Url.Action("LoadDanhSachMon", "ChuongTrinhGiangDay")">
-                                @item1.linkTaiLieu
-                            <i class="fa fa-trash-o"></i>
-                        </a>
+                            <a title="Thêm vào cặp"
+                               onclick="ThemFileVaoCap(this)"
+                               data-otf-target="#checkdacotrongcap_@item1.BuoiGiangGuid"
+                               data-otf-action="@Url.Action("ThemFileVaoCap",
+                                                                "ChuongTrinhGiangDay",
+                                                                null,
+                                                                Request.Url.Scheme)?fileguid=@item1.FileSystemGuid">
+                                @item1.ClientFileName &nbsp; @item1.FileSize MB
+                            </a>
+                            <div id="checkdacotrongcap_@item1.BuoiGiangGuid" style="display:none;">
+                                Đã có trong cặp
+                            </div>
+                            <a href="~/Data/@item1.ServerFileName">DownLoad</a>
+                            //kiem tra quyen
+                            if (Roles.IsUserInRole("GiangVien"))
+                            {
+                                <a onclick="XoaFileDinhKem(this)"
+                                   data-otf-action="@Url.Action(
+                                                                "DeleteLinkURL",
+                                                                "ChuongTrinhGiangDay",
+                                                                null,
+                                                                Request.Url.Scheme)?buoiguid=@item1.BuoiGiangGuid"
+                                   data-otf-target="#danhsachmonhoc"
+                                   data-otf-actionload="@Url.Action("LoadDanhSachMon", "ChuongTrinhGiangDay")">
+                                    Xoa
+                                    <i class="fa fa-trash-o"></i>
+                                </a>
+                            }
                         }
                         <br />
                     }

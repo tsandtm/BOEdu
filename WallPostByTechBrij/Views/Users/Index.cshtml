@@ -11,9 +11,9 @@
                 <div class="col-sm-5">
                     <div class="input-group">
                         <input id="txtKeySearch" placeholder="Thông tin cần tìm" onkeypress="return EnterEvent(event, 'txtKeySearch', 'btnSearch', 'ajaxSearchList')"
-                               class="form-control" />                       
+                               class="form-control" />
                         <span class="input-group-btn">
-                            <button id="btnSearch" type="submit" class="btn btn-sm btn-primary" data-otf-target="#ListResult" data-otf-action="@Url.Action("LoadListUsers", "Users", null, Request.Url.Scheme)" onclick="ajaxSearchList('txtKeySearch', 'btnSearch');">
+                            <button id="btnSearch" type="submit" class="" data-otf-target="#ListResult" data-otf-action="@Url.Action("LoadListUsers", "Users", null, Request.Url.Scheme)?page=1" onclick="ajaxSearchList('txtKeySearch', 'btnSearch');">
                                 Tìm kiếm
                             </button>
                         </span>
@@ -24,14 +24,23 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="pull-right">
-                        @Html.ActionLink("Thêm mới", "Create", "Users", new { @class = "btn btn-primary" })
+                        <button onclick="openPopupUsers(this)" type="button"
+                                data-otf-target="#CreateUser"
+                                data-otf-action="@Url.Action("Create", "Users", null, Request.Url.Scheme)"
+                                class="" data-toggle="modal"
+                                data-target="#modalCreateUser"
+                                title="Thêm mới">
+                            Thêm mới
+                        </button>
+
+                        @*@Html.ActionLink("Thêm mới", "Create", "Users", new { @class = "btn btn-primary" })*@
                         <button data-otf-mutil="true"
                                 data-otf-ajax="true"
                                 data-otf-confirm="Bạn có chắc chắn muôn xóa?"
                                 data-otf-target="#ListResult"
-                                data-otf-action-target="@Url.Action("LoadListUsers", "Users")?page=1"
+                                data-otf-action-target="@Url.Action("LoadListUsers", "Users")?page=1&q="
                                 data-otf-action="@Url.Action("Delete", "Users", null, Request.Url.Scheme)?diugresu="
-                                class=" btn btn-white text-left text-danger"
+                                class=" "
                                 title="Xóa"
                                 onclick="deleteListItem(this)">
                             <i class="fa fa-trash-o"></i> Xóa
@@ -66,3 +75,18 @@
         @Html.Partial("_PartialPopupEditUser")
     </div>
 </div>
+
+@section Scripts {
+    @*<script type="text/javascript">
+        $(document).ready(function () {
+            $('#data_ngayssinh .input-group.date').datepicker({
+                format: 'dd/mm/yyyy',
+                todayBtn: "linked",
+                keyboardNavigation: false,
+                forceParse: false,
+                calendarWeeks: true,
+                autoclose: true
+            });
+        });
+    </script>*@
+}

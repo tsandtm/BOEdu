@@ -28,7 +28,7 @@ namespace _project.library.hoa
 
                     item.UserName = reader["UserName"].ToString();
 
-                    item.Password = reader["Password"].ToString();
+                    //item.Password = reader["Password"].ToString();
                     item.DiaChi = reader["DiaChi"].ToString();
                     item.DienThoai = reader["DienThoai"].ToString();
                     item.DienThoai = reader["AvatarExt"].ToString();
@@ -82,7 +82,7 @@ namespace _project.library.hoa
                     catch (Exception) { }
                     item.FullName = reader["FullName"].ToString();
                     item.UserName = reader["UserName"].ToString();
-                    item.Password = reader["Password"].ToString();
+                    //item.Password = reader["Password"].ToString();
                     item.DiaChi = reader["DiaChi"].ToString();
                     item.DienThoai = reader["DienThoai"].ToString();
                     item.DienThoai = reader["AvatarExt"].ToString();

@@ -1,0 +1,32 @@
+﻿
+
+
+@if (ViewBag.ListFiles != null)
+{
+    foreach (project.config.library.FileSystem item in ViewBag.ListFiles)
+    {
+
+        <span>  @item.ClientFileName</span>
+        <strong>@item.FileSize MB</strong> 
+            <a href="~/Download.ashx?id=@item.FileSystemGuid" title="@item.ClientFileName">@item.ClientFileName</a>
+    <a class="dz-error-mark" id="link-@item.FileSystemGuid" onclick="DeleteFileSystem(this)" @*data-otf-confirm="Bạn muốn xóa file?"*@
+       data-otf-action-target="@Url.Action("LoadList", "FileSystem", null, Request.Url.Scheme)?catGuid=@item.ItemGuid"
+       data-otf-target="#ListFileOfFolder"
+       data-otf-action="@Url.Action("Delete", "FileSystem", null, Request.Url.Scheme)?q=@item.FileSystemGuid"
+       style="opacity: 1;">
+        <span>✘</span>
+    </a>
+    
+    <a href="#">
+        <span>Share</span>
+    </a>
+    
+    <a href="#">
+        <span>Download</span>
+    </a>
+    <br />
+    }
+}
+
+
+
