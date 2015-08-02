@@ -1,6 +1,13 @@
 # BOEdu
 Bag online for all student
 
-Lưu trữ bài giảng và các tài liệu của giảng viên và sinh viên
-Mỗi cá nhân sẽ được tạo một không giang riêng giống một bag.
-Giảng viên chia sẽ tài liệu. Sinh viên có thể xem và lưu về bag của mình để lưu trữ và xem sau này.
+What’s in a digital school bag?
+
+Students of all ages, with internet access, can access all the learning documents and resources they need
+
+Timetables
+Textbooks
+Notebooks
+Report cards
+Documents
+Lesson material provided by teachers (texts, videos, etc.)
