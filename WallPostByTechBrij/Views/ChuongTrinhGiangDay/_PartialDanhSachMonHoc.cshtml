@@ -5,53 +5,59 @@
         {
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>
-                        <a title="@item.MonHocName"><i class="fa fa-folder"></i></a>
-                    </h1>@item.MonHocName
+                    <div class="showhim1">
+                        <p>
+                            <strong class="float-left">
+                                @item.MonHocName &nbsp;&nbsp;
+                            </strong>
 
-                    @if (Roles.IsUserInRole("GiangVien"))
-                    {
-                        <a data-otf-target="#EditMonHoc"
-                           data-otf-method="get"
-                           onclick="ClickEditMonHoc(this)"
-                           data-toggle="modal"
-                           data-target="#modalEditMon"
-                           data-otf-action="@Url.Action("Edit", "ChuongTrinhGiangDay", null, Request.Url.Scheme)?monhocguid=@item.MonHocGuid">
-                            <i class="fa fa-pencil">Sua</i>
-                        </a>
+                            @if (Roles.IsUserInRole("GiangVien"))
+                            {
+                                <span class="showme">
+                                    <a data-otf-target="#EditMonHoc"
+                                       data-otf-method="get"
+                                       onclick="ClickEditMonHoc(this)"
+                                       data-toggle="modal"
+                                       data-target="#modalEditMon"
+                                       data-otf-action="@Url.Action("Edit", "ChuongTrinhGiangDay", null, Request.Url.Scheme)?monhocguid=@item.MonHocGuid">
+                                        <i class="glyphicon  glyphicon-pencil text-primary"></i>
+                                    </a>
 
-                        <a onclick="ClickXoaMonHoc(this)"
-                           id="deletedanhsachmon"
-                           data-otf-target="#danhsachmonhoc"
-                           data-otf-action="@Url.Action("LoadDanhSachMon", "ChuongTrinhGiangDay")"
-                           data-otf-actionmain="@Url.Action("Delete", "ChuongTrinhGiangDay",null, Request.Url.Scheme)?monhocguid=@item.MonHocGuid">Xoa<i class="fa fa-trash-o"></i></a>
-                    }
+                                    <a onclick="ClickXoaMonHoc(this)"
+                                       id="deletedanhsachmon"
+                                       data-otf-target="#danhsachmonhoc"
+                                       data-otf-action="@Url.Action("LoadDanhSachMon", "ChuongTrinhGiangDay")"
+                                       data-otf-actionmain="@Url.Action("Delete", "ChuongTrinhGiangDay", null, Request.Url.Scheme)?monhocguid=@item.MonHocGuid"><i class="glyphicon  glyphicon-trash text-danger"></i></a>
+                                </span>
+                            }
+                        </p>
+                    </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-12">
                     @foreach (chuongtv01082015.library.chuong.BuoiGiangDay item1 in item.DanhSachBuoiGiangDay)
                     {
-                        @item1.BuoiGiangName
+                        <span style="padding-left: 15px;" class="float-left"> @item1.BuoiGiangName : &nbsp;&nbsp;</span>
                         if (item1.FileSystemGuid != Guid.Empty)
                         {
-                            <a title="Thêm vào cặp"
+                            <a title="Thêm vào cặp" class="float-left btn-nounderline"
                                onclick="ThemFileVaoCap(this)"
                                data-otf-target="#checkdacotrongcap_@item1.BuoiGiangGuid"
                                data-otf-action="@Url.Action("ThemFileVaoCap",
                                                                 "ChuongTrinhGiangDay",
                                                                 null,
                                                                 Request.Url.Scheme)?fileguid=@item1.FileSystemGuid">
-                                @item1.ClientFileName &nbsp; @item1.FileSize MB
+                                @item1.ClientFileName &nbsp; @item1.FileSize MB &nbsp;&nbsp;
                             </a>
-                            <div id="checkdacotrongcap_@item1.BuoiGiangGuid" style="display:none;">
-                                Đã có trong cặp
-                            </div>
-                            <a href="~/Data/@item1.ServerFileName">DownLoad</a>
+                            <span id="checkdacotrongcap_@item1.BuoiGiangGuid" style="display:none;" class="float-left">
+                                <i class="glyphicon glyphicon-ok text-success"></i>&nbsp;&nbsp;
+                            </span>
+    <a href="~/Download.ashx?id=@item1.FileSystemGuid" class="float-left btn-nounderline"><i class="glyphicon glyphicon-save"></i>&nbsp;&nbsp;</a>
                             //kiem tra quyen
                             if (Roles.IsUserInRole("GiangVien"))
                             {
-                                <a onclick="XoaFileDinhKem(this)"
+                                <a onclick="XoaFileDinhKem(this)" class="float-left btn-nounderline"
                                    data-otf-action="@Url.Action(
                                                                 "DeleteLinkURL",
                                                                 "ChuongTrinhGiangDay",
@@ -59,8 +65,8 @@
                                                                 Request.Url.Scheme)?buoiguid=@item1.BuoiGiangGuid"
                                    data-otf-target="#danhsachmonhoc"
                                    data-otf-actionload="@Url.Action("LoadDanhSachMon", "ChuongTrinhGiangDay")">
-                                    Xoa
-                                    <i class="fa fa-trash-o"></i>
+
+                                    <i class="glyphicon glyphicon-trash"></i>&nbsp;&nbsp;
                                 </a>
                             }
                         }
@@ -68,6 +74,8 @@
                     }
                 </div>
             </div>
+
+            <hr />
         }
     }
 }

@@ -36,7 +36,15 @@ namespace ngocnv10052014.catology.library.Models
 
         bool SaveFileThumbnail(Guid GuidCatology, string FileNameThumbnail);
 
-        IList<Catologie> GetAllGroupCatology(Guid guidRoot, int status);
+        int GetMaxPositionByKindGuid(Guid Kindguid);
+
+        Guid CreateImport(Catologie sv);
+
+        bool CheckExistUser(Catologie itemSP);
+
+        List<Catologie> GetAllCatologiesByUserID(int user);
+
+        List<Catologie> GetAllCatologiesByUserIDNotChilrend(int user, Guid q);
     }
 }
 

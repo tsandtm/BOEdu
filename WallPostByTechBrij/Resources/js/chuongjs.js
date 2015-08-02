@@ -121,7 +121,13 @@ function ClosePopupAndLoadDataChuong(idPopup, idActionLoadList, errormessage) {
     }
     DialogAlert("", errormessage, 1);
 }
+function themmoimonhoc(element) {
+    var $button = $(element);
+    var ipopup = $button.attr("data-otf-target");
+    $(ipopup).load($button.attr("data-otf-action"));
+    //$(ipopup).modal('show');
 
+}
 function ClosePopupAndLoadDataEditChuong(idPopup, idActionLoadList, errormessage) {
 
     if (idPopup != 'null')
@@ -206,4 +212,29 @@ function ThemFileVaoCap(element) {
             alert('server bận vui lòng quay lại sau ít phút nữa!');
         }
     });
+}
+
+function EnterEventListContact(event, textbox, button, ajaxEvent) {
+    if (event.which == 13) {
+        $('#' + textbox).select();
+        ajaxSearchListContact(textbox, button);
+    }
+}
+
+function ajaxSearchListContact(textbox, button) {
+    var $button = $("#" + button);
+    var key = $($button.attr("data-otf-target")).val();
+    var idList = $button.attr("data-otf-updateid");
+    $(idList).load($button.attr("data-otf-action") + "?keysearch=" + key);
+}
+
+function themdanhsachtheodoi(element) {
+    var $button = $(element);
+    var idList = $button.attr("data-otf-target")
+    $(idList).load($button.attr("data-otf-action"));
+}
+
+function loaddanhsachdangtheodoi(element) {
+    var $button = $(element);
+    $button.load($button.attr("data-otf-action"));
 }

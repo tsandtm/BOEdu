@@ -1,0 +1,28 @@
+﻿@{
+                
+    if (Model != null)
+    {
+        <div class="form-horizontal">
+            <div class="form-group">
+                <label class="col-sm-2 control-label">
+                    Danh sach buoi:
+                </label>
+                <div class="col-sm-10">
+
+                    @foreach (chuongtv01082015.library.chuong.BuoiGiangDay item in Model)
+{
+    <a data-dismiss="modal"
+       data-otf-method="get"
+       data-otf-action="@(Url.Action("ShareDocForStudent", "ManageDoc", null, Request.Url.Scheme))"
+       data-otf-action-target="@(Url.Action("LoadList", "FileSystem", null, Request.Url.Scheme))?page=1&q=&catGuid="
+       data-otf-target="#ListFileOfFolder"
+       data-target="#modalEditShare"
+       onclick="AddShareDocForStudent(this,'@ViewData["fileguidsytem"]','@item.BuoiGiangGuid')">@item.BuoiGiangName</a>  <text> : </text>  @item.ClientFileName
+                        <br />
+                    }
+
+                </div>
+            </div>
+        </div>
+    }
+}

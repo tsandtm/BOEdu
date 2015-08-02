@@ -8,6 +8,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web;
 using System.Web.Http;
+using System.Web.Routing;
 using WallPostByTechBrij.Filters;
 using WallPostByTechBrij.Models;
 using WebMatrix.WebData;
@@ -24,9 +25,12 @@ namespace WallPostByTechBrij.Controllers
         // GET api/WallPost
         public dynamic GetPosts()
         {
-           
+          // RouteData r= RouteTable.Routes.GetRouteData(new HttpContextWrapper(HttpContext.Current));
+           //int id = Convert.ToInt32();
             var ret = (from post in db.Posts.ToList() 
                       orderby post.PostedDate descending
+                     //  where post.UserProfile.UserId==WebSecurity.CurrentUserId
+
                       select new
                       {
                           Message = post.Message,

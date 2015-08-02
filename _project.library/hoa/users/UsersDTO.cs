@@ -31,7 +31,7 @@ namespace _project.library.hoa
                     //item.Password = reader["Password"].ToString();
                     item.DiaChi = reader["DiaChi"].ToString();
                     item.DienThoai = reader["DienThoai"].ToString();
-                    item.DienThoai = reader["AvatarExt"].ToString();
+                    item.AvatarExt = reader["AvatarExt"].ToString();
 
                     try
                     {
@@ -85,7 +85,7 @@ namespace _project.library.hoa
                     //item.Password = reader["Password"].ToString();
                     item.DiaChi = reader["DiaChi"].ToString();
                     item.DienThoai = reader["DienThoai"].ToString();
-                    item.DienThoai = reader["AvatarExt"].ToString();
+                    item.AvatarExt = reader["AvatarExt"].ToString();
                     try
                     {
                         item.NgaySinh = Convert.ToDateTime(reader["NgaySinh"]);

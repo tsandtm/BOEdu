@@ -99,6 +99,36 @@ namespace project.config.library
                 sql,
                 null)>0;
         }
+
+        internal static bool RemoveBookInBag(Guid FileGuid)
+        {
+            SqlParameterHelper sph = new SqlParameterHelper(ConnectionStringStatic.GetReadConnectionString(), "doc_FileSystem_RemoveBookInBag", 1);
+            sph.DefineSqlParameter("@FileGuid", SqlDbType.UniqueIdentifier, ParameterDirection.Input, FileGuid);
+            int row = sph.ExecuteNonQuery();
+            return (row > 0);
+        }
+        public static IDataReader GetPageByItemGuid(int pageNumber, int pageSize, out int totalRows, Guid catGuid, string q)
+        {
+            totalRows = 0;
+            totalRows = GetCountByItemGuid(catGuid, q);
+
+            SqlParameterHelper sph = new SqlParameterHelper(ConnectionStringStatic.GetReadConnectionString(), "doc_FileSystem_DN_SelectPageByItemGuid", 4);
+            sph.DefineSqlParameter("@PageNumber", SqlDbType.Int, ParameterDirection.Input, pageNumber);
+            sph.DefineSqlParameter("@PageSize", SqlDbType.Int, ParameterDirection.Input, pageSize);
+            sph.DefineSqlParameter("@ItemGuid", SqlDbType.UniqueIdentifier, ParameterDirection.Input, catGuid);
+            sph.DefineSqlParameter("@KeySearch", SqlDbType.NVarChar, 256, ParameterDirection.Input, q);
+
+            return sph.ExecuteReader();
+        }
+
+        public static int GetCountByItemGuid(Guid catGuid, string q)
+        {
+            SqlParameterHelper sph = new SqlParameterHelper(ConnectionStringStatic.GetReadConnectionString(), "doc_FileSystem_DN_GetCountByItemGuid", 2);
+            sph.DefineSqlParameter("@ItemGuid", SqlDbType.UniqueIdentifier, ParameterDirection.Input, catGuid);
+            sph.DefineSqlParameter("@KeySearch", SqlDbType.NVarChar, 256, ParameterDirection.Input, q);
+
+            return Convert.ToInt32(sph.ExecuteScalar());
+        }
     }
 }
 

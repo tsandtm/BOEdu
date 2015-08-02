@@ -16,6 +16,7 @@
         @Html.AntiForgeryToken()
         @Html.HiddenFor(model => Model.MonHocGuid)
         @Html.HiddenFor(model => Model.Userid)
+        @Html.DisplayFor(model => Model.Userid)
 
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>

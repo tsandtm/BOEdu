@@ -1,0 +1,113 @@
+﻿@{
+    
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model MvcPaging.IPagedList<ngocnv10052014.catology.library.Models.Catologie>
+@*<input type="hidden" value="@ViewBag.ProjectID" id="hiddenprojectid" />*@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Đối tượng tài trợ</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="@Url.Action("Index", "Dashboards")">Home</a>
+            </li>
+            <li>
+                <a href="@Url.Action("Index", "CauHinhCoBan")">Cấu hình cơ bản</a>
+            </li>
+            <li class="active">
+                <strong>@ViewBag.Title</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+    </div>
+</div>
+@*content*@
+<div class="wrapper wrapper-content">
+    <div class="row">
+        <div class="col-sm-8 m-b-5 p-w-5">
+
+            
+            @*<a class="more"
+               data-otf-method="get"
+               data-toggle="modal"
+               data-otf-action="@Url.Action("Add", "CauHinhCoBan", null, Request.Url.Scheme)?gr=@ViewData["rootguid"]"
+               data-otf-target="#DetailTask"
+               data-target="#myModal5"
+               onclick="LoadEditCauHinhCaiDat(this)">Thêm mới</a>*@
+            
+            <a class="more"
+               data-otf-method="get"
+               data-toggle="modal"
+               data-otf-action="@Url.Action("Add", "CauHinhCoBan", null, Request.Url.Scheme)"
+               data-otf-target="#DetailTask"
+               data-target="#myModal5"
+               onclick="LoadEditCauHinhCaiDat(this)">Thêm mới</a>
+
+
+            <button data-otf-mutil="true"
+                    data-otf-ajax="true"
+                    data-otf-confirm="Hệ thống sẽ xóa tất cả các node con nếu node cha được chọn. Bạn có chắc muôn xóa?"
+                    data-otf-target="#ListCauHinCaiDat"
+                    data-otf-action-target="@Url.Action("LoadListCauHinh", "CauHinhCoBan")?page=1&gr=@ViewData["rootguid"]"
+                    data-otf-action="@Url.Action("Delete", "CauHinhCoBan", null, Request.Url.Scheme)?status=@ViewData["status"]&idCat="
+                    class=" btn btn-white text-left text-danger"
+                    title="Xóa">
+                <i class="fa fa-trash-o"></i> Xóa
+            </button>
+
+
+        </div>
+        <div class="col-sm-4 m-b-5 p-w-5">
+            <div class=" pull-right">
+                @Html.DropDownList("ListStatus", null, new
+          {
+              @class = "form-control ",
+              data_otf_action = @Url.Action("LoadListCauHinh", "CauHinhCoBan", null, Request.Url.Scheme) + "?gr="+@ViewData["rootguid"]+"&status=",
+              data_otf_target = "#ListCauHinCaiDat",
+              data_otf_ajax = "true"
+
+          })
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-content">
+                    <div class="table-responsive" id="ListCauHinCaiDat">
+                        @Html.Partial("_PartialListCauHinhCaiDat", @Model, new ViewDataDictionary { { "status", @ViewData["status"] }, { "rootguid", @ViewData["rootguid"] } })
+                    </div>
+                </div>
+                <div class="modal inmodal fade" id="myModal5" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        @Html.Partial("_PartialEditCauHinhCaiDat", new ngocnv10052014.catology.library.Models.Catologie())
+                    </div>
+                </div>
+                <div class="modal inmodal fade" id="myModalAdd" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        @Html.Partial("_PartialAddCauHinhCaiDat", new ngocnv10052014.catology.library.Models.Catologie())
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+@section Scripts {
+    @Scripts.Render("~/plugins/chosen")
+
+
+    <script type="text/javascript">
+                $(document).ready(function () {
+
+
+
+                });
+    </script>
+}

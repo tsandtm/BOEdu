@@ -348,11 +348,9 @@ D:\My Private\tsandtm_data\hackerdanemic\fb-wall-post-master\WallPostByTechBrij\
 D:\My Private\tsandtm_data\hackerdanemic\fb-wall-post-master\WallPostByTechBrij\obj\Debug\WallPostByTechBrij.csprojResolveAssemblyReference.cache
 D:\My Private\tsandtm_data\hackerdanemic\fb-wall-post-master\WallPostByTechBrij\obj\Debug\WallPostByTechBrij.dll
 D:\My Private\tsandtm_data\hackerdanemic\fb-wall-post-master\WallPostByTechBrij\obj\Debug\WallPostByTechBrij.pdb
-D:\BOEdu\WallPostByTechBrij\bin\WallPostByTechBrij.dll.config
-D:\BOEdu\WallPostByTechBrij\bin\WallPostByTechBrij.dll
-D:\BOEdu\WallPostByTechBrij\bin\WallPostByTechBrij.pdb
-D:\BOEdu\WallPostByTechBrij\bin\Antlr3.Runtime.dll
 D:\BOEdu\WallPostByTechBrij\bin\DotNetOpenAuth.AspNet.dll
+D:\BOEdu\WallPostByTechBrij\bin\Antlr3.Runtime.dll
+D:\BOEdu\WallPostByTechBrij\bin\chuongtv01082015.library.dll
 D:\BOEdu\WallPostByTechBrij\bin\DotNetOpenAuth.Core.dll
 D:\BOEdu\WallPostByTechBrij\bin\DotNetOpenAuth.OAuth.Consumer.dll
 D:\BOEdu\WallPostByTechBrij\bin\DotNetOpenAuth.OAuth.dll
@@ -364,7 +362,11 @@ D:\BOEdu\WallPostByTechBrij\bin\Microsoft.Data.OData.dll
 D:\BOEdu\WallPostByTechBrij\bin\Microsoft.Web.Infrastructure.dll
 D:\BOEdu\WallPostByTechBrij\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
 D:\BOEdu\WallPostByTechBrij\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\BOEdu\WallPostByTechBrij\bin\MvcPaging.dll
 D:\BOEdu\WallPostByTechBrij\bin\Newtonsoft.Json.dll
+D:\BOEdu\WallPostByTechBrij\bin\ngocnv.quanlydanhmucthongtin.library.dll
+D:\BOEdu\WallPostByTechBrij\bin\nvn.Library.dll
+D:\BOEdu\WallPostByTechBrij\bin\project.config.library.dll
 D:\BOEdu\WallPostByTechBrij\bin\Rabbit.Bootstrap.dll
 D:\BOEdu\WallPostByTechBrij\bin\System.Net.Http.Formatting.dll
 D:\BOEdu\WallPostByTechBrij\bin\System.Spatial.dll
@@ -381,8 +383,16 @@ D:\BOEdu\WallPostByTechBrij\bin\System.Web.WebPages.Razor.dll
 D:\BOEdu\WallPostByTechBrij\bin\WebGrease.dll
 D:\BOEdu\WallPostByTechBrij\bin\WebMatrix.Data.dll
 D:\BOEdu\WallPostByTechBrij\bin\WebMatrix.WebData.dll
+D:\BOEdu\WallPostByTechBrij\bin\_project.library.dll
 D:\BOEdu\WallPostByTechBrij\bin\Org.Mentalis.Security.Cryptography.dll
 D:\BOEdu\WallPostByTechBrij\bin\Mono.Math.dll
+D:\BOEdu\WallPostByTechBrij\bin\chuongtv01082015.library.pdb
+D:\BOEdu\WallPostByTechBrij\bin\ngocnv.quanlydanhmucthongtin.library.pdb
+D:\BOEdu\WallPostByTechBrij\bin\MvcPaging.pdb
+D:\BOEdu\WallPostByTechBrij\bin\MvcPaging.xml
+D:\BOEdu\WallPostByTechBrij\bin\nvn.Library.pdb
+D:\BOEdu\WallPostByTechBrij\bin\project.config.library.pdb
+D:\BOEdu\WallPostByTechBrij\bin\_project.library.pdb
 D:\BOEdu\WallPostByTechBrij\bin\Rabbit.Bootstrap.xml
 D:\BOEdu\WallPostByTechBrij\bin\System.Web.Mvc.xml
 D:\BOEdu\WallPostByTechBrij\bin\EntityFramework.xml
@@ -398,7 +408,6 @@ D:\BOEdu\WallPostByTechBrij\bin\System.Web.WebPages.Razor.xml
 D:\BOEdu\WallPostByTechBrij\bin\WebMatrix.Data.xml
 D:\BOEdu\WallPostByTechBrij\bin\Microsoft.Web.WebPages.OAuth.xml
 D:\BOEdu\WallPostByTechBrij\bin\WebMatrix.WebData.xml
-D:\BOEdu\WallPostByTechBrij\bin\DotNetOpenAuth.AspNet.xml
 D:\BOEdu\WallPostByTechBrij\bin\DotNetOpenAuth.Core.xml
 D:\BOEdu\WallPostByTechBrij\bin\DotNetOpenAuth.OAuth.Consumer.xml
 D:\BOEdu\WallPostByTechBrij\bin\DotNetOpenAuth.OAuth.xml
@@ -440,16 +449,6 @@ D:\BOEdu\WallPostByTechBrij\bin\zh-Hant\System.Spatial.resources.dll
 D:\BOEdu\WallPostByTechBrij\obj\Debug\WallPostByTechBrij.csprojResolveAssemblyReference.cache
 D:\BOEdu\WallPostByTechBrij\obj\Debug\WallPostByTechBrij.dll
 D:\BOEdu\WallPostByTechBrij\obj\Debug\WallPostByTechBrij.pdb
-D:\BOEdu\WallPostByTechBrij\bin\MvcPaging.dll
-D:\BOEdu\WallPostByTechBrij\bin\ngocnv.quanlydanhmucthongtin.library.dll
-D:\BOEdu\WallPostByTechBrij\bin\nvn.Library.dll
-D:\BOEdu\WallPostByTechBrij\bin\project.config.library.dll
-D:\BOEdu\WallPostByTechBrij\bin\_project.library.dll
-D:\BOEdu\WallPostByTechBrij\bin\ngocnv.quanlydanhmucthongtin.library.pdb
-D:\BOEdu\WallPostByTechBrij\bin\MvcPaging.pdb
-D:\BOEdu\WallPostByTechBrij\bin\MvcPaging.xml
-D:\BOEdu\WallPostByTechBrij\bin\nvn.Library.pdb
-D:\BOEdu\WallPostByTechBrij\bin\project.config.library.pdb
-D:\BOEdu\WallPostByTechBrij\bin\_project.library.pdb
-D:\BOEdu\WallPostByTechBrij\bin\chuongtv01082015.library.dll
-D:\BOEdu\WallPostByTechBrij\bin\chuongtv01082015.library.pdb
+D:\BOEdu\WallPostByTechBrij\bin\WallPostByTechBrij.dll.config
+D:\BOEdu\WallPostByTechBrij\bin\WallPostByTechBrij.dll
+D:\BOEdu\WallPostByTechBrij\bin\WallPostByTechBrij.pdb

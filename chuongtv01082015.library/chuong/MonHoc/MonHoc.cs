@@ -7,6 +7,12 @@ namespace chuongtv01082015.library.chuong
 {
     public class MonHoc
     {
+        public MonHoc() { }
+        public MonHoc(Guid m,string i) {
+            MonHocGuid = m;
+            MonHocName = i;
+        }
+
         #region Public Properties
         public Guid MonHocGuid { get; set; }
         public string MonHocName { get; set; }

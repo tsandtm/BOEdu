@@ -125,7 +125,7 @@ namespace ngocnv10052014.catology.library.Models
 				                    Levels=(select Levels from cont_Catologies where CatologyGuid='" + item.KindCatologyGuid + @"') + 1,
                                     ListPlacementID=convert(nvarchar(18),(select ListPlacementID from cont_Catologies where CatologyGuid='" + item.KindCatologyGuid + @"')) + '\' + convert(nvarchar(18),(select CatologyID from cont_Catologies where CatologyGuid='" + item.KindCatologyGuid + @"')),
 				                    Position=" + item.Position + @",
-                                    UserID="+item.UserID+@"
+                                    UserID="+item.UserID+@",
                                     IsNotDelete='"+item.IsNotDelete+@"'
 			
                         WHERE

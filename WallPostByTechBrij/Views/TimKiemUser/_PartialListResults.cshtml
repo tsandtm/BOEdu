@@ -1,0 +1,30 @@
+﻿@if (@Model != null)
+{
+    foreach (chuongtv01082015.library.chuong.Users item in Model)
+    {
+        <br />
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="col-lg-3">
+                    <a href="@Url.Action("Index", "ChuongTrinhGiangDay", new { id = @item.UserId })" title="Lorem ipsum" class="thumbnail"><img src="http://lorempixel.com/250/140/people" alt="Lorem ipsum" /></a>
+                </div>
+                <div class="col-lg-3">
+                    <ul class="meta-search" style="list-style: outside none none;">
+                        <li><i class="glyphicon glyphicon-calendar"></i> <span>@Html.DisplayFor(itemB => item.FullName)</span></li>
+                        <li><i class="glyphicon glyphicon-time"></i> <span>@Html.DisplayFor(itemB => item.UserName)</span></li>
+                        <li><i class="glyphicon glyphicon-tags"></i> <span>@Html.DisplayFor(itemB => item.UserId)</span></li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <h3><a href="#" title="">Voluptatem, exercitationem, suscipit, distinctio</a></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, exercitationem, suscipit, distinctio, qui sapiente aspernatur molestiae non corporis magni sit sequi iusto debitis delectus doloremque.</p>
+                    <span class="plus">
+                        <a data-otf-target="#danhsachtheodoi" data-otf-action="@Url.Action("addusertofollowlist", "TimKiemUser", null, Request.Url.Scheme)?id=@item.UserId" title="Thêm vào danh sách theo dõi" onclick="themdanhsachtheodoi(this)"><i class="glyphicon glyphicon-eye-open"></i> Theo dõi</a>
+                    </span>
+                </div>
+                <span class="clearfix borda"></span>
+            </div>
+        </div>
+    }
+}
+

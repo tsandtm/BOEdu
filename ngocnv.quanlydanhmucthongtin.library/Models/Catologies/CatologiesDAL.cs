@@ -19,7 +19,7 @@ namespace ngocnv10052014.catology.library.Models
         /// <returns>int</returns>
         public static int Create(Catologie item)
         {
-            SqlParameterHelper sph = new SqlParameterHelper(ConnectionStringStatic.GetWriteConnectionString(), "cont_Catologies_ngocnv10052014_Insert", 8);
+            SqlParameterHelper sph = new SqlParameterHelper(ConnectionStringStatic.GetWriteConnectionString(), "cont_Catologies_ngocnv10052014_Insert", 10);
             sph.DefineSqlParameter("@CatologyGuid", SqlDbType.UniqueIdentifier, ParameterDirection.Input, item.CatologyGuid);
             sph.DefineSqlParameter("@CatologyName", SqlDbType.NVarChar, 256, ParameterDirection.Input, item.CatologyName);
             sph.DefineSqlParameter("@Description", SqlDbType.NVarChar, 500, ParameterDirection.Input, item.Description);
@@ -28,11 +28,33 @@ namespace ngocnv10052014.catology.library.Models
             sph.DefineSqlParameter("@IsActive", SqlDbType.Bit, ParameterDirection.Input, item.IsActive);
             sph.DefineSqlParameter("@Position", SqlDbType.Int, ParameterDirection.Input, item.Position);
             sph.DefineSqlParameter("@ListStringToSort", SqlDbType.NVarChar, 256, ParameterDirection.Input, item.ListStringToSort);
-
+            sph.DefineSqlParameter("@UserName", SqlDbType.NVarChar,256, ParameterDirection.Input, item.Massv);
+            sph.DefineSqlParameter("@IsNotDelete", SqlDbType.Bit, ParameterDirection.Input, item.IsNotDelete);
             int rowsAffected = sph.ExecuteNonQuery();
             return rowsAffected;
         }
 
+        public static int CreateImport(Catologie item)
+        {
+            SqlParameterHelper sph = new SqlParameterHelper(ConnectionStringStatic.GetWriteConnectionString(), "cont_Catologies_Import_Insert", 13);
+            sph.DefineSqlParameter("@CatologyGuid", SqlDbType.UniqueIdentifier, ParameterDirection.Input, item.CatologyGuid);
+            sph.DefineSqlParameter("@CatologyName", SqlDbType.NVarChar, 256, ParameterDirection.Input, item.CatologyName);
+            sph.DefineSqlParameter("@Description", SqlDbType.NVarChar, 500, ParameterDirection.Input, item.Description);
+            sph.DefineSqlParameter("@KindCatologyGuid", SqlDbType.UniqueIdentifier, ParameterDirection.Input, item.KindCatologyGuid);
+            sph.DefineSqlParameter("@KindCatologyName", SqlDbType.NVarChar, 256, ParameterDirection.Input, item.KindCatologyName);
+            sph.DefineSqlParameter("@IsActive", SqlDbType.Bit, ParameterDirection.Input, item.IsActive);
+            sph.DefineSqlParameter("@Position", SqlDbType.Int, ParameterDirection.Input, item.Position);
+            sph.DefineSqlParameter("@ListStringToSort", SqlDbType.NVarChar, 256, ParameterDirection.Input, item.ListStringToSort);
+            sph.DefineSqlParameter("@UserID", SqlDbType.Int, ParameterDirection.Input, item.UserID);
+            sph.DefineSqlParameter("@IsNotDelete", SqlDbType.Bit, ParameterDirection.Input, item.IsNotDelete);
+
+            sph.DefineSqlParameter("@Role", SqlDbType.NVarChar, 256, ParameterDirection.Input, item.Role);
+            sph.DefineSqlParameter("@PassWord", SqlDbType.NVarChar, 256, ParameterDirection.Input, item.PassWord);
+            sph.DefineSqlParameter("@UsetName", SqlDbType.NVarChar, 256, ParameterDirection.Input, item.Massv);
+            
+            int rowsAffected = sph.ExecuteNonQuery();
+            return rowsAffected;
+        }
         /// <summary>
         /// Updates a row in the cont_Catologies table. Returns true if row updated.
         /// </summary>
@@ -169,8 +191,25 @@ namespace ngocnv10052014.catology.library.Models
             int pageSize,
             out int totalPages)
         {
-              totalPages  = GetCount(rootGuid, isActive);
+            totalPages = 1;
+            int totalRows
+                = GetCount(rootGuid, isActive);
 
+            if (pageSize > 0) totalPages = totalRows / pageSize;
+
+            if (totalRows <= pageSize)
+            {
+                totalPages = 1;
+            }
+            else
+            {
+                int remainder;
+                Math.DivRem(totalRows, pageSize, out remainder);
+                if (remainder > 0)
+                {
+                    totalPages += 1;
+                }
+            }
 
             SqlParameterHelper sph = new SqlParameterHelper(ConnectionStringStatic.GetReadConnectionString(), "cont_Catologies_ngocnv10052014_SelectPage_4para", 4);
             sph.DefineSqlParameter("@RootGuid", SqlDbType.NVarChar, 256, ParameterDirection.Input, rootGuid.ToString());
@@ -225,13 +264,35 @@ namespace ngocnv10052014.catology.library.Models
 
 
 
-        internal static IDataReader GetAllGroupCatology(Guid guidRoot, int status)
+        internal static int GetMaxPositionByKindGuid(Guid Kindguid)
         {
-            SqlParameterHelper sph = new SqlParameterHelper(ConnectionStringStatic.GetReadConnectionString(), "cont_Catologies_thanhdai08072015_GetAllGroupCatology", 2);
-            sph.DefineSqlParameter("@ValueGuid", SqlDbType.UniqueIdentifier, ParameterDirection.Input, guidRoot);
-            sph.DefineSqlParameter("@Active", SqlDbType.Int, ParameterDirection.Input, status);
+            SqlParameterHelper sph = new SqlParameterHelper(ConnectionStringStatic.GetReadConnectionString(), "cont_Catologies_ngocnv10052014_SelectMaxPosition", 1);
+            sph.DefineSqlParameter("@KindCatologyGuid", SqlDbType.UniqueIdentifier, ParameterDirection.Input, Kindguid);
+            return Convert.ToInt32(sph.ExecuteScalar());
+        }
+
+        internal static bool CheckExistUser(Catologie itemSP)
+        {
+            SqlParameterHelper sph = new SqlParameterHelper(ConnectionStringStatic.GetReadConnectionString(), "cont_UserProfile_CheckExistUser", 1);
+            sph.DefineSqlParameter("@UserName", SqlDbType.NVarChar,256, ParameterDirection.Input, itemSP.Massv);
+            return Convert.ToInt32(sph.ExecuteScalar())>0;
+        }
+
+        internal static IDataReader GetAllCatologiesByUserID(int user)
+        {
+            SqlParameterHelper sph = new SqlParameterHelper(ConnectionStringStatic.GetReadConnectionString(), "cont_Catologies_GetAllCatologiesByUserID", 1);
+            sph.DefineSqlParameter("@UserID", SqlDbType.NVarChar, 256, ParameterDirection.Input, user);
+            return sph.ExecuteReader();
+        }
+
+        internal static IDataReader GetAllCatologiesByUserIDNotChilrend(int user, Guid q)
+        {
+            SqlParameterHelper sph = new SqlParameterHelper(ConnectionStringStatic.GetReadConnectionString(), "cont_Catologies_GetAllCatologiesByUserIDNotChilrend", 2);
+            sph.DefineSqlParameter("@UserID", SqlDbType.Int, ParameterDirection.Input, user);
+            sph.DefineSqlParameter("@CatGuid", SqlDbType.UniqueIdentifier, ParameterDirection.Input, q);
             return sph.ExecuteReader();
         }
     }
 }
 
+                                                                                                                                      

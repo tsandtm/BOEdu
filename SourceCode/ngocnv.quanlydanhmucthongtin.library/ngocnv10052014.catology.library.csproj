@@ -33,7 +33,11 @@
   <ItemGroup>
     <Reference Include="nvn.Core.MVP, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\nvn.Core.MVP.dll</HintPath>
+      <HintPath>..\project.web\bin\nvn.Core.MVP.dll</HintPath>
+    </Reference>
+    <Reference Include="nvn.Library, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\project.web\bin\nvn.Library.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />

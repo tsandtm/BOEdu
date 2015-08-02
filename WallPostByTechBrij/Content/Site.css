@@ -113,7 +113,7 @@ h5, h6
 .content-wrapper
 {
     margin: 0 auto;
-    max-width: 960px;
+    max-width: 1010px;
 }
 
 #body
@@ -898,7 +898,7 @@ tr.pager td
 
 .publishContainer
 {
-    width: 65%;
+    /*width: 65%;*/
     text-align: right;
      background-color: #F2F2F2;
     border-color: #B4BBCD;
@@ -918,7 +918,7 @@ tr.pager td
 
 #msgHolder
 {
-    width: 65%;
+    /*width: 65%;*/
 }
 
     #msgHolder img
@@ -993,7 +993,7 @@ tr.pager td
     margin-right: 10px;
     padding: 5px;
     text-align: center;
-    width: 50px;
+    /*width: 50px;*/
 }
 
 aside
@@ -1326,3 +1326,21 @@ aside
   position: relative;
   text-decoration: none;
 }
+
+.div-scroll {
+    	overflow: auto;
+        height: 400px;
+}
+/*ẩn hiện button edit*/
+.showme{display: none;}
+.showhim:hover .showme{display: block;float: right;z-index: 5;}
+.showhim:hover .hideme{display: none;}
+.showhim1:hover .showme{display: block;float: left;z-index: 5;}
+.showhim1:hover .hideme{display: none;}
+.m-t-none {margin-top: 0 !important;}
+.btn-glyphicon { padding:8px; background:#ffffff; margin-right:4px; }
+.icon-btn { padding: 1px 15px 3px 2px; border-radius:50px;}
+.icon-tacvu {width:30px;}
+.icon-tacvu:hover{background: none;}
+.icon-tacvu .glyphicon {padding: 0;margin: 0;}
+.btn-nounderline{text-decoration: none;}

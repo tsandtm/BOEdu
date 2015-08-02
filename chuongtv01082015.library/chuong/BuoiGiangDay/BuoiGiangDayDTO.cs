@@ -38,7 +38,23 @@ namespace chuongtv01082015.library.chuong
                     catch { }
                     item.BuoiGiangID = reader["BuoiGiangID"].ToString();
                     item.BuoiGiangName = reader["BuoiGiangName"].ToString();
-                    try { item.MonHocGuid = new Guid(reader["MonHocGuid"].ToString()); }
+                    try
+                    {
+                        item.ClientFileName = reader["ClientFileName"].ToString();
+                    }
+                    catch
+                    {
+                    }
+                    
+
+                    try { 
+                        item.MonHocGuid = new Guid(reader["MonHocGuid"].ToString()); 
+                    }
+                    catch { }
+                    try
+                    {
+                        item.MonHocName = reader["MonHocName"].ToString();
+                    }
                     catch { }
                     items.Add(item);
                 }

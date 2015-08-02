@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 
@@ -68,6 +69,8 @@ namespace project.config.library
             get { return serverFileName; }
             set { serverFileName = value; }
         }
+
+        [DisplayFormat(DataFormatString = "{0:d}", ApplyFormatInEditMode = true)]
         public  DateTime?  UpdatedDate 
         {
             get { return updatedDate; }

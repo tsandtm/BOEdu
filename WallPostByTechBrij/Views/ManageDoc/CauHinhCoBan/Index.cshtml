@@ -1,0 +1,68 @@
+﻿@{
+    ViewBag.Title = "Đối tượng tài trợ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model MvcPaging.IPagedList<ngocnv10052014.catology.library.Models.Catologie>
+@*<input type="hidden" value="@ViewBag.ProjectID" id="hiddenprojectid" />*@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Đối tượng tài trợ</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="@Url.Action("Index", "Dashboards")">Home</a>
+            </li>
+            <li>
+                <a href="@Url.Action("Index", "CauHinhCoBan")">Cấu hình cơ bản</a>
+            </li>
+
+        </ol>
+    </div>
+    <div class="col-lg-2">
+    </div>
+</div>
+@*content*@
+<div class="wrapper wrapper-content">
+    <div class="row">
+        <div class="col-sm-3">
+            <a target="_blank" href="@Url.Action("LoadGroup", "CauHinhCoBan")?gr=@project.config.library.Utilities.ConstantVariable.Catology_Root" class="text-nodecoration">
+                <div class="panel status panel-success">
+                    <div class="panel-heading">
+                        <h1 class="panel-title text-center">
+                            0
+                        </h1>
+                    </div>
+                    <div class="panel-body text-center">
+                        <strong>Cài đặt gốc</strong>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        @{int i = 1;}
+        @foreach (ngocnv10052014.catology.library.Models.Catologie item in ViewBag.ListGroup)
+        {
+
+            <div class="col-sm-3">
+                <a target="_blank" href="@Url.Action("LoadGroup", "CauHinhCoBan")?gr=@item.CatologyGuid" class="text-nodecoration">
+                    <div class="panel status panel-success">
+                        <div class="panel-heading">
+                            <h1 class="panel-title text-center">
+                                @i @{i++;}
+                            </h1>
+                        </div>
+                        <div class="panel-body text-center">
+                            <strong>@item.CatologyName</strong>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+
+        }
+
+
+    </div>
+
+</div>
+

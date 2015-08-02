@@ -1,0 +1,59 @@
+﻿@model chuongtv01082015.library.chuong.BuoiGiangDay
+
+<div class="modal-content" id="editShare">
+    @using (Ajax.BeginForm(
+                                    "EditThongTinLienHe",
+                                    "DoanhNghiep",
+                                    new AjaxOptions
+                                {
+                                    InsertionMode = InsertionMode.Replace,
+                                    HttpMethod = "POST",
+                                    UpdateTargetId = "EditLienHe"
+                                }))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h5 class="modal-title">Thông tin liên hệ</h5>
+        </div>
+        <div class="modal-body">
+
+            <div id="result"></div>
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">
+                        Mon hoc
+                    </label>
+                    <div class="col-sm-10">
+                        @Html.DropDownListFor(model => Model.MonHocGuid, new SelectList(
+                                    Model.ListMonHoc,
+                          "MonHocGuid", "MonHocName", Model.MonHocGuid),
+new
+{
+    @class = "form-control w-300",
+    onchange = "ThayDoiGiaTriDropDownlist(this,'#ListBuoiTheoMon')",
+    data_otf_action = @Url.Action("LoadListBuoi", "ManageDoc", null, Request.Url.Scheme) + "?fg=" + @Model.FileSystemGuid + "&MonGuid="
+})
+
+                    </div>
+                </div>
+            </div>
+            <div id="ListBuoiTheoMon">
+                @Html.Partial("_PartialListBuoiTheoMon", new List<chuongtv01082015.library.chuong.BuoiGiangDay>(), new ViewDataDictionary { { "fileguidsytem", @Model.FileSystemGuid } })
+            </div>
+
+        </div>
+        <div class="modal-footer">
+            @*<button id="buttonSaveLienHe" class="btn btn-primary btn-sm" type="submit"><i class="fa fa-floppy-o"></i> Save</button>
+                hoặc*@
+            <a data-dismiss="modal"
+               data-otf-method="get"
+               data-otf-action="@Url.Action("LoadManageLienHe", "DoanhNghiep", null, Request.Url.Scheme)?diugpeihgnhnaod=@ViewData["doanhnghiepguid"]&m=edit"
+               data-otf-target="#ListManageLienHe"
+               data-target="#modalCreateLienHe"
+               onclick="tsOpenPopup(this)">Quay lại</a>
+        </div>
+    }
+
+</div>

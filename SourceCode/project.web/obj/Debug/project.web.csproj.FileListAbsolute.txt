@@ -117,3 +117,14 @@ D:\THANHDAI18HT\SVN\DemoHackdMit\SourceCode\project.web\bin\nvn.Library.pdb
 D:\THANHDAI18HT\SVN\DemoHackdMit\SourceCode\project.web\obj\Debug\project.web.csprojResolveAssemblyReference.cache
 D:\THANHDAI18HT\SVN\DemoHackdMit\SourceCode\project.web\obj\Debug\project.web.dll
 D:\THANHDAI18HT\SVN\DemoHackdMit\SourceCode\project.web\obj\Debug\project.web.pdb
+D:\THANHDAI18HT\BOEdu\SourceCode\project.web\bin\project.web.dll
+D:\THANHDAI18HT\BOEdu\SourceCode\project.web\bin\project.web.pdb
+D:\THANHDAI18HT\BOEdu\SourceCode\project.web\bin\ColorCode.dll
+D:\THANHDAI18HT\BOEdu\SourceCode\project.web\bin\ngocnv.quanlydanhmucthongtin.library.dll
+D:\THANHDAI18HT\BOEdu\SourceCode\project.web\bin\project.config.library.dll
+D:\THANHDAI18HT\BOEdu\SourceCode\project.web\bin\Select.HtmlToPdf.dll
+D:\THANHDAI18HT\BOEdu\SourceCode\project.web\bin\ngocnv.quanlydanhmucthongtin.library.pdb
+D:\THANHDAI18HT\BOEdu\SourceCode\project.web\bin\project.config.library.pdb
+D:\THANHDAI18HT\BOEdu\SourceCode\project.web\obj\Debug\project.web.csprojResolveAssemblyReference.cache
+D:\THANHDAI18HT\BOEdu\SourceCode\project.web\obj\Debug\project.web.dll
+D:\THANHDAI18HT\BOEdu\SourceCode\project.web\obj\Debug\project.web.pdb

@@ -1,35 +1,94 @@
 ﻿@using WallPostByTechBrij.Helpers
-@model List<WallPostByTechBrij.Controllers.TreeViewLocation>
-
-@if (Roles.IsUserInRole("GiangVien"))
-{
-    <a href="#" onclick="uploadFileForTask()">abc</a>
+@model List<ngocnv10052014.catology.library.Models.Catologie>
+@{
+    ViewBag.Title = "Quản lý tài liệu";
 }
 
-
-@*bien luu catology khi xu ly colick*@
-<input id="TextboxValueHidden" type="hidden" class="form-control" value="83E14AA7-707D-4479-B489-4777768FCC7A" title="@Url.Action("CreateFiles", "FileSystem", null, Request.Url.Scheme)">
-<form id="myAwesomeDropzone"
-      data-otf-target="#ListFileOfFolder"
-      class="dropzone"
-      action="@Url.Action("CreateFiles", "FileSystem", null, Request.Url.Scheme)"
-      method="post"
-      enctype="multipart/form-data" style="min-height: 50px !important; padding: 5px !important;">
-    <div class="dropzone-previews"></div>
-</form>
-<div id="ListFileOfFolder">
-    @Html.Partial("~/Views/FileSystem/_PartialListFiles.cshtml")
+<div class="col-md-4">
+    <div id="ListCauHinCaiDat" class="div-scroll">
+        @Html.Partial("CauHinhCoBan/_PartialListCauHinhCaiDat", (List<ngocnv10052014.catology.library.Models.Catologie>)ViewBag.ListDanhMuc)
+    </div>
 </div>
+
+<div class="col-md-8">
+    @*bien luu catology khi xu ly colick*@
+    <input id="TextboxValueHidden" type="hidden" class="form-control" value="92D84863-88D6-42AF-B181-9AFF97A57D8C" title="@Url.Action("CreateFiles", "FileSystem", null, Request.Url.Scheme)">
+
+    <div class="input-group">
+        <input id="CheckBoxAll" onclick="javascript: checkAlllist('#listcheckall',this);" type="checkbox" title="Chọn tất cả" value="Select All" class=" icon-btn" /> Chọn tất cả
+
+
+
+        <button id="btnShareClass" type="submit" class=" ">
+            <span class="glyphicon glyphicon-share"></span> Share Lớp
+        </button>
+
+
+        <button id="btnDownload" type="submit" class=" ">
+            <span class="glyphicon glyphicon-save"></span> Download
+        </button>
+
+        <button id="btnDeleteMulti" type="submit" class=" ">
+            <span class="glyphicon glyphicon-trash"></span> Delete
+        </button>
+
+    </div>
+    <div class="input-group">
+        <input id="txtKeySearch" placeholder="Thông tin cần tìm" onkeypress="return EnterEventFiles(event, 'txtKeySearch', 'btnSearch', 'ajaxSearchListFiles')"
+               class="form-control" />
+        <span class="input-group-btn">
+            <button id="btnSearch" type="submit" class="" data-otf-target="#ListFileOfFolder" data-otf-action="@Url.Action("LoadList", "FileSystem", null, Request.Url.Scheme)?page=1" onclick="ajaxSearchListFiles('txtKeySearch', 'btnSearch');">
+                Tìm kiếm
+            </button>
+        </span>
+    </div>
+    <br />
+    <form id="myAwesomeDropzone"
+          data-otf-target="#ListFileOfFolder"
+          class="dropzone"
+          action="@Url.Action("CreateFiles", "FileSystem", null, Request.Url.Scheme)"
+          method="post"
+          enctype="multipart/form-data" style="min-height: 50px !important; padding: 5px !important;">
+        <div class="dropzone-previews"></div>
+    </form>
+
+    <div id="ListFileOfFolder">
+        @Html.Partial("~/Views/FileSystem/_PartialListFiles.cshtml")
+    </div>
+
+
+
+    <div class="modal inmodal fade" id="modalEditShare" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            @Html.Partial("_PartialShare", new chuongtv01082015.library.chuong.BuoiGiangDay())
+        </div>
+    </div>
+
+
+    <div class="modal inmodal fade" id="myModal5" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <a href="~/Views/CauHinhCoBan/_PartialListCauHinhCaiDat.cshtml">~/Views/CauHinhCoBan/_PartialListCauHinhCaiDat.cshtml</a>
+            @Html.Partial("CauHinhCoBan/_PartialEditCauHinhCaiDat", new ngocnv10052014.catology.library.Models.Catologie())
+        </div>
+    </div>
+    <div class="modal inmodal fade" id="myModalAdd" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            @Html.Partial("CauHinhCoBan/_PartialAddCauHinhCaiDat", new ngocnv10052014.catology.library.Models.Catologie())
+        </div>
+    </div>
+</div>
+
 
 @section Scripts {
     <script type="text/javascript">
         //guid thu muc test
         //83E14AA7-707D-4479-B489-4777768FCC7A
-        function uploadFileForTask() {
-            var abc = $("#TextboxValueHidden").val();
+        function uploadFileForTask(abc) {
+            $("#TextboxValueHidden").val(abc);
             $("form#myAwesomeDropzone").attr('action', $("#TextboxValueHidden").attr("title") + "?catGuid=" + $("#TextboxValueHidden").val());
             //$("#my-awesome-dropzone div.dz-message").click();
-            $("#ListFileOfFolder").load('@(Url.Action("LoadList", "FileSystem", null, Request.Url.Scheme))?catGuid=' + abc);
+            $("#ListFileOfFolder").load('@(Url.Action("LoadList", "FileSystem", null, Request.Url.Scheme))?page=1&q=&catGuid=' + abc);
+
         }
 
         $(document).ready(function () {
@@ -51,7 +110,7 @@
                     });
                     this.on("queuecomplete", function (file) {
                         var abc = $("#TextboxValueHidden").val();
-                        $("#ListFileOfFolder").load('@(Url.Action("LoadList", "FileSystem", null, Request.Url.Scheme))?catGuid=' + abc);
+                        $("#ListFileOfFolder").load('@(Url.Action("LoadList", "FileSystem", null, Request.Url.Scheme))?page1&q=&catGuid=' + abc);
                         myDropzone.removeAllFiles();
                     });
                     this.on("errormultiple", function (files, response) {
@@ -64,4 +123,3 @@
         });
     </script>
 }
-                    

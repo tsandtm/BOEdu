@@ -111,5 +111,22 @@ namespace chuongtv01082015.library.chuong
 			sph.DefineSqlParameter("@PageSize", SqlDbType.Int, ParameterDirection.Input, pageSize);
 			return sph.ExecuteReader();
 		}
+
+        internal IDataReader GetAllByMonGuidAndUser(Guid MonGuida, int UserID)
+        {
+            SqlParameterHelper sph = new SqlParameterHelper(ConnectionStringStatic.GetReadConnectionString(), "gv_BuoiGiangDay_tsandtm_GetAllByMonGuidAndUser", 2);
+            sph.DefineSqlParameter("@MonHocGuid", SqlDbType.UniqueIdentifier, ParameterDirection.Input, MonGuida);
+            sph.DefineSqlParameter("@UserID", SqlDbType.Int, ParameterDirection.Input, UserID);
+            return sph.ExecuteReader();
+        }
+
+        internal bool ShareDocForStudent(Guid buoiguid, Guid monguid)
+        {
+            SqlParameterHelper sph = new SqlParameterHelper(ConnectionStringStatic.GetReadConnectionString(), "gv_BuoiGiangDay_tsandtm_ShareDocForStudent", 2);
+            sph.DefineSqlParameter("@buoiguid", SqlDbType.UniqueIdentifier, ParameterDirection.Input, buoiguid);
+            sph.DefineSqlParameter("@monguid", SqlDbType.UniqueIdentifier, ParameterDirection.Input, monguid);
+            int rowsAffected = sph.ExecuteNonQuery();
+            return (rowsAffected > 0);
+        }
     }
 }

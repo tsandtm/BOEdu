@@ -90,7 +90,7 @@ namespace project.config.library
 
         #endregion
 
-  
+
 
         /// <summary>
         /// Deletes an instance of FileSystem. Returns true on success.
@@ -121,13 +121,13 @@ namespace project.config.library
             }
         }
 
-   
+
         public List<FileSystem> GetAllByItemGuid(Guid itemGuid)
         {
             IDataReader reader = FileSystemDAL.GetAllByItemGuid(itemGuid);
             return LoadListFromReader(reader);
         }
-       
+
         public bool DeleteByItemGuid(Guid itemGuid)
         {
             return FileSystemDAL.DeleteByItemGuid(itemGuid);
@@ -139,11 +139,30 @@ namespace project.config.library
             return FileSystemDAL.SaveFiles(sql);
         }
 
+        /// <summary>
+        /// Gets an IList with page of instances of Users.
+        /// </summary>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="totalPages">total pages</par
+        public List<FileSystem> GetPageByItemGuid(int pageNumber, int pageSize, out int totalRows, Guid catGuid, string q)
+        {
+            totalRows = 1;
+            IDataReader reader = FileSystemDAL.GetPageByItemGuid(pageNumber, pageSize, out totalRows, catGuid, q);
+            return LoadListFromReader(reader);
+        }
+        public int GetCountByItemGuid(Guid catGuid, string q)
+        {
+            return FileSystemDAL.GetCountByItemGuid(catGuid, q);
+        }
 
 
 
 
-
+        public bool RemoveBookInBag(Guid FileGuid)
+        {
+            return FileSystemDAL.RemoveBookInBag(FileGuid);
+        }
     }
 }
 

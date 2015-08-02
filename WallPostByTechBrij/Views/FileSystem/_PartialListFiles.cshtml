@@ -1,32 +1,77 @@
-﻿
-
+﻿@using MvcPaging
 
 @if (ViewBag.ListFiles != null)
 {
-    foreach (project.config.library.FileSystem item in ViewBag.ListFiles)
-    {
+    <table class="table table-hover">
 
-        <span>  @item.ClientFileName</span>
-        <strong>@item.FileSize MB</strong> 
-            <a href="~/Download.ashx?id=@item.FileSystemGuid" title="@item.ClientFileName">@item.ClientFileName</a>
-    <a class="dz-error-mark" id="link-@item.FileSystemGuid" onclick="DeleteFileSystem(this)" @*data-otf-confirm="Bạn muốn xóa file?"*@
-       data-otf-action-target="@Url.Action("LoadList", "FileSystem", null, Request.Url.Scheme)?catGuid=@item.ItemGuid"
-       data-otf-target="#ListFileOfFolder"
-       data-otf-action="@Url.Action("Delete", "FileSystem", null, Request.Url.Scheme)?q=@item.FileSystemGuid"
-       style="opacity: 1;">
-        <span>✘</span>
-    </a>
-    
-    <a href="#">
-        <span>Share</span>
-    </a>
-    
-    <a href="#">
-        <span>Download</span>
-    </a>
-    <br />
-    }
+        <tbody id="listcheckall">
+            @foreach (project.config.library.FileSystem item in ViewBag.ListFiles)
+            {
+                <tr>
+                    <td>
+                        <input type="checkbox" class="checkbox-item" value="@item.FileSystemGuid" />
+                    </td>
+                    <td>
+                        @item.ClientFileName
+                    </td>
+                    <td class="text-right">
+                        @item.FileSize MB
+                    </td>
+                    <td>
+                        @Html.DisplayFor(m => @item.UpdatedDate)
+                    </td>
+                    <td style="width:85px;">
+                        <a href="~/Download.ashx?id=@item.FileSystemGuid" title="@item.ClientFileName"><i class="glyphicon glyphicon-save"></i></a>
+
+                        <a title="Share" onclick="tsOpenPopup(this)"
+                           data-otf-method="get"
+                           data-otf-target="#editShare"
+                           data-otf-action="@Url.Action("EditShare", "ManageDoc", null, Request.Url.Scheme)?fileguid=@item.FileSystemGuid"
+                           data-toggle="modal"
+                           data-target="#modalEditShare">
+                            <i class="glyphicon glyphicon-share"></i>
+                        </a>
+
+                        <a class="dz-error-mark" id="link-@item.FileSystemGuid" onclick="DeleteFileSystem(this)" @*data-otf-confirm="Bạn muốn xóa file?"*@
+                           data-otf-action-target="@Url.Action("LoadList", "FileSystem", null, Request.Url.Scheme)?catGuid=@item.ItemGuid&q="
+                           data-otf-target="#ListFileOfFolder"
+                           data-otf-action="@Url.Action("Delete", "FileSystem", null, Request.Url.Scheme)?q=@item.FileSystemGuid"
+                           style="opacity: 1;">
+                            <span class="glyphicon glyphicon-trash"></span>
+                        </a>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+    <div class="pager1">
+        @Html.Raw(Ajax.Pager(
+            new Options
+            {
+                PageSize = ViewBag.ListFiles.PageSize,
+                TotalItemCount = ViewBag.ListFiles.TotalItemCount,
+                CurrentPage = ViewBag.ListFiles.PageNumber,
+                ItemTexts = new ItemTexts() { Next = "Next", Previous = "Previous", Page = "" },
+                ItemIcon = new ItemIcon() { First = "icon-backward", Previous = "icon-chevron-left", Next = "icon-chevron-right", Last = "icon-forward" },
+                TooltipTitles = new TooltipTitles() { Next = "Next page", Previous = "Previous page", Page = "Page {0}." },
+                Size = Size.normal,
+                Alignment = Alignment.centered,
+                IsShowControls = true,
+                IsShowFirstLast = true,
+                CssClass = ""
+            },
+            new AjaxOptions
+            {
+                UpdateTargetId = "ListFileOfFolder"
+                //OnBegin = "beginPaging",
+                //OnSuccess = "successPaging",
+                //OnFailure = "failurePaging"
+            }, new { controller = "FileSystem", action = "LoadList", q = @ViewData["query"], catGuid = @ViewBag.ItemGuid }))
+
+    </div>
+    <div>
+        Tổng cộng (@ViewBag.ListFiles.TotalItemCount)
+    </div>
+
 }
-
-
-

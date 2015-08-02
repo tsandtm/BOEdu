@@ -15,6 +15,12 @@ namespace chuongtv01082015.library.chuong
         List<BuoiGiangDay> GetPage(int pageNumber, int pageSize, out int totalrow);
         List<BuoiGiangDay> GetAll();
         int GetCount();
+
+        BuoiGiangDay GetOne(Guid fileguid);
+
+        List<BuoiGiangDay> GetAllByMonGuidAndUser(Guid MonGuida, int p);
+
+        bool ShareDocForStudent(Guid buoiguid, Guid monguid);
     }
 }
 

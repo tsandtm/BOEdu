@@ -309,30 +309,55 @@ function tsClick(element, type) {
     }).done(function () {
     });
     return true;
-    
+
+}
+
+function AddShareDocForStudent(element, m, b) {
+    //tam thoi ko can load lai list. chi can an popup la xong
+
+    var $button = $(element);
+    //var idList = $button.attr("data-otf-target");
+    $.ajax({
+        type: 'Post',
+        cache: false,
+        url: $button.attr("data-otf-action"),
+        data: { buoi: b, mon: m },
+        success: function (data) {
+            //$(idList).load($button.attr("data-otf-action-target"));
+        }
+    }).done(function () {
+    });
+    return true;
 }
 
 function tsOpenPopup(element) {
     var $button = $(element);
     var idList = $button.attr("data-otf-target");
 
- 
+
     $(idList).load($button.attr("data-otf-action"), function () {
 
         //kiem tra de loai tru cai nay
-        var config = {
-            '.chosen-select': {},
-            '.chosen-select-deselect': { allow_single_deselect: true },
-            '.chosen-select-no-single': { disable_search_threshold: 10 },
-            '.chosen-select-no-results': { no_results_text: 'Lỗi! Vui lòng chọn ít nhất 1 mục.' },
-            '.chosen-select-width': { width: "95%" }
-        }
-        for (var selector in config) {
-            $(selector).chosen(config[selector]);
-        }
+        //var config = {
+        //    '.chosen-select': {},
+        //    '.chosen-select-deselect': { allow_single_deselect: true },
+        //    '.chosen-select-no-single': { disable_search_threshold: 10 },
+        //    '.chosen-select-no-results': { no_results_text: 'Lỗi! Vui lòng chọn ít nhất 1 mục.' },
+        //    '.chosen-select-width': { width: "95%" }
+        //}
+        //for (var selector in config) {
+        //    $(selector).chosen(config[selector]);
+        //}
 
     });
     return true;
+}
+
+function ThayDoiGiaTriDropDownlist(element, idLoad) {
+    var $button = $(element);
+
+    $(idLoad).load($button.attr("data-otf-action") + $button.find('option:selected').val());
+    //alert($button.attr("data-otf-action") + $button.find('option:selected').val());
 }
 
 function tsDropDownListChange(id, element) {
@@ -556,15 +581,15 @@ function checkAlllist(idList, obj) {
 }
 
 
-function ClosePopupAndLoadData(idPopup, idActionLoadList,errormessage) {
-    
+function ClosePopupAndLoadData(idPopup, idActionLoadList, errormessage) {
+
     if (idPopup != 'null')
         $(idPopup).modal('hide');
-    
+
     if (idActionLoadList != 'null') {
         var idList = $(idActionLoadList).attr("data-otf-target");
         $(idList).load($(idActionLoadList).attr("data-otf-action"));
     }
 
-    DialogAlert("", errormessage, 1);    
+    DialogAlert("", errormessage, 1);
 }

@@ -39,6 +39,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DotNetOpenAuth.AspNet">
+      <HintPath>..\..\ProjectDangLam\mvc_hutech_internalsystem\SourceCode\project.web.mvc\bin\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Rabbit.Bootstrap">
       <HintPath>..\packages\Rabbit.Bootstrap.MVC.1.1.0.0\lib\net40\Rabbit.Bootstrap.dll</HintPath>
@@ -131,10 +134,6 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.WebData.2.0.20710.0\lib\net40\WebMatrix.WebData.dll</HintPath>
     </Reference>
-    <Reference Include="DotNetOpenAuth.AspNet, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.1.4.12333\lib\net45-full\DotNetOpenAuth.AspNet.dll</HintPath>
-    </Reference>
     <Reference Include="DotNetOpenAuth.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\DotNetOpenAuth.Core.4.1.4.12333\lib\net45-full\DotNetOpenAuth.Core.dll</HintPath>
@@ -192,6 +191,7 @@
     <Compile Include="Controllers\FileSystemController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageDocController.cs" />
+    <Compile Include="Controllers\TimKiemUserController.cs" />
     <Compile Include="Controllers\TreeViewController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Controllers\WallPostController.cs" />
@@ -1216,6 +1216,16 @@
     <Content Include="Views\FileSystem\Index.cshtml" />
     <Content Include="Views\FileSystem\_PartialListFiles.cshtml" />
     <Content Include="Scripts\plugins\justified-gallery\README.md" />
+    <Content Include="Views\ManageDoc\_PartialShare.cshtml" />
+    <Content Include="Views\ManageDoc\_PartialListBuoiTheoMon.cshtml" />
+    <Content Include="Views\ManageDoc\CauHinhCoBan\Index.cshtml" />
+    <Content Include="Views\ManageDoc\CauHinhCoBan\LoadGroup.cshtml" />
+    <Content Include="Views\ManageDoc\CauHinhCoBan\_PartialAddCauHinhCaiDat.cshtml" />
+    <Content Include="Views\ManageDoc\CauHinhCoBan\_PartialEditCauHinhCaiDat.cshtml" />
+    <Content Include="Views\ManageDoc\CauHinhCoBan\_PartialListCauHinhCaiDat.cshtml" />
+    <Content Include="Views\TimKiemUser\Index.cshtml" />
+    <Content Include="Views\TimKiemUser\_PartialDanhSachTheoDoi.cshtml" />
+    <Content Include="Views\TimKiemUser\_PartialListResults.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

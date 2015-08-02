@@ -43,7 +43,31 @@ function ajaxDropdowlistFromAutocomplate(itemvalue, id_ddl, actionlink) {
         }
     });
 };
+function DeleteCAT(element) {
+    var $button = $(element);
+    if ($button.attr("data-otf-confirm"))
+        if (!confirm($button.attr("data-otf-confirm")))
+            return false;
 
+
+    var idList = $button.attr("data-otf-target");
+    //chua kiem tra data-otf-mutil
+
+    //trường họp 1 item 
+    $.ajax({
+        type: 'Post',
+        cache: false,
+        url: $button.attr("data-otf-action"),
+        //data: { selectedIds: selectedIds },
+        //dataType: "json",
+        success: function (data) {
+            $(idList).load($button.attr("data-otf-action-target"));
+        }
+    }).done(function () {
+    });
+    return true;
+
+}
 
 function DeleteFileSystem(element) {
     var $button = $(element);

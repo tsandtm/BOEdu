@@ -39,6 +39,10 @@ namespace ngocnv10052014.catology.library.Models
         private int levels = 0;
         private int position = 0;
         private string listPlacementGuid = string.Empty;
+        private bool isNotDelete = false;
+        private int userID = -1;
+
+        
         #endregion
 
         #region Public Properties
@@ -118,6 +122,36 @@ namespace ngocnv10052014.catology.library.Models
             set { kindCatologyName = value; }
         }
         #endregion
+        public int UserID
+        {
+            get { return userID; }
+            set { userID = value; }
+        }
+        private string passWord = string.Empty;
+
+        public string PassWord
+        {
+            get { return passWord; }
+            set { passWord = value; }
+        }
+        private string role = string.Empty;
+
+        public string Role
+        {
+            get { return role; }
+            set { role = value; }
+        }
+
+        public bool IsNotDelete
+        {
+            get { return isNotDelete; }
+            set { isNotDelete = value; }
+        }
+        public string Khoa { get; set; }
+
+        public string Lop { get; set; }
+
+        public string Massv { get; set; }
     }
 }
 

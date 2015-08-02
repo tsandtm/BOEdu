@@ -102,4 +102,6 @@ namespace WallPostByTechBrij.Models
         public bool RememberMe { get; set; }
         public int UserID { get; set; }
     }
+
+    
 }

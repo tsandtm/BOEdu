@@ -87,6 +87,27 @@ namespace chuongtv01082015.library.chuong
             return BuoiGiangDayDTO.LoadListFromReader(reader);
         }
         #endregion
+
+
+        public BuoiGiangDay GetOne(Guid fileguid)
+        {
+            throw new NotImplementedException();
+        }
+
+
+        public List<BuoiGiangDay> GetAllByMonGuidAndUser(Guid MonGuida, int UserID)
+        {
+            BuoiGiangDayDAL itemDAL = new BuoiGiangDayDAL();
+            IDataReader reader = itemDAL.GetAllByMonGuidAndUser(MonGuida,UserID);
+            return BuoiGiangDayDTO.LoadListFromReader(reader);
+        }
+
+
+        public bool ShareDocForStudent(Guid buoiguid, Guid monguid)
+        {
+            BuoiGiangDayDAL itemDAL = new BuoiGiangDayDAL();
+            return itemDAL.ShareDocForStudent(buoiguid, monguid);
+        }
     }
 }
 

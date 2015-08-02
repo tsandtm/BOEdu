@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Data;
+using project.config.library;
 using project.config.library.Utilities;
 
 namespace ngocnv10052014.catology.library.Models
@@ -30,6 +31,16 @@ namespace ngocnv10052014.catology.library.Models
                 item.ListPlacementName = reader["ListPlacementName"].ToString();
                 item.Levels = Convert.ToInt32(reader["Levels"]);
                 item.Position = Convert.ToInt32(reader["Position"]);
+                try
+                {
+                    item.IsNotDelete = Convert.ToBoolean(reader["IsNotDelete"].ToString());
+                }
+                catch { }
+                try
+                {
+                    item.UserID=Convert.ToInt32(reader["UserID"]);
+                }
+                catch { }
             }
             return item;
         }
@@ -53,7 +64,16 @@ namespace ngocnv10052014.catology.library.Models
                     item.ListPlacementName = reader["ListPlacementName"].ToString();
                     item.Levels = Convert.ToInt32(reader["Levels"]);
                     item.Position = Convert.ToInt32(reader["Position"]);
-
+                    try
+                    {
+                        item.IsNotDelete = Convert.ToBoolean(reader["IsNotDelete"].ToString());
+                    }
+                    catch { }
+                    try
+                    {
+                        item.UserID = Convert.ToInt32(reader["UserID"]);
+                    }
+                    catch { }
                     items.Add(item);
                 }
             }
@@ -91,23 +111,22 @@ namespace ngocnv10052014.catology.library.Models
 
             //lay then [0] lam truoc.
             //chay auto cac then con lai.
-            query += @"
-DECLARE @KindCatologyName nvarchar(50);
-select @KindCatologyName =CatologyName from cont_Catologies where CatologyGuid='" + item.KindCatologyGuid + @"' 
-                        UPDATE 		[dbo].[cont_Catologies] 
+            query += @"UPDATE 		[dbo].[cont_Catologies] 
 
                         SET
 			                        [CatologyName] = N'" + item.CatologyName + @"',
 			                        [Description] = N'" + item.Description + @"',
 			                        [KindCatologyGuid] = '" + item.KindCatologyGuid + @"',
-			                        [KindCatologyName] = @KindCatologyName,
+			                        [KindCatologyName] = N'" + item.KindCatologyName + @"',
 			                        IsActive='" + item.IsActive + @"',
                                     ListStringToSort=(select ListStringToSort from cont_Catologies where CatologyGuid='" + item.KindCatologyGuid + @"') + '" + item.ListStringToSort + @"',
 				                    ListPlacementGuid=(select ListPlacementGuid from cont_Catologies where CatologyGuid='" + item.KindCatologyGuid + @"') + ';' + convert(nvarchar(256),'" + item.KindCatologyGuid + @"'),
 				                    ListPlacementName=(select ListPlacementName from cont_Catologies where CatologyGuid='" + item.KindCatologyGuid + @"') + '\' + (select CatologyName from cont_Catologies where CatologyGuid='" + item.KindCatologyGuid + @"'),
 				                    Levels=(select Levels from cont_Catologies where CatologyGuid='" + item.KindCatologyGuid + @"') + 1,
                                     ListPlacementID=convert(nvarchar(18),(select ListPlacementID from cont_Catologies where CatologyGuid='" + item.KindCatologyGuid + @"')) + '\' + convert(nvarchar(18),(select CatologyID from cont_Catologies where CatologyGuid='" + item.KindCatologyGuid + @"')),
-				                    Position=" + item.Position + @"
+				                    Position=" + item.Position + @",
+                                    UserID="+item.UserID+@",
+                                    IsNotDelete='"+item.IsNotDelete+@"'
 			
                         WHERE
 			                        [CatologyGuid] = '" + listCatologies[0].CatologyGuid + @"'";
@@ -208,45 +227,6 @@ select @KindCatologyName =CatologyName from cont_Catologies where CatologyGuid='
             return LoadListFromReader(reader);
         }
 
-        //public Guid GetDanhMucGuid_ByLoaiDanhMucGuid(Guid ValueGuid)
-        //{
-        //    using (IDataReader reader = CatologieDAL.GetDanhMucGuid_ByLoaiDanhMucGuid(ValueGuid))
-        //    {
-        //        if (reader.Read())
-        //            return new Guid(reader["CatologyGuid"].ToString());
-        //        return Guid.Empty;
-        //    }
-        //}
-        //public bool Delete_ByLoaiDanhMucGuid(Guid ValueGuid)
-        //{
-        //    return CatologieDAL.Delete_ByLoaiDanhMucGuid(ValueGuid);
-        //}
-
-        ////---------------------------->lay tat ca du lieu danh muc dua vao guid cha<---------------------------//
-        //List<Catologie> _items;
-        //string valueTree = string.Empty;
-
-        //private void BuidCatologies(string ValueString, Guid ValueGuid, string Symbol)
-        //{
-        //    ICatologieBAL itemBAL = new CatologieBAL();
-        //    //Lay tat ca danh muc cung cap voi danh muc cha, Luon lay nhung gia tri da kich hoat
-        //    IDataReader reader = CatologieDAL.GetAllDanhMuc_TheoDanhMucCha(ValueGuid, 1);
-        //    List<Catologie> items = LoadListFromReader(reader);
-
-        //    //them ky hieu
-        //    if (ValueGuid != Guid.Empty)
-        //        valueTree = valueTree + Symbol;
-
-        //    foreach (Catologie item in items)
-        //    {
-        //        if (item.CatologyGuid != Guid.Empty)
-        //            _items.Add(new Catologie(valueTree + item.CatologyName, item.CatologyGuid,item.CatologyID));
-        //        BuidCatologies(item.CatologyName, item.CatologyGuid, Symbol); //Load de quy
-        //    }
-        //    if (ValueGuid != Guid.Empty)
-        //        valueTree = valueTree.Remove(valueTree.Length - Symbol.Length, Symbol.Length);
-        //}
-        //---------------------------->End<---------------------------//
         #endregion
 
 
@@ -265,9 +245,37 @@ select @KindCatologyName =CatologyName from cont_Catologies where CatologyGuid='
         }
 
 
-        public IList<Catologie> GetAllGroupCatology(Guid guidRoot, int status)
+        public int GetMaxPositionByKindGuid(Guid Kindguid)
         {
-            return LoadListFromReader(CatologieDAL.GetAllGroupCatology(guidRoot, status));
+           return  CatologieDAL.GetMaxPositionByKindGuid(Kindguid);
+        }
+
+
+        public Guid CreateImport(Catologie item)
+        {
+            item.CatologyGuid = Guid.NewGuid();
+            int rowsAffected = CatologieDAL.CreateImport(item);
+            return rowsAffected > 0 ? item.CatologyGuid : Guid.Empty;
+        }
+
+
+        public bool CheckExistUser(Catologie itemSP)
+        {
+            return CatologieDAL.CheckExistUser(itemSP);
+        }
+
+
+        public List<Catologie> GetAllCatologiesByUserID(int user)
+        {
+            IDataReader reader = CatologieDAL.GetAllCatologiesByUserID(user);
+            return LoadListFromReader(reader);
+        }
+
+
+        public List<Catologie> GetAllCatologiesByUserIDNotChilrend(int user, Guid q)
+        {
+            IDataReader reader = CatologieDAL.GetAllCatologiesByUserIDNotChilrend(user,q);
+            return LoadListFromReader(reader);
         }
     }
 }

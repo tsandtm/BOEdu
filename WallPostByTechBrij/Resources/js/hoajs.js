@@ -342,3 +342,25 @@ function deleteListItem(element) {
     return false;
 }
 
+
+//Files
+//gán action cho sự kiện nhấn enter trong textbox tìm kiếm
+function EnterEventFiles(event, textbox, button, ajaxEvent) {
+    if (event.which == 13) {
+        //$('#buttonsearch').trigger('submit');
+        //$('#txtdoanhnghiep').select();
+        //ajaxSearchListDoanhNghiep();
+        $('#' + textbox).select();
+        ajaxSearchListFiles(textbox, button);
+    }
+}
+//search danh sách dung chung
+function ajaxSearchListFiles(textbox, button) {
+    var $button = $("#" + button);
+    var idList = $button.attr("data-otf-target");
+    var guid = $("#TextboxValueHidden").val();
+    var textSearch = GetDataFilter(textbox);
+    textSearch = textSearch.replace(" ", "+");
+    //alert(textSearch);
+    $(idList).load($button.attr("data-otf-action") + "&catGuid=" + guid + "&q=" + textSearch);
+}

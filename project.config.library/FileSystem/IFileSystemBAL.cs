@@ -17,6 +17,10 @@ namespace project.config.library
         List<FileSystem> GetAllByItemGuid(Guid itemGuid);
 
         bool SaveFiles(string query);
+
+        bool RemoveBookInBag(Guid FileGuid);
+
+        List<FileSystem> GetPageByItemGuid(int pageNumber, int pageSize, out int totalRows, Guid catGuid, string q);
     }
 }
 

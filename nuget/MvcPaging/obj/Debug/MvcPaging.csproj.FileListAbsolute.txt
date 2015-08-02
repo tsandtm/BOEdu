@@ -67,6 +67,6 @@ G:\Drive\Dropbox\BOEdu\nuget\MvcPaging\obj\Debug\MvcPaging.pdb
 D:\BOEdu\nuget\MvcPaging\bin\Debug\MvcPaging.XML
 D:\BOEdu\nuget\MvcPaging\bin\Debug\MvcPaging.dll
 D:\BOEdu\nuget\MvcPaging\bin\Debug\MvcPaging.pdb
-D:\BOEdu\nuget\MvcPaging\obj\Debug\MvcPaging.csprojResolveAssemblyReference.cache
 D:\BOEdu\nuget\MvcPaging\obj\Debug\MvcPaging.dll
 D:\BOEdu\nuget\MvcPaging\obj\Debug\MvcPaging.pdb
+D:\BOEdu\nuget\MvcPaging\obj\Debug\MvcPaging.csprojResolveAssemblyReference.cache

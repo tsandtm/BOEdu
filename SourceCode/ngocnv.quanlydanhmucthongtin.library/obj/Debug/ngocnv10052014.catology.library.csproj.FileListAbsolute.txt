@@ -71,3 +71,12 @@ D:\THANHDAI18HT\SVN\DemoHackdMit\SourceCode\ngocnv.quanlydanhmucthongtin.library
 D:\THANHDAI18HT\SVN\DemoHackdMit\SourceCode\ngocnv.quanlydanhmucthongtin.library\obj\Debug\ngocnv10052014.catology.library.csprojResolveAssemblyReference.cache
 D:\THANHDAI18HT\SVN\DemoHackdMit\SourceCode\ngocnv.quanlydanhmucthongtin.library\obj\Debug\ngocnv.quanlydanhmucthongtin.library.dll
 D:\THANHDAI18HT\SVN\DemoHackdMit\SourceCode\ngocnv.quanlydanhmucthongtin.library\obj\Debug\ngocnv.quanlydanhmucthongtin.library.pdb
+D:\THANHDAI18HT\BOEdu\SourceCode\ngocnv.quanlydanhmucthongtin.library\obj\Debug\ngocnv10052014.catology.library.csprojResolveAssemblyReference.cache
+D:\THANHDAI18HT\BOEdu\SourceCode\ngocnv.quanlydanhmucthongtin.library\obj\Debug\ngocnv.quanlydanhmucthongtin.library.dll
+D:\THANHDAI18HT\BOEdu\SourceCode\ngocnv.quanlydanhmucthongtin.library\obj\Debug\ngocnv.quanlydanhmucthongtin.library.pdb
+D:\THANHDAI18HT\BOEdu\SourceCode\ngocnv.quanlydanhmucthongtin.library\bin\Debug\ngocnv.quanlydanhmucthongtin.library.dll
+D:\THANHDAI18HT\BOEdu\SourceCode\ngocnv.quanlydanhmucthongtin.library\bin\Debug\ngocnv.quanlydanhmucthongtin.library.pdb
+D:\THANHDAI18HT\BOEdu\SourceCode\ngocnv.quanlydanhmucthongtin.library\bin\Debug\nvn.Core.MVP.dll
+D:\THANHDAI18HT\BOEdu\SourceCode\ngocnv.quanlydanhmucthongtin.library\bin\Debug\nvn.Library.dll
+D:\THANHDAI18HT\BOEdu\SourceCode\ngocnv.quanlydanhmucthongtin.library\bin\Debug\project.config.library.dll
+D:\THANHDAI18HT\BOEdu\SourceCode\ngocnv.quanlydanhmucthongtin.library\bin\Debug\project.config.library.pdb

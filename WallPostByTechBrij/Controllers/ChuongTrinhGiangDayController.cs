@@ -16,10 +16,12 @@ namespace WallPostByTechBrij.Controllers
         IMonHocBAL itemBAL = new MonHocBAL();
         //
         // GET: /ChuongTrinhGiangDay/
-        public ActionResult Index()
+        public ActionResult Index(int? id)
         {
-            //return JavaScript("GetTabDanhSachMonHoc('#thongtindanhsachmonhoc')");
-            return View();
+            IUsersBAL itemUserBAL = new UsersBAL();
+            int Userid = id == null ? WebSecurity.CurrentUserId : Convert.ToInt32(id);
+            Users item = itemUserBAL.GetUsers(Userid);
+            return View(item);
         }
         public ActionResult CreateChuongTrinhGiangDay(MonHoc item)
         {
@@ -27,7 +29,6 @@ namespace WallPostByTechBrij.Controllers
             if (item.MonHocGuid == null || item.MonHocGuid == Guid.Empty)
             {
                 item.MonHocGuid = Guid.Empty;
-                item.Userid = 1;
                 flagCreate = true;
             }
             Guid trangThai = itemBAL.Save(item);
@@ -39,9 +40,9 @@ namespace WallPostByTechBrij.Controllers
             return View();
         }
 
-        public ActionResult LoadDanhSachMon()
+        public ActionResult LoadDanhSachMon(int? id)
         {
-            int Userid = 1;
+            int Userid = id == null ? WebSecurity.CurrentUserId : Convert.ToInt32(id);
             return PartialView("_PartialDanhSachMonHoc", itemBAL.GetAllMonHocTheoGiangVien(Userid));
         }
 
@@ -63,9 +64,11 @@ namespace WallPostByTechBrij.Controllers
 
         [HttpGet]
         [ActionName("Create")]
-        public ActionResult CreateMon_View()
+        public ActionResult CreateMon_View(int? id)
         {
-            return PartialView("_PartialDanhSachMonHoc", new chuongtv01082015.library.chuong.MonHoc());
+            MonHoc item = new MonHoc();
+            item.Userid = id == null ? 0 : Convert.ToInt32(id);
+            return PartialView("_PartialThemMoiMonGiangDay", item);
         }
 
         [ActionName("Delete")]
@@ -82,10 +85,12 @@ namespace WallPostByTechBrij.Controllers
                 return View();
             }
             bool trangThai = itemBAL.Delete(monhoc);
-            if (trangThai)
-                return JavaScript("ReloadDanhSachMon('Thực hiện thành công')");
-            else
-                return JavaScript("ReloadDanhSachMon('Thực hiện Thất bại')");
+
+            return View();
+            //if (trangThai)
+            //    return JavaScript("ReloadDanhSachMon('Thực hiện thành công')");
+            //else
+            //    return JavaScript("ReloadDanhSachMon('Thực hiện Thất bại')");
         }
 
         [HttpPost]

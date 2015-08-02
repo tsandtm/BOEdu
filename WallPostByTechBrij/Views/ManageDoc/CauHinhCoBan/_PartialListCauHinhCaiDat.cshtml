@@ -1,0 +1,39 @@
+﻿@model List<ngocnv10052014.catology.library.Models.Catologie>
+
+
+
+@{var i = 0;}
+@foreach (ngocnv10052014.catology.library.Models.Catologie item in Model)
+{
+    <div class="showhim">
+        <span>
+            @project.config.library.Utilities.ConstantVariable.BuildSymbol(item.Levels)
+            <a href="javascript:void(0)" onclick="uploadFileForTask('@item.CatologyGuid')"> @item.CatologyName</a>
+        </span>
+        <span class="showme">
+            <a class="more icon-tacvu"
+               data-otf-method="get"
+               data-toggle="modal"
+               data-otf-action="@Url.Action("Add", "ManageDoc", null, Request.Url.Scheme)?gr=@item.CatologyGuid"
+               data-otf-target="#DetailTask"
+               data-target="#myModal5"
+               onclick="LoadEditCauHinhCaiDat(this)"><i class="glyphicon btn-glyphicon glyphicon-plus text-success"></i></a>
+            @if (!item.IsNotDelete && i != 0)
+            {
+                <a class="icon-tacvu" href="javascript:void(0)" data-otf-confirm="You want delete?" data-otf-target="#ListCauHinCaiDat" onclick="DeleteCAT(this)"
+                   data-otf-action="@Url.Action("Delete", "ManageDoc", null, Request.Url.Scheme)?idCat=@item.CatologyGuid"
+                   data-otf-action-target="@Url.Action("LoadListDanhMuc", "ManageDoc", null, Request.Url.Scheme)"><i class="glyphicon btn-glyphicon glyphicon-trash text-danger"></i></a>
+                <a class="more icon-tacvu"
+                   data-otf-method="get"
+                   data-toggle="modal"
+                   title="@item.Description"
+                   data-otf-action="@Url.Action("Edit", "ManageDoc", null, Request.Url.Scheme)?q=@item.CatologyGuid"
+                   data-otf-target="#DetailTask"
+                   data-target="#myModal5"
+                   onclick="LoadEditCauHinhCaiDat(this)"><i class="glyphicon btn-glyphicon glyphicon-pencil text-primary"></i></a>
+            }
+        </span>
+        <br />
+    </div>
+            i++;
+}

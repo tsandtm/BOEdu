@@ -1,0 +1,49 @@
+﻿@model ngocnv10052014.catology.library.Models.Catologie
+
+
+<div class="modal-content" id="AddDetailTask">
+    <div class="modal-header">
+
+        <h5 class="modal-title">Thêm mới danh mục thông tin</h5>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            @using (Ajax.BeginForm(
+                                    "Create",
+                                    "ManageDoc", new { r = @ViewBag.ItemGuid },
+                                    new AjaxOptions
+                                {
+                                    InsertionMode = InsertionMode.Replace,//cach thuc update du lieu. Thay the hay them vao
+                                    HttpMethod = "POST",
+                                    UpdateTargetId = "addresult"
+                                }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.HiddenFor(model => Model.CatologyGuid)
+                <div id="addresult"></div>
+
+                <div class="form-group">
+                    @Html.Label("Tên danh mục", new { @class = "control-label col-md-12" })
+                    <div class="col-md-12 m-b">
+                        @Html.EditorFor(model => Model.CatologyName)
+                        @Html.ValidationMessageFor(model => model.CatologyName)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Save" class="btn btn-primary" /> hoặc
+
+                        <a data-dismiss="modal"
+                           data-otf-method="get"
+                           data-otf-action="@Url.Action("LoadListDanhMuc", "ManageDoc", null, Request.Url.Scheme)"
+                           data-otf-target="#ListCauHinCaiDat"
+                           data-target="#myModal5"
+                           onclick="tsOpenPopup(this)">Quay lại</a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+

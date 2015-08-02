@@ -58,6 +58,11 @@
     <Compile Include="chuong\MonHoc\MonHocBAL.cs" />
     <Compile Include="chuong\MonHoc\MonHocDAL.cs" />
     <Compile Include="chuong\MonHoc\MonHocDTO.cs" />
+    <Compile Include="chuong\users\IUsersBAL.cs" />
+    <Compile Include="chuong\users\Users.cs" />
+    <Compile Include="chuong\users\UsersBAL.cs" />
+    <Compile Include="chuong\users\UsersDAL.cs" />
+    <Compile Include="chuong\users\UsersDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
